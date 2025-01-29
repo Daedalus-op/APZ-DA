@@ -3,10 +3,10 @@ A database acceleration project in collaboration with amd and zoho
 
 ## TODO
 - [-] Select @Daedalus-op
-- [-] Update @neha-aj007
+- [ ] Update 
 - [ ] Aggregate
 - [-] Join @anagha
-- [ ] Bitwise
+- [-] Bitwise @neha-aj007
 - [-] Delete @Arun-66
 
 `- [-] in progress`
