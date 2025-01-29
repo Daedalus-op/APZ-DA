@@ -1,0 +1,36 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel name="delete_top" language="c" vlnv="xilinx.com:hls:delete_top:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" compileOptions="" profileType="none" hwControlProtocol="ap_ctrl_none">
+    <ports>
+      <port name="I_HASH_STRM" mode="read_only" dataWidth="32" portType="stream"/>
+      <port name="I_COL1_STRM" mode="read_only" dataWidth="32" portType="stream"/>
+      <port name="I_COL2_STRM" mode="read_only" dataWidth="32" portType="stream"/>
+      <port name="I_COL3_STRM" mode="read_only" dataWidth="32" portType="stream"/>
+      <port name="I_PAYLOAD_STRM" mode="read_only" dataWidth="128" portType="stream"/>
+      <port name="I_E_STRM" mode="read_only" dataWidth="8" portType="stream"/>
+      <port name="I_D_KEY1_STRM" mode="read_only" dataWidth="32" portType="stream"/>
+      <port name="O_HASH_STRM" mode="write_only" dataWidth="32" portType="stream"/>
+      <port name="O_COL1_STRM" mode="write_only" dataWidth="32" portType="stream"/>
+      <port name="O_COL2_STRM" mode="write_only" dataWidth="32" portType="stream"/>
+      <port name="O_COL3_STRM" mode="write_only" dataWidth="32" portType="stream"/>
+      <port name="O_PAYLOAD_STRM" mode="write_only" dataWidth="128" portType="stream"/>
+      <port name="O_E_STRM" mode="write_only" dataWidth="8" portType="stream"/>
+    </ports>
+    <args>
+      <arg id="0" name="i_hash_strm" addressQualifier="4" port="I_HASH_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" origName="i_hash_strm" origUse="variable"/>
+      <arg id="1" name="i_col1_strm" addressQualifier="4" port="I_COL1_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" origName="i_col1_strm" origUse="variable"/>
+      <arg id="2" name="i_col2_strm" addressQualifier="4" port="I_COL2_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" origName="i_col2_strm" origUse="variable"/>
+      <arg id="3" name="i_col3_strm" addressQualifier="4" port="I_COL3_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" origName="i_col3_strm" origUse="variable"/>
+      <arg id="4" name="i_payload_strm" addressQualifier="4" port="I_PAYLOAD_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;ap_uint&lt;128&gt;, 0&gt;&amp;" origName="i_payload_strm" origUse="variable"/>
+      <arg id="5" name="i_e_strm" addressQualifier="4" port="I_E_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;bool, 0&gt;&amp;" origName="i_e_strm" origUse="variable"/>
+      <arg id="6" name="i_d_key1_strm" addressQualifier="4" port="I_D_KEY1_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" origName="i_d_key1_strm" origUse="variable"/>
+      <arg id="7" name="o_hash_strm" addressQualifier="4" port="O_HASH_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" origName="o_hash_strm" origUse="variable"/>
+      <arg id="8" name="o_col1_strm" addressQualifier="4" port="O_COL1_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" origName="o_col1_strm" origUse="variable"/>
+      <arg id="9" name="o_col2_strm" addressQualifier="4" port="O_COL2_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" origName="o_col2_strm" origUse="variable"/>
+      <arg id="10" name="o_col3_strm" addressQualifier="4" port="O_COL3_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" origName="o_col3_strm" origUse="variable"/>
+      <arg id="11" name="o_payload_strm" addressQualifier="4" port="O_PAYLOAD_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;ap_uint&lt;128&gt;, 0&gt;&amp;" origName="o_payload_strm" origUse="variable"/>
+      <arg id="12" name="o_e_strm" addressQualifier="4" port="O_E_STRM" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;bool, 0&gt;&amp;" origName="o_e_strm" origUse="variable"/>
+    </args>
+    <compileWorkGroupSize x="1" y="1" z="1"/>
+    <maxWorkGroupSize x="1" y="1" z="1"/>
+  </kernel>
+</root>

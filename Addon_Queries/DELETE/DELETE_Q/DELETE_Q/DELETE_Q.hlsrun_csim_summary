@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/DELETE_Q.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Jan 29 19:16:26 2025",
+ "timestampMillis": "1738158386888",
+ "buildStep": {
+  "cmdId": "4cd53e67-552f-4068-952c-18c2e2cb7098",
+  "name": "vitis-run",
+  "logFile": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/logs/DELETE_Q.steps.log",
+  "commandLine": "/work/Xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg --work_dir DELETE_Q ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg",
+   "--work_dir",
+   "DELETE_Q"
+  ],
+  "iniFiles": [],
+  "cwd": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jan 29 19:16:26 2025",
+ "timestampMillis": "1738158386888",
+ "status": {
+  "cmdId": "4cd53e67-552f-4068-952c-18c2e2cb7098",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Jan 29 19:16:40 2025",
+ "timestampMillis": "1738158400142",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "delete_1",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.cpp",
+     "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jan 29 19:16:40 2025",
+ "timestampMillis": "1738158400144",
+ "buildStep": {
+  "cmdId": "0514096c-cacd-4466-8391-a52885cecfff",
+  "name": "",
+  "logFile": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jan 29 19:16:40 2025",
+ "timestampMillis": "1738158400144",
+ "status": {
+  "cmdId": "0514096c-cacd-4466-8391-a52885cecfff",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jan 29 19:16:49 2025",
+ "timestampMillis": "1738158409159",
+ "status": {
+  "cmdId": "0514096c-cacd-4466-8391-a52885cecfff",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jan 29 19:16:49 2025",
+ "timestampMillis": "1738158409588",
+ "status": {
+  "cmdId": "4cd53e67-552f-4068-952c-18c2e2cb7098",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jan 29 19:16:49 2025",
+ "timestampMillis": "1738158409590",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jan 29 19:16:49 2025",
+ "timestampMillis": "1738158409592",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

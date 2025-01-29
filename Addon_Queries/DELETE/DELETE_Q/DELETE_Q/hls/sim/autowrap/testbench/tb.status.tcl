@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/./sim/autowrap/testbench/DELETE_Q.cpp_pre.cpp.tb.cpp

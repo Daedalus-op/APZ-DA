@@ -1,0 +1,148 @@
+
+
+================================================================
+== Synthesis Summary Report of 'delete_top'
+================================================================
++ General Information: 
+    * Date:           Wed Jan 29 19:17:57 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        DELETE_Q
+    * Solution:       hls (Vitis Kernel Flow Target)
+    * Product family: virtexuplusHBM
+    * Target device:  xcu50-fsvh2104-3-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |                 Modules                | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |                 & Loops                | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +----------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ delete_top                            |     -|  6.14|        -|       -|         -|        -|     -|        no|     -|   -|  539 (~0%)|  439 (~0%)|    -|
+    | + delete_top_Pipeline_VITIS_LOOP_24_1  |     -|  6.14|        -|       -|         -|        -|     -|        no|     -|   -|  265 (~0%)|  235 (~0%)|    -|
+    |  o VITIS_LOOP_24_1                     |     -|  7.30|        -|       -|         3|        1|     -|       yes|     -|   -|          -|          -|    -|
+    +----------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++----------------+-----------+---------------+-------+--------+--------+
+| Interface      | Direction | Register Mode | TDATA | TREADY | TVALID |
++----------------+-----------+---------------+-------+--------+--------+
+| i_col1_strm    | in        | both          | 32    | 1      | 1      |
+| i_col2_strm    | in        | both          | 32    | 1      | 1      |
+| i_col3_strm    | in        | both          | 32    | 1      | 1      |
+| i_d_key1_strm  | in        | both          | 32    | 1      | 1      |
+| i_e_strm       | in        | both          | 8     | 1      | 1      |
+| i_hash_strm    | in        | both          | 32    | 1      | 1      |
+| i_payload_strm | in        | both          | 128   | 1      | 1      |
+| o_col1_strm    | out       | both          | 32    | 1      | 1      |
+| o_col2_strm    | out       | both          | 32    | 1      | 1      |
+| o_col3_strm    | out       | both          | 32    | 1      | 1      |
+| o_e_strm       | out       | both          | 8     | 1      | 1      |
+| o_hash_strm    | out       | both          | 32    | 1      | 1      |
+| o_payload_strm | out       | both          | 128   | 1      | 1      |
++----------------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------------+-----------+--------------------------+
+| Argument       | Direction | Datatype                 |
++----------------+-----------+--------------------------+
+| i_hash_strm    | in        | stream<ap_uint<32>, 0>&  |
+| i_col1_strm    | in        | stream<ap_uint<32>, 0>&  |
+| i_col2_strm    | in        | stream<ap_uint<32>, 0>&  |
+| i_col3_strm    | in        | stream<ap_uint<32>, 0>&  |
+| i_payload_strm | in        | stream<ap_uint<128>, 0>& |
+| i_e_strm       | in        | stream<bool, 0>&         |
+| i_d_key1_strm  | in        | stream<ap_uint<32>, 0>&  |
+| o_hash_strm    | out       | stream<ap_uint<32>, 0>&  |
+| o_col1_strm    | out       | stream<ap_uint<32>, 0>&  |
+| o_col2_strm    | out       | stream<ap_uint<32>, 0>&  |
+| o_col3_strm    | out       | stream<ap_uint<32>, 0>&  |
+| o_payload_strm | out       | stream<ap_uint<128>, 0>& |
+| o_e_strm       | out       | stream<bool, 0>&         |
++----------------+-----------+--------------------------+
+
+* SW-to-HW Mapping
++----------------+----------------+-----------+
+| Argument       | HW Interface   | HW Type   |
++----------------+----------------+-----------+
+| i_hash_strm    | i_hash_strm    | interface |
+| i_col1_strm    | i_col1_strm    | interface |
+| i_col2_strm    | i_col2_strm    | interface |
+| i_col3_strm    | i_col3_strm    | interface |
+| i_payload_strm | i_payload_strm | interface |
+| i_e_strm       | i_e_strm       | interface |
+| i_d_key1_strm  | i_d_key1_strm  | interface |
+| o_hash_strm    | o_hash_strm    | interface |
+| o_col1_strm    | o_col1_strm    | interface |
+| o_col2_strm    | o_col2_strm    | interface |
+| o_col3_strm    | o_col3_strm    | interface |
+| o_payload_strm | o_payload_strm | interface |
+| o_e_strm       | o_e_strm       | interface |
++----------------+----------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------+-----+--------+-----------+-------+------+---------+
+| Name                                   | DSP | Pragma | Variable  | Op    | Impl | Latency |
++----------------------------------------+-----+--------+-----------+-------+------+---------+
+| + delete_top                           | 0   |        |           |       |      |         |
+|  + delete_top_Pipeline_VITIS_LOOP_24_1 | 0   |        |           |       |      |         |
+|    icmp_ln32_fu_195_p2                 |     |        | icmp_ln32 | seteq | auto | 0       |
++----------------------------------------+-----+--------+-----------+-------+------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------+---------------------------------------------------+
+| Type      | Options                  | Location                                          |
++-----------+--------------------------+---------------------------------------------------+
+| interface | axis port=i_hash_strm    | ../DELETE_Q.cpp:151 in delete_top, i_hash_strm    |
+| interface | axis port=i_col1_strm    | ../DELETE_Q.cpp:152 in delete_top, i_col1_strm    |
+| interface | axis port=i_col2_strm    | ../DELETE_Q.cpp:153 in delete_top, i_col2_strm    |
+| interface | axis port=i_col3_strm    | ../DELETE_Q.cpp:154 in delete_top, i_col3_strm    |
+| interface | axis port=i_payload_strm | ../DELETE_Q.cpp:155 in delete_top, i_payload_strm |
+| interface | axis port=i_e_strm       | ../DELETE_Q.cpp:156 in delete_top, i_e_strm       |
+| interface | axis port=i_d_key1_strm  | ../DELETE_Q.cpp:157 in delete_top, i_d_key1_strm  |
+| interface | axis port=o_hash_strm    | ../DELETE_Q.cpp:158 in delete_top, o_hash_strm    |
+| interface | axis port=o_col1_strm    | ../DELETE_Q.cpp:159 in delete_top, o_col1_strm    |
+| interface | axis port=o_col2_strm    | ../DELETE_Q.cpp:160 in delete_top, o_col2_strm    |
+| interface | axis port=o_col3_strm    | ../DELETE_Q.cpp:161 in delete_top, o_col3_strm    |
+| interface | axis port=o_payload_strm | ../DELETE_Q.cpp:162 in delete_top, o_payload_strm |
+| interface | axis port=o_e_strm       | ../DELETE_Q.cpp:163 in delete_top, o_e_strm       |
+| interface | ap_ctrl_none port=return | ../DELETE_Q.cpp:164 in delete_top, return         |
++-----------+--------------------------+---------------------------------------------------+
+
+

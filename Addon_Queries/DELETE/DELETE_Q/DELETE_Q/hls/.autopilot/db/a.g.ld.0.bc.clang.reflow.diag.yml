@@ -1,0 +1,89 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../DELETE_Q.cpp, Line: 166, Column: 2 }
+Function:        delete_top
+Args:            
+  - Callee:          'void xf::database::details::delete_1::delete_1<32, 32, 128, 32>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: ../DELETE_Q.cpp, Line: 21, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          delete_top
+    DebugLoc:        { File: ../DELETE_Q.cpp, Line: 150, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../DELETE_Q.cpp, Line: 166, Column: 2 }
+Function:        delete_top
+Args:            
+  - Callee:          'void xf::database::details::delete_1::delete_1<32, 32, 128, 32>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: ../DELETE_Q.cpp, Line: 21, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          delete_top
+    DebugLoc:        { File: ../DELETE_Q.cpp, Line: 150, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_delete_top_ir
+Args:            
+  - Callee:          delete_top
+    DebugLoc:        { File: ../DELETE_Q.cpp, Line: 150, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_delete_top_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../DELETE_Q.cpp, Line: 150, Column: 0 }
+Function:        delete_top
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void xf::database::details::delete_1::delete_1<32, 32, 128, 32>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: ../DELETE_Q.cpp, Line: 21, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          delete_top
+    DebugLoc:        { File: ../DELETE_Q.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../DELETE_Q.cpp, Line: 24, Column: 22 }
+Function:        delete_top
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          ' '
+  - LoopLoc:         '../DELETE_Q.cpp:24:22'
+  - String:          ' '
+  - Function:        delete_top
+    DebugLoc:        { File: ../DELETE_Q.cpp, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../DELETE_Q.cpp, Line: 24, Column: 22 }
+Function:        delete_top
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          '''('
+  - LoopLoc:         '../DELETE_Q.cpp:24:22'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          '> at '
+  - LoopLoc:         '../DELETE_Q.cpp:24:22'
+  - String:          ' '
+...

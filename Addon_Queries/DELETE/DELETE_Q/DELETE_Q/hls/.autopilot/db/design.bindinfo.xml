@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op seteq" ID="" IMPL="auto" LATENCY="0" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln32_fu_195_p2" SOURCE="../DELETE_Q.cpp:32" VARIABLE="icmp_ln32" MODULE="delete_top_Pipeline_VITIS_LOOP_24_1" LOOP="VITIS_LOOP_24_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+</BindInfo>

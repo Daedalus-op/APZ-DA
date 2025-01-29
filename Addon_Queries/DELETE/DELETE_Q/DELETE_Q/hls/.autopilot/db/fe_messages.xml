@@ -1,0 +1,51 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=delete_top" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:151:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=i_hash_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:152:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=i_col1_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:153:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=i_col2_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:154:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=i_col3_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:155:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=i_payload_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:156:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=i_e_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:157:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=i_d_key1_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:158:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=o_hash_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:159:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=o_col1_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:160:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=o_col2_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:161:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=o_col3_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:162:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=o_payload_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:163:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=o_e_strm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../DELETE_Q.cpp:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="delete_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../DELETE_Q.cpp:150:0" msg_body="Inlining function 'void xf::database::details::delete_1::delete_1&lt;32, 32, 128, 32&gt;(hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;128&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;128&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;)' into 'delete_top'">
+        <args Callee="void xf::database::details::delete_1::delete_1&lt;32, 32, 128, 32&gt;(hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;128&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;128&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;)" Callee-DebugLoc="File ../DELETE_Q.cpp Line 21 Column 0" Caller="delete_top" Caller-DebugLoc="File ../DELETE_Q.cpp Line 150 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,81 @@
+{
+    "rules": {
+        "['/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q.cpp.0.bc', '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q.cpp.0.bc.d']": {
+            "command": [
+                "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang",
+                "-c",
+                "-emit-llvm",
+                "-MD",
+                "-MF",
+                "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q.cpp.0.bc.d",
+                "-fhls",
+                "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot",
+                "-vitis-hls=/work/Xilinx/Vitis/2024.2",
+                "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+                "-hls-clock-period=10.0",
+                "-fslxtrace",
+                "-fslx-compile-mode",
+                "-fhlstoplevel=delete_1",
+                "../DELETE_Q.cpp",
+                "-o",
+                "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q.cpp.0.bc"
+            ],
+            "exectime": 4.667210578918457,
+            "cwd": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q"
+        },
+        "['/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q.cpp.0.o', '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q.cpp.0.o.d']": {
+            "command": [
+                "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang",
+                "-c",
+                "-MD",
+                "-MF",
+                "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=/work/Xilinx/Vitis/2024.2/vcxx/data/include",
+                "-vitis-hls=/work/Xilinx/Vitis/2024.2",
+                "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+                "-fslxtrace",
+                "-fslx-compile-mode",
+                "-fslxskipfunctionbody",
+                "-fhlstoplevel=delete_1",
+                "../DELETE_Q.cpp",
+                "-o",
+                "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q.cpp.0.o"
+            ],
+            "exectime": 4.9874091148376465,
+            "cwd": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q"
+        },
+        "['/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q_Test.cpp.0.o', '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q_Test.cpp.0.o.d']": {
+            "command": [
+                "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang",
+                "-c",
+                "-MD",
+                "-MF",
+                "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q_Test.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=/work/Xilinx/Vitis/2024.2/vcxx/data/include",
+                "-vitis-hls=/work/Xilinx/Vitis/2024.2",
+                "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+                "-fslxtrace",
+                "-fslx-compile-mode",
+                "-fslxskipfunctionbody",
+                "-fhlstoplevel=delete_1",
+                "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q_Test.cpp",
+                "-o",
+                "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q_Test.cpp.0.o"
+            ],
+            "exectime": 3.6344690322875977,
+            "cwd": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q"
+        },
+        "['/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/syn_srcs.bc']": {
+            "command": [
+                "/work/Xilinx/Vitis/2024.2/vcxx/libexec/llvm-link",
+                "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/DELETE_Q.cpp.0.bc",
+                "-o",
+                "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/csim/code_analyzer/.internal/build/syn_srcs.bc"
+            ],
+            "exectime": 0.09067177772521973,
+            "cwd": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q"
+        }
+    }
+}

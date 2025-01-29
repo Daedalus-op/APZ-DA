@@ -1,0 +1,35 @@
+INFO: [HLS 200-2005] Using work_dir /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.cpp' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.hpp' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q_Test.cpp' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q_Test.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=delete_1' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vitis' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1465] Applying ini 'part=xcu50-fsvh2104-3-e' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-3-e'
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=xo' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(5)
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../DELETE_Q_Test.cpp in debug mode
+   Generating csim.exe
+ld.lld: error: undefined symbol: delete_1(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)
+>>> referenced by DELETE_Q_Test.cpp:58 (../../../../../DELETE_Q_Test.cpp:58)
+>>>               obj/DELETE_Q_Test.o:(main)
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile.rules:350: csim.exe] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: 4
+INFO: [HLS 200-112] Total CPU user time: 9.12 seconds. Total CPU system time: 1.14 seconds. Total elapsed time: 9.95 seconds; peak allocated memory: 326.996 MB.

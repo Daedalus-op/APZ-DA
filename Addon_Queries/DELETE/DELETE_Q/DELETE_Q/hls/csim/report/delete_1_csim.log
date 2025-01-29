@@ -1,0 +1,38 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../DELETE_Q.cpp in debug mode
+   Generating csim.exe
+Writing test data into streams...
+Running delete_q_top...
+
+Verifying outputs...
+Records after deletion (excluding records where col1 = 116):
+Hash	Col1	Col2	Col3	Payload
+----------------------------------------
+20		58		58		58		370
+30		465		465		465		227
+40		391		391		391		374
+50		226		226		226		409
+60		198		198		198		375
+80		268		268		268		18
+90		262		262		262		99
+100		235		235		235		304
+10		141		141		141		198
+20		420		420		420		238
+30		461		461		461		161
+50		297		297		297		416
+70		33		33		33		50
+80		98		98		98		68
+100		367		367		367		237
+Warning: One or more output streams are empty. Breaking loop.
+
+Test Summary:
+Total input records: 20
+Records after deletion: 15
+Records deleted: 5
+
+Test PASSED!
+WARNING [HLS SIM]: hls::stream 'hls::stream<bool, 0>1' contains leftover data, which may result in RTL simulation hanging.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 21
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

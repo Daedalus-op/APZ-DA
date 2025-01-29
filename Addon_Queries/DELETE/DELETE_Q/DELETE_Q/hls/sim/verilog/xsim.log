@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# xsim v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Jan 29 19:20:21 2025
+# Process ID         : 12194
+# Current directory  : /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/sim/verilog
+# Command line       : xsim -mode tcl -source {xsim.dir/delete_top/xsim_script.tcl}
+# Log file           : /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/sim/verilog/xsim.log
+# Journal file       : /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/sim/verilog/xsim.jou
+# Running On         : arix8
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.1 LTS
+# Processor Detail   : AMD Ryzen 7 3700U with Radeon Vega Mobile Gfx
+# CPU Frequency      : 2393.740 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 6119 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 8267 MB
+# Available Virtual  : 3267 MB
+#-----------------------------------------------------------
+source xsim.dir/delete_top/xsim_script.tcl
+# xsim {delete_top} -autoloadwcfg -tclbatch {delete_top.tcl}
+Time resolution is 1 ps
+source delete_top.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "155000"
+// RTL Simulation : 1 / 1 [n/a] @ "435000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 495 ns : File "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/sim/verilog/delete_top.autotb.v" Line 526
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Jan 29 19:20:32 2025...

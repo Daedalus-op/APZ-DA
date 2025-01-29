@@ -1,0 +1,23 @@
+{
+    "1": {
+        "name": "delete_top_Pipeline_VITIS_LOOP_24_1",
+        "file": "..\/DELETE_Q.cpp",
+        "fileloc": "166",
+        "instructions": "42",
+        "total_instructions": "42",
+        "calls": "",
+        "basicblocks": "8",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "delete_top",
+        "file": "DELETE_Q.cpp",
+        "fileloc": "138",
+        "instructions": "33",
+        "total_instructions": "75",
+        "calls": "1",
+        "basicblocks": "1"
+    }
+}

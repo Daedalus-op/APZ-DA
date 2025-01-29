@@ -1,0 +1,1828 @@
+INFO: [HLS 200-2005] Using work_dir /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.cpp' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.hpp' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q_Test.cpp' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q_Test.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=delete_1' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vitis' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1465] Applying ini 'part=xcu50-fsvh2104-3-e' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-3-e'
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=xo' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(5)
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../DELETE_Q.cpp in debug mode
+../../../../../DELETE_Q.cpp:166:27: error: unexpected namespace name 'delete_1': expected expression
+   xf::database::details::delete_1<32, 32, 128, 32>(
+                          ^
+../../../../../DELETE_Q.cpp:166:51: error: invalid operands to binary expression ('int' and 'hls::stream<bool>')
+   xf::database::details::delete_1<32, 32, 128, 32>(
+                                                ~~^~
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7180:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(bool, 1, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7180:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7181:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(char, 8, CHAR_IS_SIGNED)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7181:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7182:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(signed char, 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7182:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7183:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(unsigned char, 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7183:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7184:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(short, sizeof(short) * 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7184:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7185:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(unsigned short, sizeof(unsigned short) * 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7185:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7186:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(int, sizeof(int) * 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7186:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7187:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(unsigned int, sizeof(unsigned int) * 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7187:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7188:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(long, sizeof(long) * 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7188:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7189:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(unsigned long, sizeof(unsigned long) * 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7189:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7190:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(ap_slong, sizeof(ap_slong) * 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7190:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7191:1: note: candidate template ignored: could not match 'ap_private<_AP_W, _AP_S>' against 'int'
+OPS_MIX_INT(ap_ulong, sizeof(ap_ulong) * 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7104:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W, _AP_S>& op,          \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7191:1: note: candidate template ignored: could not match 'ap_private' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7173:3: note: expanded from macro 'OPS_MIX_INT'
+  OP_REL_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))          \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7109:35: note: expanded from macro 'OP_REL_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                  \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7270:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W1, _AP_S1>' against 'int'
+OP_REL_MIX_RANGE(>)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7236:35: note: expanded from macro 'OP_REL_MIX_RANGE'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W1, _AP_S1>& op1,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7270:1: note: candidate template ignored: could not match 'ap_private<_AP_W1, _AP_S1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7241:35: note: expanded from macro 'OP_REL_MIX_RANGE'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W1, _AP_S1>& op1,           \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7345:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W1, _AP_S1>' against 'int'
+OP_REL_MIX_BIT(>)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7311:35: note: expanded from macro 'OP_REL_MIX_BIT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W1, _AP_S1>& op1,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7345:1: note: candidate template ignored: could not match 'ap_private<_AP_W1, _AP_S1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7316:35: note: expanded from macro 'OP_REL_MIX_BIT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const ap_private<_AP_W1, _AP_S1>& op1,         \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7386:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(bool, 1, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7386:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7386:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7386:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7387:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(char, 8, CHAR_IS_SIGNED)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7387:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7387:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7387:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7388:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(signed char, 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7388:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7388:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7388:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7389:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(unsigned char, 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7389:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7389:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7389:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7390:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(short, sizeof(short) * 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7390:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7390:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7390:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7391:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(unsigned short, sizeof(unsigned short) * 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7391:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7391:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7391:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7392:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(int, sizeof(int) * 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7392:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7392:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7392:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7393:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(unsigned int, sizeof(unsigned int) * 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7393:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7393:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7393:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7394:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(long, sizeof(long) * 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7394:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7394:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7394:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7395:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(unsigned long, sizeof(unsigned long) * 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7395:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7395:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7395:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7396:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(ap_slong, sizeof(ap_slong) * 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7396:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7396:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7396:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7397:1: note: candidate template ignored: could not match '_private_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_MIX_INT(ap_ulong, sizeof(ap_ulong) * 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7355:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_range_ref<_AP_W, _AP_S>& op,   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7397:1: note: candidate template ignored: could not match '_private_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7362:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7397:1: note: candidate template ignored: could not match '_private_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7368:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(const _private_bit_ref<_AP_W, _AP_S>& op,     \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7397:1: note: candidate template ignored: could not match '_private_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7379:3: note: expanded from macro 'REF_REL_MIX_INT'
+  REF_REL_OP_MIX_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_private.h:7373:35: note: expanded from macro 'REF_REL_OP_MIX_INT'
+  HLS_CONSTEXPR_EXTRA INLINE bool operator REL_OP(C_TYPE op2,                                   \
+                                  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1765:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(bool, 1, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1765:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1766:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(char, 8, CHAR_IS_SIGNED)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1766:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1767:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(signed char, 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1767:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1768:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(unsigned char, 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1768:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1769:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(short, _AP_SIZE_short, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1769:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1770:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(unsigned short, _AP_SIZE_short, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1770:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1771:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(int, _AP_SIZE_int, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1771:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1772:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(unsigned int, _AP_SIZE_int, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1772:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1773:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(long, _AP_SIZE_long, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1773:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1774:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(unsigned long, _AP_SIZE_long, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1774:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1775:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1775:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1776:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1747:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1776:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1758:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(>, C_TYPE, _AP_W2, _AP_S2)        \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1752:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1802:3: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+  OP_REL_WITH_DOUBLE_OR_FLOAT(>)
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1783:37: note: expanded from macro 'OP_REL_WITH_DOUBLE_OR_FLOAT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator Sym(const ap_int_base<_AP_W, _AP_S>& op1,    \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1802:3: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1788:37: note: expanded from macro 'OP_REL_WITH_DOUBLE_OR_FLOAT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator Sym(double op1,                              \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1802:3: note: candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1793:37: note: expanded from macro 'OP_REL_WITH_DOUBLE_OR_FLOAT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator Sym(const ap_int_base<_AP_W, _AP_S>& op1,    \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1802:3: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1798:37: note: expanded from macro 'OP_REL_WITH_DOUBLE_OR_FLOAT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator Sym(float op1,                               \
+                                    ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1916:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W1, _AP_S1>' against 'int'
+OP_REL_WITH_RANGE(>)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1904:23: note: expanded from macro 'OP_REL_WITH_RANGE'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W1, _AP_S1>& op1,     \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1916:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W1, _AP_S1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:1909:23: note: expanded from macro 'OP_REL_WITH_RANGE'
+  INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W1, _AP_S1>& op1,      \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:2025:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W1, _AP_S1>' against 'int'
+OP_REL_WITH_BIT(>)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:2013:23: note: expanded from macro 'OP_REL_WITH_BIT'
+  INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W1, _AP_S1>& op1,   \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:2025:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W1, _AP_S1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:2018:23: note: expanded from macro 'OP_REL_WITH_BIT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W1, _AP_S1>& op1,    \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:2132:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W3, _AP_S3>' against 'int'
+OP_REL_WITH_CONCAT(>)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:2115:23: note: expanded from macro 'OP_REL_WITH_CONCAT'
+  INLINE NODEBUG bool operator REL_OP(                                        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:2132:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W1, _AP_T1, _AP_W2, _AP_T2>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:2123:23: note: expanded from macro 'OP_REL_WITH_CONCAT'
+  INLINE NODEBUG bool operator REL_OP(                                        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1036:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(bool, 1, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1036:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1036:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1036:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1037:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(char, 8, CHAR_IS_SIGNED)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1037:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1037:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1037:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1038:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(signed char, 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1038:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1038:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1038:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1039:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(unsigned char, 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1039:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1039:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1039:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1040:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(short, _AP_SIZE_short, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1040:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1040:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1040:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1041:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(unsigned short, _AP_SIZE_short, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1041:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1041:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1041:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1042:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(int, _AP_SIZE_int, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1042:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1042:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1042:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1043:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(unsigned int, _AP_SIZE_int, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1043:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1043:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1043:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1044:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(long, _AP_SIZE_long, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1044:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1044:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1044:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1045:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(unsigned long, _AP_SIZE_long, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1045:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1045:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1045:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1046:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(ap_slong, _AP_SIZE_ap_slong, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1046:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1046:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1046:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1047:1: note: candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'int'
+REF_REL_WITH_INT_1(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1047:1: note: candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1047:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1047:1: note: candidate template ignored: could not match 'ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1031:3: note: expanded from macro 'REF_REL_WITH_INT_1'
+  REF_REL_OP_WITH_INT(>, C_TYPE, _AP_WI, _AP_SI)   \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2373:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(bool, 1, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2373:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2374:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(char, 8, CHAR_IS_SIGNED)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2374:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2375:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(signed char, 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2375:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2376:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(unsigned char, 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2376:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2377:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(short, _AP_SIZE_short, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2377:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2378:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(unsigned short, _AP_SIZE_short, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2378:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2379:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(int, _AP_SIZE_int, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2379:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2380:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(unsigned int, _AP_SIZE_int, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2380:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2381:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(long, _AP_SIZE_long, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2381:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2382:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(unsigned long, _AP_SIZE_long, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2382:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2383:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2383:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2384:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+ALL_AF_OP_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2312:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2384:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2366:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(>, C_TYPE, (BITS), (SIGN))           \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2319:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2483:1: note: candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REL_OP_WITH_AP_INT(>)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2429:43: note: expanded from macro 'AF_REL_OP_WITH_AP_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2483:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W2, _AP_S2>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2437:43: note: expanded from macro 'AF_REL_OP_WITH_AP_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:2509:41: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator>(
+                                        ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:679:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(bool, 1, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:679:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:679:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:679:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:680:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(char, 8, CHAR_IS_SIGNED)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:680:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:680:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:680:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:681:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(signed char, 8, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:681:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:681:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:681:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:682:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(unsigned char, 8, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:682:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:682:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:682:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:683:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(short, _AP_SIZE_short, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:683:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:683:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:683:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:684:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(unsigned short, _AP_SIZE_short, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:684:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:684:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:684:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:685:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(int, _AP_SIZE_int, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:685:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:685:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:685:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:686:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(unsigned int, _AP_SIZE_int, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:686:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:686:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:686:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:687:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(long, _AP_SIZE_long, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:687:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:687:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:687:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:688:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(unsigned long, _AP_SIZE_long, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:688:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:688:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:688:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:689:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:689:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:689:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:689:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:690:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OPS_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:690:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:690:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:690:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:672:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(>, C_TYPE, (_AP_W2), (_AP_S2))  \
+  ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:725:1: note: candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+AF_REF_REL_OP_WITH_AP_INT(>)
+^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:698:23: note: expanded from macro 'AF_REF_REL_OP_WITH_AP_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:725:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W2, _AP_S2>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:705:23: note: expanded from macro 'AF_REF_REL_OP_WITH_AP_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:725:1: note: candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:712:23: note: expanded from macro 'AF_REF_REL_OP_WITH_AP_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:725:1: note: candidate template ignored: could not match 'ap_int_base<_AP_W2, _AP_S2>' against 'int'
+/work/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h:719:23: note: expanded from macro 'AF_REF_REL_OP_WITH_AP_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+../../../../../DELETE_Q.cpp:167:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    i_hash_strm, 
+    ^~~~~~~~~~~
+../../../../../DELETE_Q.cpp:168:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    i_col1_strm, 
+    ^~~~~~~~~~~
+../../../../../DELETE_Q.cpp:169:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    i_col2_strm, 
+    ^~~~~~~~~~~
+../../../../../DELETE_Q.cpp:170:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    i_col3_strm, 
+    ^~~~~~~~~~~
+../../../../../DELETE_Q.cpp:171:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    i_payload_strm, 
+    ^~~~~~~~~~~~~~
+../../../../../DELETE_Q.cpp:172:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    i_e_strm, 
+    ^~~~~~~~
+../../../../../DELETE_Q.cpp:173:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    i_d_key1_strm, 
+    ^~~~~~~~~~~~~
+../../../../../DELETE_Q.cpp:174:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    o_hash_strm, 
+    ^~~~~~~~~~~
+../../../../../DELETE_Q.cpp:175:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    o_col1_strm, 
+    ^~~~~~~~~~~
+../../../../../DELETE_Q.cpp:176:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    o_col2_strm, 
+    ^~~~~~~~~~~
+../../../../../DELETE_Q.cpp:177:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    o_col3_strm, 
+    ^~~~~~~~~~~
+../../../../../DELETE_Q.cpp:178:5: warning: left operand of comma operator has no effect [-Wunused-value]
+    o_payload_strm, 
+    ^~~~~~~~~~~~~~
+12 warnings and 2 errors generated.
+make: *** [csim.mk:94: obj/DELETE_Q.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: 4
+INFO: [HLS 200-112] Total CPU user time: 12.21 seconds. Total CPU system time: 1.53 seconds. Total elapsed time: 13.37 seconds; peak allocated memory: 326.996 MB.

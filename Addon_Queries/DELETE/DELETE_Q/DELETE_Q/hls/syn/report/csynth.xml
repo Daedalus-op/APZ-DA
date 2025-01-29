@@ -1,0 +1,993 @@
+<profile>
+    <ReportVersion>
+        <Version>2024.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplusHBM</ProductFamily>
+        <Part>xcu50-fsvh2104-3-e</Part>
+        <TopModelName>delete_top</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vitis</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>1.156</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>../DELETE_Q.cpp:138</SourceLocation>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>539</FF>
+            <LUT>437</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>2688</BRAM_18K>
+            <DSP>5952</DSP>
+            <FF>1743360</FF>
+            <LUT>871680</LUT>
+            <URAM>640</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>delete_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>delete_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_hash_strm_TDATA</name>
+            <Object>i_hash_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_hash_strm_TVALID</name>
+            <Object>i_hash_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_hash_strm_TREADY</name>
+            <Object>i_hash_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_col1_strm_TDATA</name>
+            <Object>i_col1_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_col1_strm_TVALID</name>
+            <Object>i_col1_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_col1_strm_TREADY</name>
+            <Object>i_col1_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_col2_strm_TDATA</name>
+            <Object>i_col2_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_col2_strm_TVALID</name>
+            <Object>i_col2_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_col2_strm_TREADY</name>
+            <Object>i_col2_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_col3_strm_TDATA</name>
+            <Object>i_col3_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_col3_strm_TVALID</name>
+            <Object>i_col3_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_col3_strm_TREADY</name>
+            <Object>i_col3_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_payload_strm_TDATA</name>
+            <Object>i_payload_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>128</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_payload_strm_TVALID</name>
+            <Object>i_payload_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_payload_strm_TREADY</name>
+            <Object>i_payload_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_e_strm_TDATA</name>
+            <Object>i_e_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_e_strm_TVALID</name>
+            <Object>i_e_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_e_strm_TREADY</name>
+            <Object>i_e_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_d_key1_strm_TDATA</name>
+            <Object>i_d_key1_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_d_key1_strm_TVALID</name>
+            <Object>i_d_key1_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>i_d_key1_strm_TREADY</name>
+            <Object>i_d_key1_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_hash_strm_TDATA</name>
+            <Object>o_hash_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_hash_strm_TVALID</name>
+            <Object>o_hash_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_hash_strm_TREADY</name>
+            <Object>o_hash_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_col1_strm_TDATA</name>
+            <Object>o_col1_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_col1_strm_TVALID</name>
+            <Object>o_col1_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_col1_strm_TREADY</name>
+            <Object>o_col1_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_col2_strm_TDATA</name>
+            <Object>o_col2_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_col2_strm_TVALID</name>
+            <Object>o_col2_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_col2_strm_TREADY</name>
+            <Object>o_col2_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_col3_strm_TDATA</name>
+            <Object>o_col3_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_col3_strm_TVALID</name>
+            <Object>o_col3_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_col3_strm_TREADY</name>
+            <Object>o_col3_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_payload_strm_TDATA</name>
+            <Object>o_payload_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>128</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_payload_strm_TVALID</name>
+            <Object>o_payload_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_payload_strm_TREADY</name>
+            <Object>o_payload_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_e_strm_TDATA</name>
+            <Object>o_e_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_e_strm_TVALID</name>
+            <Object>o_e_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>o_e_strm_TREADY</name>
+            <Object>o_e_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>delete_top</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_delete_top_Pipeline_VITIS_LOOP_24_1_fu_70</InstName>
+                    <ModuleName>delete_top_Pipeline_VITIS_LOOP_24_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>70</ID>
+                    <BindInstances>icmp_ln32_fu_195_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>delete_top_Pipeline_VITIS_LOOP_24_1</Name>
+            <Loops>
+                <VITIS_LOOP_24_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.156</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_24_1>
+                        <Name>VITIS_LOOP_24_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_24_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../DELETE_Q.cpp:24~../DELETE_Q.cpp:166</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_24_1>
+                            <Name>VITIS_LOOP_24_1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../DELETE_Q.cpp:24~../DELETE_Q.cpp:166</SourceLocation>
+                        </VITIS_LOOP_24_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>265</FF>
+                    <AVAIL_FF>1743360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>235</LUT>
+                    <AVAIL_LUT>871680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>2688</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>5952</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>640</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln32_fu_195_p2" SOURCE="../DELETE_Q.cpp:32" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln32" VISIBLE="false"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>delete_top</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.156</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../DELETE_Q.cpp:138</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>539</FF>
+                    <AVAIL_FF>1743360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>439</LUT>
+                    <AVAIL_LUT>871680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>2688</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>5952</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>640</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_export format="xo"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="i_hash_strm" index="0" direction="in" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="i_hash_strm" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="i_col1_strm" index="1" direction="in" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="i_col1_strm" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="i_col2_strm" index="2" direction="in" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="i_col2_strm" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="i_col3_strm" index="3" direction="in" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="i_col3_strm" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="i_payload_strm" index="4" direction="in" srcType="stream&lt;ap_uint&lt;128&gt;, 0&gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="i_payload_strm" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="i_e_strm" index="5" direction="in" srcType="stream&lt;bool, 0&gt;&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="interface" interface="i_e_strm" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="i_d_key1_strm" index="6" direction="in" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="i_d_key1_strm" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="o_hash_strm" index="7" direction="out" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="o_hash_strm" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="o_col1_strm" index="8" direction="out" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="o_col1_strm" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="o_col2_strm" index="9" direction="out" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="o_col2_strm" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="o_col3_strm" index="10" direction="out" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="o_col3_strm" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="o_payload_strm" index="11" direction="out" srcType="stream&lt;ap_uint&lt;128&gt;, 0&gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="o_payload_strm" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="o_e_strm" index="12" direction="out" srcType="stream&lt;bool, 0&gt;&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="interface" interface="o_e_strm" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">i_hash_strm:i_col1_strm:i_col2_strm:i_col3_strm:i_payload_strm:i_e_strm:i_d_key1_strm:o_hash_strm:o_col1_strm:o_col2_strm:o_col3_strm:o_payload_strm:o_e_strm</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="i_hash_strm" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="32" portPrefix="i_hash_strm_">
+            <ports>
+                <port>i_hash_strm_TDATA</port>
+                <port>i_hash_strm_TREADY</port>
+                <port>i_hash_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="i_hash_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="i_col1_strm" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="32" portPrefix="i_col1_strm_">
+            <ports>
+                <port>i_col1_strm_TDATA</port>
+                <port>i_col1_strm_TREADY</port>
+                <port>i_col1_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="i_col1_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="i_col2_strm" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="32" portPrefix="i_col2_strm_">
+            <ports>
+                <port>i_col2_strm_TDATA</port>
+                <port>i_col2_strm_TREADY</port>
+                <port>i_col2_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="i_col2_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="i_col3_strm" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="32" portPrefix="i_col3_strm_">
+            <ports>
+                <port>i_col3_strm_TDATA</port>
+                <port>i_col3_strm_TREADY</port>
+                <port>i_col3_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="i_col3_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="i_payload_strm" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="128" portPrefix="i_payload_strm_">
+            <ports>
+                <port>i_payload_strm_TDATA</port>
+                <port>i_payload_strm_TREADY</port>
+                <port>i_payload_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="i_payload_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="i_e_strm" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="8" portPrefix="i_e_strm_">
+            <ports>
+                <port>i_e_strm_TDATA</port>
+                <port>i_e_strm_TREADY</port>
+                <port>i_e_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="i_e_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="i_d_key1_strm" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="32" portPrefix="i_d_key1_strm_">
+            <ports>
+                <port>i_d_key1_strm_TDATA</port>
+                <port>i_d_key1_strm_TREADY</port>
+                <port>i_d_key1_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="i_d_key1_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="o_hash_strm" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="32" portPrefix="o_hash_strm_">
+            <ports>
+                <port>o_hash_strm_TDATA</port>
+                <port>o_hash_strm_TREADY</port>
+                <port>o_hash_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="o_hash_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="o_col1_strm" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="32" portPrefix="o_col1_strm_">
+            <ports>
+                <port>o_col1_strm_TDATA</port>
+                <port>o_col1_strm_TREADY</port>
+                <port>o_col1_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="o_col1_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="o_col2_strm" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="32" portPrefix="o_col2_strm_">
+            <ports>
+                <port>o_col2_strm_TDATA</port>
+                <port>o_col2_strm_TREADY</port>
+                <port>o_col2_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="o_col2_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="o_col3_strm" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="32" portPrefix="o_col3_strm_">
+            <ports>
+                <port>o_col3_strm_TDATA</port>
+                <port>o_col3_strm_TREADY</port>
+                <port>o_col3_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="o_col3_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="o_payload_strm" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="128" portPrefix="o_payload_strm_">
+            <ports>
+                <port>o_payload_strm_TDATA</port>
+                <port>o_payload_strm_TREADY</port>
+                <port>o_payload_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="o_payload_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="o_e_strm" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="8" portPrefix="o_e_strm_">
+            <ports>
+                <port>o_e_strm_TDATA</port>
+                <port>o_e_strm_TREADY</port>
+                <port>o_e_strm_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="o_e_strm"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AXIS">
+                <table>
+                    <keys size="6">Interface, Direction, Register Mode, TDATA, TREADY, TVALID</keys>
+                    <column name="i_col1_strm">in, both, 32, 1, 1</column>
+                    <column name="i_col2_strm">in, both, 32, 1, 1</column>
+                    <column name="i_col3_strm">in, both, 32, 1, 1</column>
+                    <column name="i_d_key1_strm">in, both, 32, 1, 1</column>
+                    <column name="i_e_strm">in, both, 8, 1, 1</column>
+                    <column name="i_hash_strm">in, both, 32, 1, 1</column>
+                    <column name="i_payload_strm">in, both, 128, 1, 1</column>
+                    <column name="o_col1_strm">out, both, 32, 1, 1</column>
+                    <column name="o_col2_strm">out, both, 32, 1, 1</column>
+                    <column name="o_col3_strm">out, both, 32, 1, 1</column>
+                    <column name="o_e_strm">out, both, 8, 1, 1</column>
+                    <column name="o_hash_strm">out, both, 32, 1, 1</column>
+                    <column name="o_payload_strm">out, both, 128, 1, 1</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="ap_ctrl">ap_ctrl_none, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="i_hash_strm">in, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="i_col1_strm">in, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="i_col2_strm">in, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="i_col3_strm">in, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="i_payload_strm">in, stream&lt;ap_uint&lt;128&gt; 0&gt;&amp;</column>
+                    <column name="i_e_strm">in, stream&lt;bool 0&gt;&amp;</column>
+                    <column name="i_d_key1_strm">in, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="o_hash_strm">out, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="o_col1_strm">out, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="o_col2_strm">out, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="o_col3_strm">out, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="o_payload_strm">out, stream&lt;ap_uint&lt;128&gt; 0&gt;&amp;</column>
+                    <column name="o_e_strm">out, stream&lt;bool 0&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="i_hash_strm">i_hash_strm, interface</column>
+                    <column name="i_col1_strm">i_col1_strm, interface</column>
+                    <column name="i_col2_strm">i_col2_strm, interface</column>
+                    <column name="i_col3_strm">i_col3_strm, interface</column>
+                    <column name="i_payload_strm">i_payload_strm, interface</column>
+                    <column name="i_e_strm">i_e_strm, interface</column>
+                    <column name="i_d_key1_strm">i_d_key1_strm, interface</column>
+                    <column name="o_hash_strm">o_hash_strm, interface</column>
+                    <column name="o_col1_strm">o_col1_strm, interface</column>
+                    <column name="o_col2_strm">o_col2_strm, interface</column>
+                    <column name="o_col3_strm">o_col3_strm, interface</column>
+                    <column name="o_payload_strm">o_payload_strm, interface</column>
+                    <column name="o_e_strm">o_e_strm, interface</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="interface" location="../DELETE_Q.cpp:151" status="valid" parentFunction="delete_top" variable="i_hash_strm" isDirective="0" options="axis port=i_hash_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:152" status="valid" parentFunction="delete_top" variable="i_col1_strm" isDirective="0" options="axis port=i_col1_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:153" status="valid" parentFunction="delete_top" variable="i_col2_strm" isDirective="0" options="axis port=i_col2_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:154" status="valid" parentFunction="delete_top" variable="i_col3_strm" isDirective="0" options="axis port=i_col3_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:155" status="valid" parentFunction="delete_top" variable="i_payload_strm" isDirective="0" options="axis port=i_payload_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:156" status="valid" parentFunction="delete_top" variable="i_e_strm" isDirective="0" options="axis port=i_e_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:157" status="valid" parentFunction="delete_top" variable="i_d_key1_strm" isDirective="0" options="axis port=i_d_key1_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:158" status="valid" parentFunction="delete_top" variable="o_hash_strm" isDirective="0" options="axis port=o_hash_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:159" status="valid" parentFunction="delete_top" variable="o_col1_strm" isDirective="0" options="axis port=o_col1_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:160" status="valid" parentFunction="delete_top" variable="o_col2_strm" isDirective="0" options="axis port=o_col2_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:161" status="valid" parentFunction="delete_top" variable="o_col3_strm" isDirective="0" options="axis port=o_col3_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:162" status="valid" parentFunction="delete_top" variable="o_payload_strm" isDirective="0" options="axis port=o_payload_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:163" status="valid" parentFunction="delete_top" variable="o_e_strm" isDirective="0" options="axis port=o_e_strm"/>
+        <Pragma type="interface" location="../DELETE_Q.cpp:164" status="valid" parentFunction="delete_top" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+    </PragmaReport>
+</profile>
+

@@ -1,0 +1,808 @@
+{
+  "Top": "delete_top",
+  "RtlTop": "delete_top",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "delete_top_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_none",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "virtexuplushbm",
+    "Device": "xcu50",
+    "Package": "-fsvh2104",
+    "Speed": "-3-e",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "i_hash_strm": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "stream<ap_uint<32>, 0>&",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "i_hash_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "i_col1_strm": {
+      "index": "1",
+      "direction": "in",
+      "srcType": "stream<ap_uint<32>, 0>&",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "i_col1_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "i_col2_strm": {
+      "index": "2",
+      "direction": "in",
+      "srcType": "stream<ap_uint<32>, 0>&",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "i_col2_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "i_col3_strm": {
+      "index": "3",
+      "direction": "in",
+      "srcType": "stream<ap_uint<32>, 0>&",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "i_col3_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "i_payload_strm": {
+      "index": "4",
+      "direction": "in",
+      "srcType": "stream<ap_uint<128>, 0>&",
+      "srcSize": "128",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "i_payload_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "i_e_strm": {
+      "index": "5",
+      "direction": "in",
+      "srcType": "stream<bool, 0>&",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "i_e_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "i_d_key1_strm": {
+      "index": "6",
+      "direction": "in",
+      "srcType": "stream<ap_uint<32>, 0>&",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "i_d_key1_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "o_hash_strm": {
+      "index": "7",
+      "direction": "out",
+      "srcType": "stream<ap_uint<32>, 0>&",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "o_hash_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "o_col1_strm": {
+      "index": "8",
+      "direction": "out",
+      "srcType": "stream<ap_uint<32>, 0>&",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "o_col1_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "o_col2_strm": {
+      "index": "9",
+      "direction": "out",
+      "srcType": "stream<ap_uint<32>, 0>&",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "o_col2_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "o_col3_strm": {
+      "index": "10",
+      "direction": "out",
+      "srcType": "stream<ap_uint<32>, 0>&",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "o_col3_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "o_payload_strm": {
+      "index": "11",
+      "direction": "out",
+      "srcType": "stream<ap_uint<128>, 0>&",
+      "srcSize": "128",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "o_payload_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "o_e_strm": {
+      "index": "12",
+      "direction": "out",
+      "srcType": "stream<bool, 0>&",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "o_e_strm",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vitis",
+    "ConfigTcl": [
+      "config_interface -m_axi_latency=64",
+      "config_interface -m_axi_alignment_byte_size=64",
+      "config_interface -m_axi_max_widen_bitwidth=512",
+      "config_interface -default_interface=kernel",
+      "config_rtl -register_reset_num=3",
+      "config_csim -code_analyzer=0",
+      "config_export -format=xo"
+    ],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "delete_top"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "Uncertainty": "2.7",
+    "IsCombinational": "0",
+    "II": "undef",
+    "Latency": "undef"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "delete_top",
+    "Version": "1.0",
+    "DisplayName": "Delete_top",
+    "Revision": "2113932077",
+    "Description": "An IP generated by Vitis HLS",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_delete_top_1_0.zip"
+  },
+  "Files": {
+    "CSource": [
+      "..\/..\/..\/DELETE_Q.cpp",
+      "..\/..\/..\/DELETE_Q.hpp"
+    ],
+    "TestBench": ["..\/..\/..\/DELETE_Q_Test.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/delete_top_delete_top_Pipeline_VITIS_LOOP_24_1.vhd",
+      "impl\/vhdl\/delete_top_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/delete_top_regslice_both.vhd",
+      "impl\/vhdl\/delete_top.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/delete_top_delete_top_Pipeline_VITIS_LOOP_24_1.v",
+      "impl\/verilog\/delete_top_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/delete_top_regslice_both.v",
+      "impl\/verilog\/delete_top.v"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": "kernel.xml",
+    "Xo": "..\/delete_top.xo",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/delete_top.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {
+        "ASSOCIATED_BUSIF": "i_hash_strm:i_col1_strm:i_col2_strm:i_col3_strm:i_payload_strm:i_e_strm:i_d_key1_strm:o_hash_strm:o_col1_strm:o_col2_strm:o_col3_strm:o_payload_strm:o_e_strm",
+        "ASSOCIATED_RESET": "ap_rst_n"
+      },
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
+    },
+    "i_hash_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "32",
+      "portPrefix": "i_hash_strm_",
+      "ports": [
+        "i_hash_strm_TDATA",
+        "i_hash_strm_TREADY",
+        "i_hash_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "i_hash_strm"
+        }]
+    },
+    "i_col1_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "32",
+      "portPrefix": "i_col1_strm_",
+      "ports": [
+        "i_col1_strm_TDATA",
+        "i_col1_strm_TREADY",
+        "i_col1_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "i_col1_strm"
+        }]
+    },
+    "i_col2_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "32",
+      "portPrefix": "i_col2_strm_",
+      "ports": [
+        "i_col2_strm_TDATA",
+        "i_col2_strm_TREADY",
+        "i_col2_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "i_col2_strm"
+        }]
+    },
+    "i_col3_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "32",
+      "portPrefix": "i_col3_strm_",
+      "ports": [
+        "i_col3_strm_TDATA",
+        "i_col3_strm_TREADY",
+        "i_col3_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "i_col3_strm"
+        }]
+    },
+    "i_payload_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "128",
+      "portPrefix": "i_payload_strm_",
+      "ports": [
+        "i_payload_strm_TDATA",
+        "i_payload_strm_TREADY",
+        "i_payload_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "i_payload_strm"
+        }]
+    },
+    "i_e_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "8",
+      "portPrefix": "i_e_strm_",
+      "ports": [
+        "i_e_strm_TDATA",
+        "i_e_strm_TREADY",
+        "i_e_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "i_e_strm"
+        }]
+    },
+    "i_d_key1_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "32",
+      "portPrefix": "i_d_key1_strm_",
+      "ports": [
+        "i_d_key1_strm_TDATA",
+        "i_d_key1_strm_TREADY",
+        "i_d_key1_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "i_d_key1_strm"
+        }]
+    },
+    "o_hash_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "direction": "out",
+      "dataWidth": "32",
+      "portPrefix": "o_hash_strm_",
+      "ports": [
+        "o_hash_strm_TDATA",
+        "o_hash_strm_TREADY",
+        "o_hash_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "o_hash_strm"
+        }]
+    },
+    "o_col1_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "direction": "out",
+      "dataWidth": "32",
+      "portPrefix": "o_col1_strm_",
+      "ports": [
+        "o_col1_strm_TDATA",
+        "o_col1_strm_TREADY",
+        "o_col1_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "o_col1_strm"
+        }]
+    },
+    "o_col2_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "direction": "out",
+      "dataWidth": "32",
+      "portPrefix": "o_col2_strm_",
+      "ports": [
+        "o_col2_strm_TDATA",
+        "o_col2_strm_TREADY",
+        "o_col2_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "o_col2_strm"
+        }]
+    },
+    "o_col3_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "direction": "out",
+      "dataWidth": "32",
+      "portPrefix": "o_col3_strm_",
+      "ports": [
+        "o_col3_strm_TDATA",
+        "o_col3_strm_TREADY",
+        "o_col3_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "o_col3_strm"
+        }]
+    },
+    "o_payload_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "direction": "out",
+      "dataWidth": "128",
+      "portPrefix": "o_payload_strm_",
+      "ports": [
+        "o_payload_strm_TDATA",
+        "o_payload_strm_TREADY",
+        "o_payload_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "o_payload_strm"
+        }]
+    },
+    "o_e_strm": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "direction": "out",
+      "dataWidth": "8",
+      "portPrefix": "o_e_strm_",
+      "ports": [
+        "o_e_strm_TDATA",
+        "o_e_strm_TREADY",
+        "o_e_strm_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "o_e_strm"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "i_hash_strm_TDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "i_hash_strm_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "i_hash_strm_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "i_col1_strm_TDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "i_col1_strm_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "i_col1_strm_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "i_col2_strm_TDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "i_col2_strm_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "i_col2_strm_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "i_col3_strm_TDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "i_col3_strm_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "i_col3_strm_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "i_payload_strm_TDATA": {
+      "dir": "in",
+      "width": "128"
+    },
+    "i_payload_strm_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "i_payload_strm_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "i_e_strm_TDATA": {
+      "dir": "in",
+      "width": "8"
+    },
+    "i_e_strm_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "i_e_strm_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "i_d_key1_strm_TDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "i_d_key1_strm_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "i_d_key1_strm_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "o_hash_strm_TDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "o_hash_strm_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "o_hash_strm_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "o_col1_strm_TDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "o_col1_strm_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "o_col1_strm_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "o_col2_strm_TDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "o_col2_strm_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "o_col2_strm_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "o_col3_strm_TDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "o_col3_strm_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "o_col3_strm_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "o_payload_strm_TDATA": {
+      "dir": "out",
+      "width": "128"
+    },
+    "o_payload_strm_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "o_payload_strm_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "o_e_strm_TDATA": {
+      "dir": "out",
+      "width": "8"
+    },
+    "o_e_strm_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "o_e_strm_TREADY": {
+      "dir": "in",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "delete_top",
+      "Instances": [{
+          "ModuleName": "delete_top_Pipeline_VITIS_LOOP_24_1",
+          "InstanceName": "grp_delete_top_Pipeline_VITIS_LOOP_24_1_fu_70",
+          "BindInstances": "icmp_ln32_fu_195_p2"
+        }]
+    },
+    "Info": {
+      "delete_top_Pipeline_VITIS_LOOP_24_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "delete_top": {
+        "FunctionProtocol": "ap_ctrl_none",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "delete_top_Pipeline_VITIS_LOOP_24_1": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "loop auto-rewind stp (delay=0 clock cycles(s))"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "1.156"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_24_1",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "265",
+          "AVAIL_FF": "1743360",
+          "UTIL_FF": "~0",
+          "LUT": "235",
+          "AVAIL_LUT": "871680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "2688",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "5952",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "640",
+          "UTIL_URAM": "0"
+        }
+      },
+      "delete_top": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "1.156"
+        },
+        "Area": {
+          "FF": "539",
+          "AVAIL_FF": "1743360",
+          "UTIL_FF": "~0",
+          "LUT": "439",
+          "AVAIL_LUT": "871680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "2688",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "5952",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "640",
+          "UTIL_URAM": "0"
+        }
+      }
+    }
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2025-01-29 19:17:58 IST",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2024.2"
+  }
+}

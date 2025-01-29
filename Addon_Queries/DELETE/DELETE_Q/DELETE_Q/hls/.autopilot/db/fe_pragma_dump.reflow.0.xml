@@ -1,0 +1,27 @@
+<pragmas>
+<pragma file="../DELETE_Q.cpp" line="151" pragmaType="interface" parentfunction="delete_top" mode="axis" port="i_hash_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="152" pragmaType="interface" parentfunction="delete_top" mode="axis" port="i_col1_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="153" pragmaType="interface" parentfunction="delete_top" mode="axis" port="i_col2_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="154" pragmaType="interface" parentfunction="delete_top" mode="axis" port="i_col3_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="155" pragmaType="interface" parentfunction="delete_top" mode="axis" port="i_payload_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="156" pragmaType="interface" parentfunction="delete_top" mode="axis" port="i_e_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="157" pragmaType="interface" parentfunction="delete_top" mode="axis" port="i_d_key1_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="158" pragmaType="interface" parentfunction="delete_top" mode="axis" port="o_hash_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="159" pragmaType="interface" parentfunction="delete_top" mode="axis" port="o_col1_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="160" pragmaType="interface" parentfunction="delete_top" mode="axis" port="o_col2_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="161" pragmaType="interface" parentfunction="delete_top" mode="axis" port="o_col3_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="162" pragmaType="interface" parentfunction="delete_top" mode="axis" port="o_payload_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="163" pragmaType="interface" parentfunction="delete_top" mode="axis" port="o_e_strm" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="../DELETE_Q.cpp" line="164" pragmaType="interface" parentfunction="delete_top" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<32, false>::operator!=<32, false>(ap_int_base<32, false> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+</pragmas>

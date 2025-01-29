@@ -1,0 +1,1910 @@
+INFO: [HLS 200-2005] Using work_dir /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.cpp' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.hpp' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q_Test.cpp' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q_Test.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=delete_1' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vitis' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1465] Applying ini 'part=xcu50-fsvh2104-3-e' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-3-e'
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=xo' from /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg(5)
+INFO: [SIM 211-200] Executing Code Analyzer instead of classic HLS C simulation
+INFO: [HLS 211-200] Compiling source code ../DELETE_Q.cpp as hardware code with instrumentation
+INFO: [HLS 211-200] Compiling source code /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q_Test.cpp as test bench code with instrumentation
+INFO: [HLS 211-200] Compiling source code ../DELETE_Q.cpp as test bench code with instrumentation
+In file included from ../DELETE_Q.cpp:1:
+../DELETE_Q.hpp:12:6: error: [HLS 211-200] The requested top-level hardware function 'delete_1' should not be a template function
+void delete_1(hls::stream<ap_uint<HASHW> >& i_hash_strm,
+     ^
+../DELETE_Q.cpp:28:18: error: invalid operands to binary expression ('hls::stream<ap_uint<32>>' and 'hls::stream<ap_uint<32>>')
+                if(i_col1_strm != i_d_key_strm){
+                   ~~~~~~~~~~~ ^  ~~~~~~~~~~~~
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1845:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(bool, 1, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1845:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1846:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(char, 8, CHAR_IS_SIGNED)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1846:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1847:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(signed char, 8, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1847:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1848:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(unsigned char, 8, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1848:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1849:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(short, _AP_SIZE_short, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1849:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1850:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(unsigned short, _AP_SIZE_short, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1850:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1851:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(int, _AP_SIZE_int, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1851:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1852:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(unsigned int, _AP_SIZE_int, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1852:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1853:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(long, _AP_SIZE_long, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1853:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1854:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(unsigned long, _AP_SIZE_long, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1854:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1855:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1855:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1856:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+ALL_OP_REL_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1827:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(C_TYPE i_op,                           \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1856:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1843:3: note: expanded from macro 'ALL_OP_REL_WITH_INT'
+  OP_REL_WITH_INT(!=, C_TYPE, _AP_W2, _AP_S2)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1832:37: note: expanded from macro 'OP_REL_WITH_INT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W, _AP_S>& op,   \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1887:3: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+  OP_REL_WITH_DOUBLE_OR_FLOAT(!=)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1863:37: note: expanded from macro 'OP_REL_WITH_DOUBLE_OR_FLOAT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator Sym(const ap_int_base<_AP_W, _AP_S>& op1,    \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1887:3: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1868:37: note: expanded from macro 'OP_REL_WITH_DOUBLE_OR_FLOAT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator Sym(double op1,                              \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1887:3: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1873:37: note: expanded from macro 'OP_REL_WITH_DOUBLE_OR_FLOAT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator Sym(const ap_int_base<_AP_W, _AP_S>& op1,    \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1887:3: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1878:37: note: expanded from macro 'OP_REL_WITH_DOUBLE_OR_FLOAT'
+  HLS_CONSTEXPR INLINE NODEBUG bool operator Sym(float op1,                               \
+                                    ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1995:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+OP_REL_WITH_RANGE(!=)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1984:23: note: expanded from macro 'OP_REL_WITH_RANGE'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W1, _AP_S1>& op1,     \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1995:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:1989:23: note: expanded from macro 'OP_REL_WITH_RANGE'
+  INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W1, _AP_S1>& op1,      \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:2104:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+OP_REL_WITH_BIT(!=)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:2093:23: note: expanded from macro 'OP_REL_WITH_BIT'
+  INLINE NODEBUG bool operator REL_OP(const ap_int_base<_AP_W1, _AP_S1>& op1,   \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:2104:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:2098:23: note: expanded from macro 'OP_REL_WITH_BIT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W1, _AP_S1>& op1,    \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:2211:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+OP_REL_WITH_CONCAT(!=)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:2195:23: note: expanded from macro 'OP_REL_WITH_CONCAT'
+  INLINE NODEBUG bool operator REL_OP(                                        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:2211:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_base.h:2203:23: note: expanded from macro 'OP_REL_WITH_CONCAT'
+  INLINE NODEBUG bool operator REL_OP(                                        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1054:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(bool, 1, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1054:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1054:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1054:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1055:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(char, 8, CHAR_IS_SIGNED)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1055:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1055:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1055:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1056:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(signed char, 8, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1056:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1056:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1056:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1057:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(unsigned char, 8, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1057:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1057:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1057:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1058:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(short, _AP_SIZE_short, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1058:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1058:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1058:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1059:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(unsigned short, _AP_SIZE_short, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1059:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1059:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1059:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1060:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(int, _AP_SIZE_int, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1060:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1060:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1060:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1061:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(unsigned int, _AP_SIZE_int, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1061:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1061:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1061:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1062:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(long, _AP_SIZE_long, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1062:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1062:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1062:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1063:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(unsigned long, _AP_SIZE_long, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1063:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1063:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1063:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1064:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(ap_slong, _AP_SIZE_ap_slong, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1064:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1064:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1064:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1065:1: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+REF_REL_WITH_INT_2(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1007:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_range_ref<_AP_W, _AP_S>& op,        \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1065:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1013:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(const ap_bit_ref<_AP_W, _AP_S>& op,          \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1065:1: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1018:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(C_TYPE op2,                                  \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1065:1: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1052:3: note: expanded from macro 'REF_REL_WITH_INT_2'
+  REF_REL_OP_WITH_INT(!=, C_TYPE, _AP_WI, _AP_SI)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_int_ref.h:1023:23: note: expanded from macro 'REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                             \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2374:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(bool, 1, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2374:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2375:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(char, 8, CHAR_IS_SIGNED)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2375:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2376:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(signed char, 8, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2376:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2377:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(unsigned char, 8, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2377:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2378:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(short, _AP_SIZE_short, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2378:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2379:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(unsigned short, _AP_SIZE_short, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2379:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2380:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(int, _AP_SIZE_int, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2380:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2381:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(unsigned int, _AP_SIZE_int, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2381:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2382:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(long, _AP_SIZE_long, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2382:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2383:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(unsigned long, _AP_SIZE_long, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2383:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2384:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2384:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2385:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+ALL_AF_OP_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2313:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2385:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2372:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_REL_OP_WITH_INT(!=, C_TYPE, (BITS), (SIGN))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2320:43: note: expanded from macro 'AF_REL_OP_WITH_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2483:1: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+AF_REL_OP_WITH_AP_INT(!=)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2430:43: note: expanded from macro 'AF_REL_OP_WITH_AP_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2483:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2438:43: note: expanded from macro 'AF_REL_OP_WITH_AP_INT'
+  HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator REL_OP(                                              \
+                                          ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_base.h:2502:41: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+HLS_CONSTEXPR_EXTRA INLINE NODEBUG bool operator!=(
+                                        ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:679:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(bool, 1, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:679:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:679:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:679:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:680:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(char, 8, CHAR_IS_SIGNED)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:680:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:680:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:680:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:681:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(signed char, 8, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:681:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:681:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:681:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:682:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(unsigned char, 8, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:682:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:682:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:682:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:683:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(short, _AP_SIZE_short, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:683:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:683:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:683:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:684:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(unsigned short, _AP_SIZE_short, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:684:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:684:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:684:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:685:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(int, _AP_SIZE_int, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:685:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:685:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:685:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:686:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(unsigned int, _AP_SIZE_int, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:686:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:686:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:686:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:687:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(long, _AP_SIZE_long, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:687:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:687:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:687:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:688:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(unsigned long, _AP_SIZE_long, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:688:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:688:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:688:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:689:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:689:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:689:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:689:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:690:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OPS_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:639:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:690:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:648:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:690:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:657:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:690:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:677:3: note: expanded from macro 'AF_REF_REL_OPS_WITH_INT'
+  AF_REF_REL_OP_WITH_INT(!=, C_TYPE, (_AP_W2), (_AP_S2))
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:665:23: note: expanded from macro 'AF_REF_REL_OP_WITH_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:730:1: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+AF_REF_REL_OP_WITH_AP_INT(!=)
+^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:698:23: note: expanded from macro 'AF_REF_REL_OP_WITH_AP_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:730:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:705:23: note: expanded from macro 'AF_REF_REL_OP_WITH_AP_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:730:1: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:712:23: note: expanded from macro 'AF_REF_REL_OP_WITH_AP_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:730:1: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/etc/ap_fixed_ref.h:719:23: note: expanded from macro 'AF_REF_REL_OP_WITH_AP_INT'
+  INLINE NODEBUG bool operator REL_OP(                                            \
+                      ^
+../DELETE_Q.cpp:29:22: error: no viable conversion from 'hls::stream<ap_uint<32>>' to 'const ap_uint<32>'
+                        o_hash_strm.write(i_hash_strm);
+                                          ^~~~~~~~~~~
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:219:8: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'const ap_uint<32> &' for 1st argument
+struct ap_uint : ap_int_base<_AP_W, false> {
+       ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:321:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'bool' for 1st argument
+  CTOR(bool)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:322:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'char' for 1st argument
+  CTOR(char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:323:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'signed char' for 1st argument
+  CTOR(signed char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:324:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned char' for 1st argument
+  CTOR(unsigned char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:325:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'short' for 1st argument
+  CTOR(short)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:326:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned short' for 1st argument
+  CTOR(unsigned short)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:327:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'int' for 1st argument
+  CTOR(int)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:328:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned int' for 1st argument
+  CTOR(unsigned int)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:329:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'long' for 1st argument
+  CTOR(long)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:330:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned long' for 1st argument
+  CTOR(unsigned long)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:331:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'ap_slong' (aka 'long long') for 1st argument
+  CTOR(ap_slong)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:332:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'ap_ulong' (aka 'unsigned long long') for 1st argument
+  CTOR(ap_ulong)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:334:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'double' for 1st argument
+  HLS_CONSTEXPR ap_uint(double val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:335:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'float' for 1st argument
+  HLS_CONSTEXPR ap_uint(float val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:336:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'half' (aka '__fp16') for 1st argument
+  HLS_CONSTEXPR ap_uint(half val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:339:32: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'const char *' for 1st argument
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const char* s) : Base(s) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:226:32: note: candidate template ignored: could not match 'ap_uint' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_uint<_AP_W2>& op):Base((ap_int_base<_AP_W2, false>)op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:232:32: note: candidate template ignored: could not match 'ap_int' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_int<_AP_W2>& op):Base((ap_int_base<_AP_W2, true>)op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:238:32: note: candidate template ignored: could not match 'ap_uint' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const volatile ap_uint<_AP_W2>& op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:244:32: note: candidate template ignored: could not match 'ap_int' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const volatile ap_int<_AP_W2>& op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:260:32: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_range_ref<_AP_W2, _AP_S2>& ref) : Base(ref) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:263:32: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_bit_ref<_AP_W2, _AP_S2>& ref) : Base(ref) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:266:32: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& ref)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:271:32: note: candidate template ignored: could not match 'ap_fixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:276:32: note: candidate template ignored: could not match 'ap_ufixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:282:32: note: candidate template ignored: could not match 'ap_fixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:288:32: note: candidate template ignored: could not match 'ap_ufixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:294:32: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_int_base<_AP_W2, _AP_S2>& op):Base(op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:300:32: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:306:32: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:312:32: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/../include/hls_stream.h:566:26: note: passing argument to parameter 'In' here
+  void write(const TYPE &In) {
+                         ^
+../DELETE_Q.cpp:30:22: error: no viable conversion from 'hls::stream<ap_uint<32>>' to 'const ap_uint<32>'
+                        o_col1_strm.write(i_col1_strm);
+                                          ^~~~~~~~~~~
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:219:8: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'const ap_uint<32> &' for 1st argument
+struct ap_uint : ap_int_base<_AP_W, false> {
+       ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:321:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'bool' for 1st argument
+  CTOR(bool)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:322:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'char' for 1st argument
+  CTOR(char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:323:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'signed char' for 1st argument
+  CTOR(signed char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:324:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned char' for 1st argument
+  CTOR(unsigned char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:325:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'short' for 1st argument
+  CTOR(short)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:326:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned short' for 1st argument
+  CTOR(unsigned short)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:327:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'int' for 1st argument
+  CTOR(int)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:328:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned int' for 1st argument
+  CTOR(unsigned int)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:329:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'long' for 1st argument
+  CTOR(long)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:330:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned long' for 1st argument
+  CTOR(unsigned long)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:331:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'ap_slong' (aka 'long long') for 1st argument
+  CTOR(ap_slong)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:332:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'ap_ulong' (aka 'unsigned long long') for 1st argument
+  CTOR(ap_ulong)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:334:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'double' for 1st argument
+  HLS_CONSTEXPR ap_uint(double val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:335:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'float' for 1st argument
+  HLS_CONSTEXPR ap_uint(float val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:336:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'half' (aka '__fp16') for 1st argument
+  HLS_CONSTEXPR ap_uint(half val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:339:32: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'const char *' for 1st argument
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const char* s) : Base(s) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:226:32: note: candidate template ignored: could not match 'ap_uint' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_uint<_AP_W2>& op):Base((ap_int_base<_AP_W2, false>)op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:232:32: note: candidate template ignored: could not match 'ap_int' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_int<_AP_W2>& op):Base((ap_int_base<_AP_W2, true>)op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:238:32: note: candidate template ignored: could not match 'ap_uint' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const volatile ap_uint<_AP_W2>& op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:244:32: note: candidate template ignored: could not match 'ap_int' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const volatile ap_int<_AP_W2>& op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:260:32: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_range_ref<_AP_W2, _AP_S2>& ref) : Base(ref) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:263:32: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_bit_ref<_AP_W2, _AP_S2>& ref) : Base(ref) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:266:32: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& ref)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:271:32: note: candidate template ignored: could not match 'ap_fixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:276:32: note: candidate template ignored: could not match 'ap_ufixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:282:32: note: candidate template ignored: could not match 'ap_fixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:288:32: note: candidate template ignored: could not match 'ap_ufixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:294:32: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_int_base<_AP_W2, _AP_S2>& op):Base(op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:300:32: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:306:32: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:312:32: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/../include/hls_stream.h:566:26: note: passing argument to parameter 'In' here
+  void write(const TYPE &In) {
+                         ^
+../DELETE_Q.cpp:31:22: error: no viable conversion from 'hls::stream<ap_uint<32>>' to 'const ap_uint<32>'
+                        o_col2_strm.write(i_col2_strm);
+                                          ^~~~~~~~~~~
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:219:8: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'const ap_uint<32> &' for 1st argument
+struct ap_uint : ap_int_base<_AP_W, false> {
+       ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:321:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'bool' for 1st argument
+  CTOR(bool)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:322:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'char' for 1st argument
+  CTOR(char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:323:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'signed char' for 1st argument
+  CTOR(signed char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:324:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned char' for 1st argument
+  CTOR(unsigned char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:325:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'short' for 1st argument
+  CTOR(short)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:326:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned short' for 1st argument
+  CTOR(unsigned short)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:327:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'int' for 1st argument
+  CTOR(int)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:328:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned int' for 1st argument
+  CTOR(unsigned int)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:329:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'long' for 1st argument
+  CTOR(long)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:330:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned long' for 1st argument
+  CTOR(unsigned long)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:331:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'ap_slong' (aka 'long long') for 1st argument
+  CTOR(ap_slong)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:332:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'ap_ulong' (aka 'unsigned long long') for 1st argument
+  CTOR(ap_ulong)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:334:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'double' for 1st argument
+  HLS_CONSTEXPR ap_uint(double val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:335:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'float' for 1st argument
+  HLS_CONSTEXPR ap_uint(float val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:336:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'half' (aka '__fp16') for 1st argument
+  HLS_CONSTEXPR ap_uint(half val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:339:32: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'const char *' for 1st argument
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const char* s) : Base(s) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:226:32: note: candidate template ignored: could not match 'ap_uint' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_uint<_AP_W2>& op):Base((ap_int_base<_AP_W2, false>)op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:232:32: note: candidate template ignored: could not match 'ap_int' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_int<_AP_W2>& op):Base((ap_int_base<_AP_W2, true>)op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:238:32: note: candidate template ignored: could not match 'ap_uint' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const volatile ap_uint<_AP_W2>& op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:244:32: note: candidate template ignored: could not match 'ap_int' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const volatile ap_int<_AP_W2>& op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:260:32: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_range_ref<_AP_W2, _AP_S2>& ref) : Base(ref) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:263:32: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_bit_ref<_AP_W2, _AP_S2>& ref) : Base(ref) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:266:32: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& ref)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:271:32: note: candidate template ignored: could not match 'ap_fixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:276:32: note: candidate template ignored: could not match 'ap_ufixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:282:32: note: candidate template ignored: could not match 'ap_fixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:288:32: note: candidate template ignored: could not match 'ap_ufixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:294:32: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_int_base<_AP_W2, _AP_S2>& op):Base(op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:300:32: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:306:32: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:312:32: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/../include/hls_stream.h:566:26: note: passing argument to parameter 'In' here
+  void write(const TYPE &In) {
+                         ^
+../DELETE_Q.cpp:32:22: error: no viable conversion from 'hls::stream<ap_uint<32>>' to 'const ap_uint<32>'
+                        o_col3_strm.write(i_col3_strm);
+                                          ^~~~~~~~~~~
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:219:8: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'const ap_uint<32> &' for 1st argument
+struct ap_uint : ap_int_base<_AP_W, false> {
+       ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:321:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'bool' for 1st argument
+  CTOR(bool)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:322:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'char' for 1st argument
+  CTOR(char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:323:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'signed char' for 1st argument
+  CTOR(signed char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:324:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned char' for 1st argument
+  CTOR(unsigned char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:325:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'short' for 1st argument
+  CTOR(short)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:326:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned short' for 1st argument
+  CTOR(unsigned short)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:327:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'int' for 1st argument
+  CTOR(int)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:328:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned int' for 1st argument
+  CTOR(unsigned int)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:329:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'long' for 1st argument
+  CTOR(long)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:330:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'unsigned long' for 1st argument
+  CTOR(unsigned long)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:331:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'ap_slong' (aka 'long long') for 1st argument
+  CTOR(ap_slong)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:332:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'ap_ulong' (aka 'unsigned long long') for 1st argument
+  CTOR(ap_ulong)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:334:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'double' for 1st argument
+  HLS_CONSTEXPR ap_uint(double val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:335:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'float' for 1st argument
+  HLS_CONSTEXPR ap_uint(float val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:336:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'half' (aka '__fp16') for 1st argument
+  HLS_CONSTEXPR ap_uint(half val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:339:32: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<32>>' to 'const char *' for 1st argument
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const char* s) : Base(s) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:226:32: note: candidate template ignored: could not match 'ap_uint' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_uint<_AP_W2>& op):Base((ap_int_base<_AP_W2, false>)op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:232:32: note: candidate template ignored: could not match 'ap_int' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_int<_AP_W2>& op):Base((ap_int_base<_AP_W2, true>)op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:238:32: note: candidate template ignored: could not match 'ap_uint' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const volatile ap_uint<_AP_W2>& op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:244:32: note: candidate template ignored: could not match 'ap_int' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const volatile ap_int<_AP_W2>& op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:260:32: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_range_ref<_AP_W2, _AP_S2>& ref) : Base(ref) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:263:32: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_bit_ref<_AP_W2, _AP_S2>& ref) : Base(ref) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:266:32: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& ref)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:271:32: note: candidate template ignored: could not match 'ap_fixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:276:32: note: candidate template ignored: could not match 'ap_ufixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:282:32: note: candidate template ignored: could not match 'ap_fixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:288:32: note: candidate template ignored: could not match 'ap_ufixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:294:32: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_int_base<_AP_W2, _AP_S2>& op):Base(op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:300:32: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:306:32: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:312:32: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/../include/hls_stream.h:566:26: note: passing argument to parameter 'In' here
+  void write(const TYPE &In) {
+                         ^
+../DELETE_Q.cpp:33:25: error: no viable conversion from 'hls::stream<ap_uint<128>>' to 'const ap_uint<128>'
+                        o_payload_strm.write(i_payload_strm);
+                                             ^~~~~~~~~~~~~~
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:219:8: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'const ap_uint<128> &' for 1st argument
+struct ap_uint : ap_int_base<_AP_W, false> {
+       ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:321:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'bool' for 1st argument
+  CTOR(bool)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:322:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'char' for 1st argument
+  CTOR(char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:323:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'signed char' for 1st argument
+  CTOR(signed char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:324:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'unsigned char' for 1st argument
+  CTOR(unsigned char)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:325:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'short' for 1st argument
+  CTOR(short)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:326:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'unsigned short' for 1st argument
+  CTOR(unsigned short)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:327:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'int' for 1st argument
+  CTOR(int)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:328:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'unsigned int' for 1st argument
+  CTOR(unsigned int)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:329:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'long' for 1st argument
+  CTOR(long)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:330:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'unsigned long' for 1st argument
+  CTOR(unsigned long)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:331:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'ap_slong' (aka 'long long') for 1st argument
+  CTOR(ap_slong)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:332:3: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'ap_ulong' (aka 'unsigned long long') for 1st argument
+  CTOR(ap_ulong)
+  ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:317:32: note: expanded from macro 'CTOR'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(TYPE val):Base(val) {        \
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:334:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'double' for 1st argument
+  HLS_CONSTEXPR ap_uint(double val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:335:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'float' for 1st argument
+  HLS_CONSTEXPR ap_uint(float val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:336:17: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'half' (aka '__fp16') for 1st argument
+  HLS_CONSTEXPR ap_uint(half val) : Base(val) {}
+                ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:339:32: note: candidate constructor not viable: no known conversion from 'hls::stream<ap_uint<128>>' to 'const char *' for 1st argument
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const char* s) : Base(s) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:226:32: note: candidate template ignored: could not match 'ap_uint' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_uint<_AP_W2>& op):Base((ap_int_base<_AP_W2, false>)op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:232:32: note: candidate template ignored: could not match 'ap_int' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_int<_AP_W2>& op):Base((ap_int_base<_AP_W2, true>)op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:238:32: note: candidate template ignored: could not match 'ap_uint' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const volatile ap_uint<_AP_W2>& op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:244:32: note: candidate template ignored: could not match 'ap_int' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const volatile ap_int<_AP_W2>& op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:260:32: note: candidate template ignored: could not match 'ap_range_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_range_ref<_AP_W2, _AP_S2>& ref) : Base(ref) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:263:32: note: candidate template ignored: could not match 'ap_bit_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_bit_ref<_AP_W2, _AP_S2>& ref) : Base(ref) {}
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:266:32: note: candidate template ignored: could not match 'ap_concat_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& ref)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:271:32: note: candidate template ignored: could not match 'ap_fixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:276:32: note: candidate template ignored: could not match 'ap_ufixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:282:32: note: candidate template ignored: could not match 'ap_fixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:288:32: note: candidate template ignored: could not match 'ap_ufixed' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:294:32: note: candidate template ignored: could not match 'ap_int_base' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(const ap_int_base<_AP_W2, _AP_S2>& op):Base(op) {
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:300:32: note: candidate template ignored: could not match 'af_bit_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:306:32: note: candidate template ignored: could not match 'af_range_ref' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/ap_int.h:312:32: note: candidate template ignored: could not match 'ap_fixed_base' against 'stream'
+  HLS_CONSTEXPR INLINE NODEBUG ap_uint(
+                               ^
+/work/Xilinx/Vitis/2024.2/vcxx/data/autopilot/../include/hls_stream.h:566:26: note: passing argument to parameter 'In' here
+  void write(const TYPE &In) {
+                         ^
+7 errors generated.
+slxcmd:0:0: warning: Non-zero exit code: 1 returned by 'INFO: [HLS 211-200] Compiling source code ../DELETE_Q.cpp as hardware code with instrumentation'
+ERROR: [SIM 211-200] Code Analyzer execution failed. Consider running the classic C simulation instead by disabling the hls.csim.code_analyzer option in the config file.
+ERROR: Problem running csim: child process exited abnormally
+INFO: [HLS 200-112] Total CPU user time: 12.08 seconds. Total CPU system time: 1.2 seconds. Total elapsed time: 13.86 seconds; peak allocated memory: 326.863 MB.

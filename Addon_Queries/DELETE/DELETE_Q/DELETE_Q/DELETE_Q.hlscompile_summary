@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/DELETE_Q.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Jan 29 19:17:20 2025",
+ "timestampMillis": "1738158440820",
+ "buildStep": {
+  "cmdId": "9dc88d23-5e58-477b-9653-9d7fe50eb157",
+  "name": "v++",
+  "logFile": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/logs/DELETE_Q.steps.log",
+  "commandLine": "/work/Xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg --work_dir DELETE_Q ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg",
+   "--work_dir",
+   "DELETE_Q"
+  ],
+  "iniFiles": [
+   {
+    "path": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg",
+    "content": "part=xcu50-fsvh2104-3-e\n\n[hls]\nflow_target=vitis\npackage.output.format=xo\npackage.output.syn=false\nsyn.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.cpp\nsyn.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.hpp\ntb.file=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q_Test.cpp\ncsim.code_analyzer=0\nsyn.top=delete_top"
+   }
+  ],
+  "cwd": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jan 29 19:17:20 2025",
+ "timestampMillis": "1738158440820",
+ "status": {
+  "cmdId": "9dc88d23-5e58-477b-9653-9d7fe50eb157",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Jan 29 19:17:32 2025",
+ "timestampMillis": "1738158452645",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "delete_top",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.cpp",
+     "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jan 29 19:17:32 2025",
+ "timestampMillis": "1738158452648",
+ "buildStep": {
+  "cmdId": "bcd016f8-1ffc-4603-ba88-e07dd5160d2c",
+  "name": "",
+  "logFile": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jan 29 19:17:32 2025",
+ "timestampMillis": "1738158452649",
+ "status": {
+  "cmdId": "bcd016f8-1ffc-4603-ba88-e07dd5160d2c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jan 29 19:17:32 2025",
+ "timestampMillis": "1738158452649",
+ "report": {
+  "path": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jan 29 19:17:32 2025",
+ "timestampMillis": "1738158452650",
+ "report": {
+  "path": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jan 29 19:17:32 2025",
+ "timestampMillis": "1738158452651",
+ "report": {
+  "path": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jan 29 19:17:58 2025",
+ "timestampMillis": "1738158478590",
+ "report": {
+  "path": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jan 29 19:17:58 2025",
+ "timestampMillis": "1738158478595",
+ "report": {
+  "path": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jan 29 19:17:58 2025",
+ "timestampMillis": "1738158478597",
+ "report": {
+  "path": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jan 29 19:17:58 2025",
+ "timestampMillis": "1738158478598",
+ "status": {
+  "cmdId": "bcd016f8-1ffc-4603-ba88-e07dd5160d2c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jan 29 19:17:59 2025",
+ "timestampMillis": "1738158479194",
+ "status": {
+  "cmdId": "9dc88d23-5e58-477b-9653-9d7fe50eb157",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jan 29 19:17:59 2025",
+ "timestampMillis": "1738158479275",
+ "report": {
+  "path": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/reports/v++_compile_DELETE_Q_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jan 29 19:17:59 2025",
+ "timestampMillis": "1738158479278",
+ "report": {
+  "path": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/DELETE_Q/reports/.db/v++_compile_DELETE_Q_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=delete_top",
+      "-c",
+      "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.cpp"
+    ],
+    "file": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q.cpp"
+  },
+  {
+    "directory": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/work/Xilinx/Vitis/2024.2/include",
+      "-c",
+      "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q_Test.cpp"
+    ],
+    "file": "/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q_Test.cpp"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 8,
+    "calls": "",
+    "file": "DELETE_Q.cpp",
+    "fileloc": 138,
+    "instructions": 91,
+    "loads": {
+      "L": 8
+    },
+    "name": "delete_top",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 91
+  }
+}

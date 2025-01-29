@@ -1,0 +1,212 @@
+
+
+================================================================
+== Vitis HLS Report for 'delete_top_Pipeline_VITIS_LOOP_24_1'
+================================================================
+* Date:           Wed Jan 29 19:17:57 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        DELETE_Q
+* Solution:       hls (Vitis Kernel Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu50-fsvh2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.156 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_24_1  |        ?|        ?|         3|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+--------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++---------------------+---------+------+---------+--------+-----+
+|DSP                  |        -|     -|        -|       -|    -|
+|Expression           |        -|     -|        0|      61|    -|
+|FIFO                 |        -|     -|        -|       -|    -|
+|Instance             |        -|     -|        -|       -|    -|
+|Memory               |        -|     -|        -|       -|    -|
+|Multiplexer          |        -|     -|        0|     172|    -|
+|Register             |        -|     -|      265|       -|    -|
++---------------------+---------+------+---------+--------+-----+
+|Total                |        0|     0|      265|     233|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available SLR        |     1344|  2976|   871680|  435840|  320|
++---------------------+---------+------+---------+--------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available            |     2688|  5952|  1743360|  871680|  640|
++---------------------+---------+------+---------+--------+-----+
+|Utilization (%)      |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state1_pp0_stage0_iter0       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_218                       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_281                       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_288                       |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op25_read_state1          |       and|   0|  0|   2|           1|           1|
+    |tmp_nbreadreq_fu_74_p3                 |       and|   0|  0|   2|           1|           0|
+    |icmp_ln32_fu_195_p2                    |      icmp|   0|  0|  39|          32|          32|
+    |ap_block_pp0_stage0_01001_grp1         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001              |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1_grp1  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2_grp1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                          |       xor|   0|  0|   2|           1|           2|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                  |          |   0|  0|  61|          43|          43|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_done_int                 |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1     |   9|          2|    1|          2|
+    |ap_phi_mux_e_phi_fu_170_p4  |  14|          3|    1|          3|
+    |e_2_reg_178                 |  14|          3|    1|          3|
+    |e_reg_167                   |   9|          2|    1|          2|
+    |i_col1_strm_TDATA_blk_n     |   9|          2|    1|          2|
+    |i_col2_strm_TDATA_blk_n     |   9|          2|    1|          2|
+    |i_col3_strm_TDATA_blk_n     |   9|          2|    1|          2|
+    |i_d_key1_strm_TDATA_blk_n   |   9|          2|    1|          2|
+    |i_e_strm_TDATA_blk_n        |   9|          2|    1|          2|
+    |i_hash_strm_TDATA_blk_n     |   9|          2|    1|          2|
+    |i_payload_strm_TDATA_blk_n  |   9|          2|    1|          2|
+    |o_col1_strm_TDATA_blk_n     |   9|          2|    1|          2|
+    |o_col2_strm_TDATA_blk_n     |   9|          2|    1|          2|
+    |o_col3_strm_TDATA_blk_n     |   9|          2|    1|          2|
+    |o_e_strm_TDATA_blk_n        |   9|          2|    1|          2|
+    |o_hash_strm_TDATA_blk_n     |   9|          2|    1|          2|
+    |o_payload_strm_TDATA_blk_n  |   9|          2|    1|          2|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       | 172|         38|   18|         38|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+-----+----+-----+-----------+
+    |                    Name                   |  FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                                  |    1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp1_done_reg  |    1|   0|    1|          0|
+    |ap_done_reg                                |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                    |    1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg           |    1|   0|    1|          0|
+    |col1_reg_210                               |   32|   0|   32|          0|
+    |e_2_reg_178                                |    1|   0|    1|          0|
+    |e_reg_167                                  |    1|   0|    1|          0|
+    |i_col2_strm_read_reg_215                   |   32|   0|   32|          0|
+    |i_col3_strm_read_reg_220                   |   32|   0|   32|          0|
+    |i_hash_strm_read_reg_205                   |   32|   0|   32|          0|
+    |i_payload_strm_read_reg_225                |  128|   0|  128|          0|
+    |icmp_ln32_reg_230                          |    1|   0|    1|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |Total                                      |  265|   0|  265|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+-------------------------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |            Source Object            |    C Type    |
++-----------------------+-----+-----+------------+-------------------------------------+--------------+
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  delete_top_Pipeline_VITIS_LOOP_24_1|  return value|
+|ap_rst                 |   in|    1|  ap_ctrl_hs|  delete_top_Pipeline_VITIS_LOOP_24_1|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|  delete_top_Pipeline_VITIS_LOOP_24_1|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|  delete_top_Pipeline_VITIS_LOOP_24_1|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|  delete_top_Pipeline_VITIS_LOOP_24_1|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|  delete_top_Pipeline_VITIS_LOOP_24_1|  return value|
+|i_e_strm_TVALID        |   in|    1|        axis|                             i_e_strm|       pointer|
+|i_e_strm_TDATA         |   in|    8|        axis|                             i_e_strm|       pointer|
+|i_e_strm_TREADY        |  out|    1|        axis|                             i_e_strm|       pointer|
+|i_hash_strm_TVALID     |   in|    1|        axis|                          i_hash_strm|       pointer|
+|i_hash_strm_TDATA      |   in|   32|        axis|                          i_hash_strm|       pointer|
+|i_hash_strm_TREADY     |  out|    1|        axis|                          i_hash_strm|       pointer|
+|i_col1_strm_TVALID     |   in|    1|        axis|                          i_col1_strm|       pointer|
+|i_col1_strm_TDATA      |   in|   32|        axis|                          i_col1_strm|       pointer|
+|i_col1_strm_TREADY     |  out|    1|        axis|                          i_col1_strm|       pointer|
+|i_col2_strm_TVALID     |   in|    1|        axis|                          i_col2_strm|       pointer|
+|i_col2_strm_TDATA      |   in|   32|        axis|                          i_col2_strm|       pointer|
+|i_col2_strm_TREADY     |  out|    1|        axis|                          i_col2_strm|       pointer|
+|i_col3_strm_TVALID     |   in|    1|        axis|                          i_col3_strm|       pointer|
+|i_col3_strm_TDATA      |   in|   32|        axis|                          i_col3_strm|       pointer|
+|i_col3_strm_TREADY     |  out|    1|        axis|                          i_col3_strm|       pointer|
+|i_payload_strm_TVALID  |   in|    1|        axis|                       i_payload_strm|       pointer|
+|i_payload_strm_TDATA   |   in|  128|        axis|                       i_payload_strm|       pointer|
+|i_payload_strm_TREADY  |  out|    1|        axis|                       i_payload_strm|       pointer|
+|i_d_key1_strm_TVALID   |   in|    1|        axis|                        i_d_key1_strm|       pointer|
+|i_d_key1_strm_TDATA    |   in|   32|        axis|                        i_d_key1_strm|       pointer|
+|i_d_key1_strm_TREADY   |  out|    1|        axis|                        i_d_key1_strm|       pointer|
+|o_hash_strm_TREADY     |   in|    1|        axis|                          o_hash_strm|       pointer|
+|o_hash_strm_TDATA      |  out|   32|        axis|                          o_hash_strm|       pointer|
+|o_hash_strm_TVALID     |  out|    1|        axis|                          o_hash_strm|       pointer|
+|o_col1_strm_TREADY     |   in|    1|        axis|                          o_col1_strm|       pointer|
+|o_col1_strm_TDATA      |  out|   32|        axis|                          o_col1_strm|       pointer|
+|o_col1_strm_TVALID     |  out|    1|        axis|                          o_col1_strm|       pointer|
+|o_col2_strm_TREADY     |   in|    1|        axis|                          o_col2_strm|       pointer|
+|o_col2_strm_TDATA      |  out|   32|        axis|                          o_col2_strm|       pointer|
+|o_col2_strm_TVALID     |  out|    1|        axis|                          o_col2_strm|       pointer|
+|o_col3_strm_TREADY     |   in|    1|        axis|                          o_col3_strm|       pointer|
+|o_col3_strm_TDATA      |  out|   32|        axis|                          o_col3_strm|       pointer|
+|o_col3_strm_TVALID     |  out|    1|        axis|                          o_col3_strm|       pointer|
+|o_payload_strm_TREADY  |   in|    1|        axis|                       o_payload_strm|       pointer|
+|o_payload_strm_TDATA   |  out|  128|        axis|                       o_payload_strm|       pointer|
+|o_payload_strm_TVALID  |  out|    1|        axis|                       o_payload_strm|       pointer|
+|o_e_strm_TREADY        |   in|    1|        axis|                             o_e_strm|       pointer|
+|o_e_strm_TDATA         |  out|    8|        axis|                             o_e_strm|       pointer|
+|o_e_strm_TVALID        |  out|    1|        axis|                             o_e_strm|       pointer|
+|empty                  |   in|    1|     ap_none|                                empty|        scalar|
++-----------------------+-----+-----+------------+-------------------------------------+--------------+
+

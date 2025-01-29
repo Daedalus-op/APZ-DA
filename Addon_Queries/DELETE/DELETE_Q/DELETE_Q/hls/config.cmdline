@@ -1,0 +1,3 @@
+relativeroot=/primary/PGSQL_Vitis/DELETE_Q/DELETE_Q
+original_argv=--mode hls --cosim --config /primary/PGSQL_Vitis/DELETE_Q/DELETE_Q/hls_config.cfg --work_dir DELETE_Q 
+

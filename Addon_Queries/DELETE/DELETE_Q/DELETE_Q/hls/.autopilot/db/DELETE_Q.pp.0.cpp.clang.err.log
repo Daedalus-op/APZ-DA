@@ -1,0 +1,46 @@
+directive:1:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=name=delete_top_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=delete_top
+        ^
+../DELETE_Q.cpp:151:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=i_hash_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=i_hash_strm
+        ^
+../DELETE_Q.cpp:152:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=i_col1_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=i_col1_strm
+        ^
+../DELETE_Q.cpp:153:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=i_col2_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=i_col2_strm
+        ^
+../DELETE_Q.cpp:154:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=i_col3_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=i_col3_strm
+        ^
+../DELETE_Q.cpp:155:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=i_payload_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=i_payload_strm
+        ^
+../DELETE_Q.cpp:156:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=i_e_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=i_e_strm
+        ^
+../DELETE_Q.cpp:157:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=i_d_key1_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=i_d_key1_strm
+        ^
+../DELETE_Q.cpp:158:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=o_hash_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=o_hash_strm
+        ^
+../DELETE_Q.cpp:159:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=o_col1_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=o_col1_strm
+        ^
+../DELETE_Q.cpp:160:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=o_col2_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=o_col2_strm
+        ^
+../DELETE_Q.cpp:161:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=o_col3_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=o_col3_strm
+        ^
+../DELETE_Q.cpp:162:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=o_payload_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=o_payload_strm
+        ^
+../DELETE_Q.cpp:163:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=axis port=o_e_strm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=o_e_strm
+        ^
+../DELETE_Q.cpp:164:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=delete_top_XLX_SEP_ PragmaOptions=ap_ctrl_none port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_none port=return
+        ^
+15 warnings generated.

@@ -1,0 +1,12 @@
+{
+  "name": "DELETE_Q",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "DELETE_Q"
+  },
+  "template": "empty_hls_component"
+}
