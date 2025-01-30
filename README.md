@@ -1,21 +1,34 @@
 # APZ-DA
 A database acceleration project in collaboration with amd and zoho
 
+## Motivation
+Create a application/API based on the Vitis libraries for acceleration of database queries by implementation on a FPGA
+
 ## TODO
-- [-] Select @Daedalus-op
-- [ ] Update 
-- [ ] Aggregate
-- [-] Join @anagha
-- [-] Bitwise @neha-aj007
-- [-] Delete @Arun-66
+- Implement Vitis Libraries of FPGA
+  - [-] Select @Daedalus-op
+  - [ ] Update (on-hold)
+  - [-] Aggregate
+  - [-] Join @anagha
+  - [-] Bitwise @neha-aj007
+  - [X] Delete @Arun-66
+- Opmisation
+- Package it
 
 `- [-] in progress`
+
+## Possible Futures
+- Database Encryptor
+- Database Compressor and a migrator
+- DPR with kernels
+- Multiple queries on a single board using DPR
 
 ## Dependency
 - Vitis Database Libraries
 - Vitis, Vivado
 
 ## Related Documentation
-- [PostgreSQL](https://www.postgresql.org/about/)
-- [Vitis Database Libraries Documentation](https://xilinx.github.io/Vitis_Libraries/database/2022.1/index.html)
-- [Vitis Database Libraries Github Repository](https://github.com/Xilinx/Vitis_Libraries/tree/master/database)
+- [PostgreSQL](https://www.postgresql.org/about/) - About PostgreSQL
+- [Vitis Database Libraries](https://xilinx.github.io/Vitis_Libraries/database/2022.1/index.html) - Documentation
+- [Vitis Database Libraries Github](https://github.com/Xilinx/Vitis_Libraries/tree/master/database) - Source code
+- [XPG Github](https://github.com/Xilinx/data-analytics/tree/master/xpg) - End to end PostgreSQL Accelerator
