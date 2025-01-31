@@ -8,7 +8,7 @@ Create a application/API based on the Vitis libraries for acceleration of databa
 - Implement Vitis Libraries of FPGA
   - [-] Select @Daedalus-op
   - [ ] Update (on-hold)
-  - [-] Aggregate
+  - [-] Aggregate (Testing) 
   - [-] Join @anagha
   - [-] Bitwise @neha-aj007
   - [X] Delete @Arun-66
