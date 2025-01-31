@@ -19,7 +19,7 @@ Create a application/API based on the Vitis libraries for acceleration of databa
 
 ## Possible Futures
 - Database Encryptor
-- Database Compressor and a migrator
+- Database Compressor and Disaster Recovery Migration 
 - DPR with kernels
 - Multiple queries on a single board using DPR
 
