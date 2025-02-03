@@ -16,9 +16,9 @@ PES, Zoho, AMD Collaboration
 
 # Team
 
-- Arun M (PES)
-- Neha Anna Johns (PES)
-- Pranav Varkey (PES)
+- [Arun M](https://github.com/Arun-66) (PES)
+- [Neha Anna Johns](https://github.com/neha-aj007) (PES)
+- [Pranav Varkey](https://github.com/Daedalus-op) (PES)
 - Anagha (Zoho)
 
 ---
@@ -53,13 +53,14 @@ PES, Zoho, AMD Collaboration
 
 ## Queries In Focus
 
-| Queries | Phase |           Remark            |
-| :-----: | :---: | :-------------------------: |
-| SELECT  |   1   | Synthesising the hls kernel |
-| DELETE  |   1   |  Porting custom hls kernel  |
-| BITWISE |   1   |             TBD             |
-| UPDATE  |   1   |           On hold           |
-|  JOIN   |   1   |             TBD             |
+|  Queries  | Phase |          Remark           |
+| :-------: | :---: | :-----------------------: |
+|  SELECT   |   1   |  Porting the hls kernel   |
+|  DELETE   |   1   | Porting custom hls kernel |
+|  BITWISE  |   1   |       Synthesising        |
+|   JOIN    |   1   |            TBD            |
+| AGGREGATE |   1   |          Testing          |
+|  UPDATE   |   1   |          On hold          |
 
 ---
 
