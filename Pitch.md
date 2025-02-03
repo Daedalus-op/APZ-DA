@@ -60,6 +60,7 @@ PES, Zoho, AMD Collaboration
 | BITWISE |   1   |             TBD             |
 | UPDATE  |   1   |           On hold           |
 |  JOIN   |   1   |             TBD             |
+| AGGREGATE | 1   |         TESTING             |
 
 ---
 
