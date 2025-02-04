@@ -1,0 +1,299 @@
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 524, Column: 65 }
+Function:        _ZN2xf8database13dynamicFilterILi32ELi32EEEvRN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_IXT_EELi0EEESA_SA_SA_RNS3_IS4_IXT0_EELi0EEERNS3_IbLi0EEESD_SF_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          cmpvc_cfg_strms
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 527, Column: 9 }
+Function:        _ZN2xf8database13dynamicFilterILi32ELi32EEEvRN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_IXT_EELi0EEESA_SA_SA_RNS3_IS4_IXT0_EELi0EEERNS3_IbLi0EEESD_SF_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          cmpvv_cfg_strms
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z10filter_dutRN3hls6streamI7ap_uintILi32EELi0EEEPS3_S4_RNS0_IbLi0EEES4_S7_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          k_strms
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 524, Column: 65 }
+Function:        _ZN2xf8database13dynamicFilterILi32ELi32EEEvRN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_IXT_EELi0EEESA_SA_SA_RNS3_IS4_IXT0_EELi0EEERNS3_IbLi0EEESD_SF_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            cmpvc_cfg_strms_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '72'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 524, Column: 65 }
+Function:        _ZN2xf8database13dynamicFilterILi32ELi32EEEvRN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_IXT_EELi0EEESA_SA_SA_RNS3_IS4_IXT0_EELi0EEERNS3_IbLi0EEESD_SF_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            cmpvc_cfg_strms_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '72'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 524, Column: 65 }
+Function:        _ZN2xf8database13dynamicFilterILi32ELi32EEEvRN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_IXT_EELi0EEESA_SA_SA_RNS3_IS4_IXT0_EELi0EEERNS3_IbLi0EEESD_SF_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            cmpvc_cfg_strms_2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '72'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 524, Column: 65 }
+Function:        _ZN2xf8database13dynamicFilterILi32ELi32EEEvRN3hls6streamI7ap_uintILi32EELi0EEERNS3_IS4_IXT_EELi0EEESA_SA_SA_RNS3_IS4_IXT0_EELi0EEERNS3_IbLi0EEESD_SF_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            cmpvc_cfg_strms_3
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '72'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 88, Column: 22 }
+Function:        _ZN2xf8database7detailsL9broadcastERN3hls6streamIbLi0EEES5_S5_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_88_1
+  - String:          ' '
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:88:22'
+  - String:          ' '
+  - Function:        'xf::database::details::broadcast(hls::stream<bool, 0>&, hls::stream<bool, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                       Line: 86, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 250, Column: 5 }
+Function:        _ZN2xf8database7details11compare_opsILi32EEEvRN3hls6streamINS1_18var_const_cmp_infoIXT_EE8cfg_typeELi0EEES9_S9_S9_RNS4_INS1_16var_var_cmp_infoIXT_EE8cfg_typeELi0EEESE_SE_SE_SE_SE_RNS4_I7ap_uintIXT_EELi0EEESI_SI_SI_RNS4_IbLi0EEERNS4_ISF_ILi10EELi0EEESK_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        FILTER_MAIN_LOOP
+  - String:          ' '
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:250:5'
+  - String:          ' '
+  - Function:        'void xf::database::details::compare_ops<32>(hls::stream<xf::database::details::var_const_cmp_info<32>::cfg_type, 0>&, hls::stream<xf::database::details::var_const_cmp_info<32>::cfg_type, 0>&, hls::stream<xf::database::details::var_const_cmp_info<32>::cfg_type, 0>&, hls::stream<xf::database::details::var_const_cmp_info<32>::cfg_type, 0>&, hls::stream<xf::database::details::var_var_cmp_info<32>::cfg_type, 0>&, hls::stream<xf::database::details::var_var_cmp_info<32>::cfg_type, 0>&, hls::stream<xf::database::details::var_var_cmp_info<32>::cfg_type, 0>&, hls::stream<xf::database::details::var_var_cmp_info<32>::cfg_type, 0>&, hls::stream<xf::database::details::var_var_cmp_info<32>::cfg_type, 0>&, hls::stream<xf::database::details::var_var_cmp_info<32>::cfg_type, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<10>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                       Line: 231, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 334, Column: 5 }
+Function:        _ZN2xf8database7details10true_tableILi4EEEvRN3hls6streamI7ap_uintILi32EELi0EEERNS4_IS5_IXsr15true_table_infoIXT_EEE10addr_widthEELi0EEERNS4_IbLi0EEESD_SD_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        TRUE_TABLE_READ
+  - String:          ' '
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:334:5'
+  - String:          ' '
+  - Function:        'void xf::database::details::true_table<4>(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<true_table_info<4>::addr_width>, 0>&, hls::stream<bool, 0>&, hls::stream<bool, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                       Line: 313, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 372, Column: 5 }
+Function:        _ZN2xf8database7details9pred_passILi32EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IbLi0EEESA_SA_S8_SA_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        FILTER_PRED_PASS
+  - String:          ' '
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:372:5'
+  - String:          ' '
+  - Function:        'void xf::database::details::pred_pass<32>(hls::stream<ap_uint<32>, 0>&, hls::stream<bool, 0>&, hls::stream<bool, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<32>, 0>&, hls::stream<bool, 0>&)'
+    DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                       Line: 362, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 88, Column: 22 }
+Function:        _ZN2xf8database7detailsL9broadcastERN3hls6streamIbLi0EEES5_S5_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_88_1
+  - String:          '''('
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:88:22'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 250, Column: 5 }
+Function:        _ZN2xf8database7details11compare_opsILi32EEEvRN3hls6streamINS1_18var_const_cmp_infoIXT_EE8cfg_typeELi0EEES9_S9_S9_RNS4_INS1_16var_var_cmp_infoIXT_EE8cfg_typeELi0EEESE_SE_SE_SE_SE_RNS4_I7ap_uintIXT_EELi0EEESI_SI_SI_RNS4_IbLi0EEERNS4_ISF_ILi10EELi0EEESK_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        FILTER_MAIN_LOOP
+  - String:          '''('
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:250:5'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 334, Column: 5 }
+Function:        _ZN2xf8database7details10true_tableILi4EEEvRN3hls6streamI7ap_uintILi32EELi0EEERNS4_IS5_IXsr15true_table_infoIXT_EEE10addr_widthEELi0EEERNS4_IbLi0EEESD_SD_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        TRUE_TABLE_READ
+  - String:          '''('
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:334:5'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp, 
+                   Line: 372, Column: 5 }
+Function:        _ZN2xf8database7details9pred_passILi32EEEvRN3hls6streamI7ap_uintIXT_EELi0EEERNS4_IbLi0EEESA_SA_S8_SA_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        FILTER_PRED_PASS
+  - String:          '''('
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:372:5'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        FILTER_PRED_PASS
+  - String:          '> at '
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:372:5'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_419_1
+  - String:          '> at '
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:419:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_445_4
+  - String:          '> at '
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:445:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_467_5
+  - String:          '> at '
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:467:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_88_1
+  - String:          '> at '
+  - LoopLoc:         '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:88:22'
+  - String:          ' '
+...

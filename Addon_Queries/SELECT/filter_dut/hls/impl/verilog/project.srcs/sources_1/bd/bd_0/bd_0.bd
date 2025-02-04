@@ -1,0 +1,356 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xDD987BF311C04AD9",
+      "device": "xcvu9p-flga2104-2-i",
+      "gen_directory": "../../../../project.gen/sources_1/bd/bd_0",
+      "name": "bd_0",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "hls_inst": ""
+    },
+    "interface_ports": {
+      "ap_ctrl": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:acc_handshake:1.0",
+        "vlnv": "xilinx.com:interface:acc_handshake_rtl:1.0",
+        "port_maps": {
+          "done": {
+            "physical_name": "ap_ctrl_done",
+            "direction": "O"
+          },
+          "idle": {
+            "physical_name": "ap_ctrl_idle",
+            "direction": "O"
+          },
+          "ready": {
+            "physical_name": "ap_ctrl_ready",
+            "direction": "O"
+          },
+          "start": {
+            "physical_name": "ap_ctrl_start",
+            "direction": "I"
+          }
+        }
+      },
+      "e_f_strm": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:acc_fifo_write:1.0",
+        "vlnv": "xilinx.com:interface:acc_fifo_write_rtl:1.0",
+        "port_maps": {
+          "WR_DATA": {
+            "physical_name": "e_f_strm_wr_data",
+            "direction": "O"
+          },
+          "FULL_N": {
+            "physical_name": "e_f_strm_full_n",
+            "direction": "I"
+          },
+          "WR_EN": {
+            "physical_name": "e_f_strm_wr_en",
+            "direction": "O"
+          }
+        }
+      },
+      "e_strm": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:acc_fifo_read:1.0",
+        "vlnv": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+        "port_maps": {
+          "RD_DATA": {
+            "physical_name": "e_strm_rd_data",
+            "direction": "I"
+          },
+          "EMPTY_N": {
+            "physical_name": "e_strm_empty_n",
+            "direction": "I"
+          },
+          "RD_EN": {
+            "physical_name": "e_strm_rd_en",
+            "direction": "O"
+          }
+        }
+      },
+      "f_strm": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:acc_fifo_write:1.0",
+        "vlnv": "xilinx.com:interface:acc_fifo_write_rtl:1.0",
+        "port_maps": {
+          "WR_DATA": {
+            "physical_name": "f_strm_wr_data",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "FULL_N": {
+            "physical_name": "f_strm_full_n",
+            "direction": "I"
+          },
+          "WR_EN": {
+            "physical_name": "f_strm_wr_en",
+            "direction": "O"
+          }
+        }
+      },
+      "filter_cfg_strm": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:acc_fifo_read:1.0",
+        "vlnv": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+        "port_maps": {
+          "RD_DATA": {
+            "physical_name": "filter_cfg_strm_rd_data",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "EMPTY_N": {
+            "physical_name": "filter_cfg_strm_empty_n",
+            "direction": "I"
+          },
+          "RD_EN": {
+            "physical_name": "filter_cfg_strm_rd_en",
+            "direction": "O"
+          }
+        }
+      },
+      "k_strms_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:acc_fifo_read:1.0",
+        "vlnv": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+        "port_maps": {
+          "RD_DATA": {
+            "physical_name": "k_strms_0_rd_data",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "EMPTY_N": {
+            "physical_name": "k_strms_0_empty_n",
+            "direction": "I"
+          },
+          "RD_EN": {
+            "physical_name": "k_strms_0_rd_en",
+            "direction": "O"
+          }
+        }
+      },
+      "k_strms_1": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:acc_fifo_read:1.0",
+        "vlnv": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+        "port_maps": {
+          "RD_DATA": {
+            "physical_name": "k_strms_1_rd_data",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "EMPTY_N": {
+            "physical_name": "k_strms_1_empty_n",
+            "direction": "I"
+          },
+          "RD_EN": {
+            "physical_name": "k_strms_1_rd_en",
+            "direction": "O"
+          }
+        }
+      },
+      "k_strms_2": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:acc_fifo_read:1.0",
+        "vlnv": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+        "port_maps": {
+          "RD_DATA": {
+            "physical_name": "k_strms_2_rd_data",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "EMPTY_N": {
+            "physical_name": "k_strms_2_empty_n",
+            "direction": "I"
+          },
+          "RD_EN": {
+            "physical_name": "k_strms_2_rd_en",
+            "direction": "O"
+          }
+        }
+      },
+      "k_strms_3": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:acc_fifo_read:1.0",
+        "vlnv": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+        "port_maps": {
+          "RD_DATA": {
+            "physical_name": "k_strms_3_rd_data",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "EMPTY_N": {
+            "physical_name": "k_strms_3_empty_n",
+            "direction": "I"
+          },
+          "RD_EN": {
+            "physical_name": "k_strms_3_rd_en",
+            "direction": "O"
+          }
+        }
+      },
+      "p_strm": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:acc_fifo_read:1.0",
+        "vlnv": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+        "port_maps": {
+          "RD_DATA": {
+            "physical_name": "p_strm_rd_data",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "EMPTY_N": {
+            "physical_name": "p_strm_empty_n",
+            "direction": "I"
+          },
+          "RD_EN": {
+            "physical_name": "p_strm_rd_en",
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "ports": {
+      "ap_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "ap_rst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "bd_0_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000.0"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      }
+    },
+    "components": {
+      "hls_inst": {
+        "vlnv": "xilinx.com:hls:filter_dut:1.0",
+        "ip_revision": "2113938983",
+        "xci_name": "bd_0_hls_inst_0",
+        "xci_path": "ip/bd_0_hls_inst_0/bd_0_hls_inst_0.xci",
+        "inst_hier_path": "hls_inst"
+      }
+    },
+    "interface_nets": {
+      "ap_ctrl_0_1": {
+        "interface_ports": [
+          "ap_ctrl",
+          "hls_inst/ap_ctrl"
+        ]
+      },
+      "hls_inst_e_f_strm": {
+        "interface_ports": [
+          "e_f_strm",
+          "hls_inst/e_f_strm"
+        ]
+      },
+      "hls_inst_e_strm": {
+        "interface_ports": [
+          "e_strm",
+          "hls_inst/e_strm"
+        ]
+      },
+      "hls_inst_f_strm": {
+        "interface_ports": [
+          "f_strm",
+          "hls_inst/f_strm"
+        ]
+      },
+      "hls_inst_filter_cfg_strm": {
+        "interface_ports": [
+          "filter_cfg_strm",
+          "hls_inst/filter_cfg_strm"
+        ]
+      },
+      "hls_inst_k_strms_0": {
+        "interface_ports": [
+          "k_strms_0",
+          "hls_inst/k_strms_0"
+        ]
+      },
+      "hls_inst_k_strms_1": {
+        "interface_ports": [
+          "k_strms_1",
+          "hls_inst/k_strms_1"
+        ]
+      },
+      "hls_inst_k_strms_2": {
+        "interface_ports": [
+          "k_strms_2",
+          "hls_inst/k_strms_2"
+        ]
+      },
+      "hls_inst_k_strms_3": {
+        "interface_ports": [
+          "k_strms_3",
+          "hls_inst/k_strms_3"
+        ]
+      },
+      "hls_inst_p_strm": {
+        "interface_ports": [
+          "p_strm",
+          "hls_inst/p_strm"
+        ]
+      }
+    },
+    "nets": {
+      "ap_clk_0_1": {
+        "ports": [
+          "ap_clk",
+          "hls_inst/ap_clk"
+        ]
+      },
+      "ap_rst_0_1": {
+        "ports": [
+          "ap_rst",
+          "hls_inst/ap_rst"
+        ]
+      }
+    }
+  }
+}

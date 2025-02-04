@@ -1,0 +1,58 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 9095, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 1093, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   568, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   564, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   564, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,   578, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,   578, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,   586, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,   782, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,   798, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,   714, loop and instruction simplification</column>
+            <column name="">(2) parallelization,   714, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,   714, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,   714, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,   740, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,   811, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="filter_dut" col1="filter_dut.cpp:20" col2="9095" col3="564" col4="798" col5="714" col6="811">
+                    <row id="7" col0="dynamicFilter&lt;32, 32&gt;" col1="dynamic_filter.hpp:510" col2="9083" col3="559" col4="796" col5="712" col6="781">
+                        <row id="4" col0="broadcast" col1="dynamic_filter.hpp:86" col2="77" col3="12" col4="12" col5="12" col6="26"/>
+                        <row id="6" col0="parse_filter_config&lt;4, 32&gt;" col1="dynamic_filter.hpp:405" col2="473" col3="43" col4="177" col5="93" col6="131"/>
+                        <row id="3" col0="compare_ops&lt;32&gt;" col1="dynamic_filter.hpp:213" col2="8133" col3="358" col4="470" col5="470" col6="470">
+                            <row id="1" col0="var_const_cmp&lt;32&gt;" col1="dynamic_filter.hpp:110" col2="3520" col2_disp="3,520 (4 calls)" col3="140" col3_disp="140 (4 calls)" col4="140" col4_disp="140 (4 calls)" col5="140" col5_disp="140 (4 calls)" col6="140" col6_disp="140 (4 calls)"/>
+                            <row id="5" col0="var_var_cmp&lt;32&gt;" col1="dynamic_filter.hpp:174" col2="4002" col2_disp="4,002 (6 calls)" col3="162" col3_disp="162 (6 calls)" col4="162" col4_disp="162 (6 calls)" col5="162" col5_disp="162 (6 calls)" col6="162" col6_disp="162 (6 calls)"/>
+                        </row>
+                        <row id="2" col0="true_table&lt;4&gt;" col1="dynamic_filter.hpp:309" col2="149" col3="33" col4="33" col5="33" col6="56"/>
+                        <row id="8" col0="pred_pass&lt;32&gt;" col1="dynamic_filter.hpp:356" col2="118" col3="19" col4="19" col5="19" col6="39"/>
+                    </row>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

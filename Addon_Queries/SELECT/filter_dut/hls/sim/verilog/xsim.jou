@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Feb  3 14:22:30 2025
+# Process ID: 2077520
+# Current directory: /home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/filter_dut/xsim_script.tcl}
+# Log file: /home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/xsim.log
+# Journal file: /home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/xsim.jou
+# Running On        :chips-server
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 21.04
+# Processor Detail  :11th Gen Intel(R) Core(TM) i9-11900K @ 3.50GHz
+# CPU Frequency     :3500.000 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :134797 MB
+# Swap memory       :21474 MB
+# Total Virtual     :156271 MB
+# Available Virtual :141695 MB
+#-----------------------------------------------------------
+source xsim.dir/filter_dut/xsim_script.tcl
+source filter_dut.tcl

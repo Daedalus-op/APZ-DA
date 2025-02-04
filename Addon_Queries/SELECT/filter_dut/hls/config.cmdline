@@ -1,0 +1,3 @@
+relativeroot=/home/chips/Storage/zoho/hls_component
+original_argv=--mode hls --impl --config /home/chips/Storage/zoho/hls_component/hls_config.cfg --work_dir filter_dut 
+

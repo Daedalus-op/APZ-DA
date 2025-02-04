@@ -1,0 +1,57 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 9,095        | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  | 1,093        | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |   568        | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |   564        | user inline pragmas are applied                                                        |
+|               | (4) simplification          |   564        | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |   578        | user array partition pragmas are applied                                               |
+|               | (2) simplification          |   578        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |   586        | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |   782        | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |   798        | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |   714        | loop and instruction simplification                                                    |
+|               | (2) parallelization         |   714        | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |   714        | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |   714        | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |   740        | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |   811        | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++--------------------------------+------------------------+-----------------+---------------+---------------+---------------+---------------+
+| Function                       | Location               | Compile/Link    | Unroll/Inline | Array/Struct  | Performance   | HW Transforms |
++--------------------------------+------------------------+-----------------+---------------+---------------+---------------+---------------+
+| + filter_dut                   | filter_dut.cpp:20      | 9,095           | 564           | 798           | 714           | 811           |
+|  + dynamicFilter<32, 32>       | dynamic_filter.hpp:510 | 9,083           | 559           | 796           | 712           | 781           |
+|     broadcast                  | dynamic_filter.hpp:86  |   77            |  12           |  12           |  12           |  26           |
+|     parse_filter_config<4, 32> | dynamic_filter.hpp:405 |  473            |  43           | 177           |  93           | 131           |
+|   + compare_ops<32>            | dynamic_filter.hpp:213 | 8,133           | 358           | 470           | 470           | 470           |
+|      var_const_cmp<32>         | dynamic_filter.hpp:110 | 3,520 (4 calls) | 140 (4 calls) | 140 (4 calls) | 140 (4 calls) | 140 (4 calls) |
+|      var_var_cmp<32>           | dynamic_filter.hpp:174 | 4,002 (6 calls) | 162 (6 calls) | 162 (6 calls) | 162 (6 calls) | 162 (6 calls) |
+|     true_table<4>              | dynamic_filter.hpp:309 |  149            |  33           |  33           |  33           |  56           |
+|     pred_pass<32>              | dynamic_filter.hpp:356 |  118            |  19           |  19           |  19           |  39           |
++--------------------------------+------------------------+-----------------+---------------+---------------+---------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

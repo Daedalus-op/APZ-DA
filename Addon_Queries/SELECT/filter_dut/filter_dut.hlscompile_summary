@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "/home/chips/Storage/zoho/hls_component/filter_dut/filter_dut.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Feb  3 14:21:40 2025",
+ "timestampMillis": "1738572700710",
+ "buildStep": {
+  "cmdId": "77a7663c-9833-42fe-a08d-e9edd41677e6",
+  "name": "v++",
+  "logFile": "/home/chips/Storage/zoho/hls_component/filter_dut/logs/filter_dut.steps.log",
+  "commandLine": "/home/chips/Storage/Vitis/2024.1/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/chips/Storage/zoho/hls_component/hls_config.cfg --work_dir filter_dut ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/home/chips/Storage/zoho/hls_component/hls_config.cfg",
+   "--work_dir",
+   "filter_dut"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/chips/Storage/zoho/hls_component/hls_config.cfg",
+    "content": "part=xcvu9p-flga2104-2-i\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=filter_dut\nsyn.file=/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp\nsyn.file=/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.hpp\ntb.file=/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_test.cpp"
+   }
+  ],
+  "cwd": "/home/chips/Storage/zoho/hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Feb  3 14:21:40 2025",
+ "timestampMillis": "1738572700710",
+ "status": {
+  "cmdId": "77a7663c-9833-42fe-a08d-e9edd41677e6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Feb  3 14:21:43 2025",
+ "timestampMillis": "1738572703835",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "filter_dut",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp",
+     "/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Feb  3 14:21:43 2025",
+ "timestampMillis": "1738572703836",
+ "buildStep": {
+  "cmdId": "40bae306-4d8a-40a5-a8d2-288ee8c98b14",
+  "name": "csynth_design",
+  "logFile": "/home/chips/Storage/zoho/hls_component/filter_dut/hls/hls.log",
+  "commandLine": "csynth_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/chips/Storage/zoho/hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Feb  3 14:21:43 2025",
+ "timestampMillis": "1738572703836",
+ "status": {
+  "cmdId": "40bae306-4d8a-40a5-a8d2-288ee8c98b14",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:21:43 2025",
+ "timestampMillis": "1738572703836",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:21:43 2025",
+ "timestampMillis": "1738572703836",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:21:43 2025",
+ "timestampMillis": "1738572703836",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:21:58 2025",
+ "timestampMillis": "1738572718548",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:21:58 2025",
+ "timestampMillis": "1738572718549",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:21:58 2025",
+ "timestampMillis": "1738572718549",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Feb  3 14:21:58 2025",
+ "timestampMillis": "1738572718549",
+ "status": {
+  "cmdId": "40bae306-4d8a-40a5-a8d2-288ee8c98b14",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Feb  3 14:21:58 2025",
+ "timestampMillis": "1738572718672",
+ "status": {
+  "cmdId": "77a7663c-9833-42fe-a08d-e9edd41677e6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:21:58 2025",
+ "timestampMillis": "1738572718711",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/reports/v++_compile_filter_dut_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:21:58 2025",
+ "timestampMillis": "1738572718711",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/reports/.db/v++_compile_filter_dut_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vitis HLS Report for 'pred_pass_32_s'
+================================================================
+* Date:           Mon Feb  3 14:21:57 2025
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        filter_dut
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.894 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |                                                  |                                        |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+        |                     Instance                     |                 Module                 |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |grp_pred_pass_32_Pipeline_FILTER_PRED_PASS_fu_52  |pred_pass_32_Pipeline_FILTER_PRED_PASS  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|        2|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|       41|      102|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        0|      125|    -|
+|Register             |        -|     -|        8|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       49|      229|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------+----------------------------------------+---------+----+----+-----+-----+
+    |                     Instance                     |                 Module                 | BRAM_18K| DSP| FF | LUT | URAM|
+    +--------------------------------------------------+----------------------------------------+---------+----+----+-----+-----+
+    |grp_pred_pass_32_Pipeline_FILTER_PRED_PASS_fu_52  |pred_pass_32_Pipeline_FILTER_PRED_PASS  |        0|   0|  41|  102|    0|
+    +--------------------------------------------------+----------------------------------------+---------+----+----+-----+-----+
+    |Total                                             |                                        |        0|   0|  41|  102|    0|
+    +--------------------------------------------------+----------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------+----+-----------+-----+-----------+
+    |      Name      | LUT| Input Size| Bits| Total Bits|
+    +----------------+----+-----------+-----+-----------+
+    |ap_NS_fsm       |  26|          5|    1|          5|
+    |ap_done         |   9|          2|    1|          2|
+    |b_strm_read     |   9|          2|    1|          2|
+    |e_b_strm_blk_n  |   9|          2|    1|          2|
+    |e_b_strm_read   |   9|          2|    1|          2|
+    |e_f_strm_blk_n  |   9|          2|    1|          2|
+    |e_f_strm_din    |   9|          2|    1|          2|
+    |e_f_strm_write  |   9|          2|    1|          2|
+    |e_p_strm_blk_n  |   9|          2|    1|          2|
+    |e_p_strm_read   |   9|          2|    1|          2|
+    |f_strm_write    |   9|          2|    1|          2|
+    |p_strm_read     |   9|          2|    1|          2|
+    +----------------+----+-----------+-----+-----------+
+    |Total           | 125|         27|   12|         27|
+    +----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |                              Name                             | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                      |  4|   0|    4|          0|
+    |ap_done_reg                                                    |  1|   0|    1|          0|
+    |eb_reg_75                                                      |  1|   0|    1|          0|
+    |ep_reg_70                                                      |  1|   0|    1|          0|
+    |grp_pred_pass_32_Pipeline_FILTER_PRED_PASS_fu_52_ap_start_reg  |  1|   0|    1|          0|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                          |  8|   0|    8|          0|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+---------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  | Source Object |    C Type    |
++-------------------------+-----+-----+------------+---------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  pred_pass<32>|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  pred_pass<32>|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  pred_pass<32>|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  pred_pass<32>|  return value|
+|ap_continue              |   in|    1|  ap_ctrl_hs|  pred_pass<32>|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  pred_pass<32>|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  pred_pass<32>|  return value|
+|p_strm_dout              |   in|   32|     ap_fifo|         p_strm|       pointer|
+|p_strm_empty_n           |   in|    1|     ap_fifo|         p_strm|       pointer|
+|p_strm_read              |  out|    1|     ap_fifo|         p_strm|       pointer|
+|e_p_strm_dout            |   in|    1|     ap_fifo|       e_p_strm|       pointer|
+|e_p_strm_num_data_valid  |   in|    6|     ap_fifo|       e_p_strm|       pointer|
+|e_p_strm_fifo_cap        |   in|    6|     ap_fifo|       e_p_strm|       pointer|
+|e_p_strm_empty_n         |   in|    1|     ap_fifo|       e_p_strm|       pointer|
+|e_p_strm_read            |  out|    1|     ap_fifo|       e_p_strm|       pointer|
+|b_strm_dout              |   in|    1|     ap_fifo|         b_strm|       pointer|
+|b_strm_num_data_valid    |   in|    4|     ap_fifo|         b_strm|       pointer|
+|b_strm_fifo_cap          |   in|    4|     ap_fifo|         b_strm|       pointer|
+|b_strm_empty_n           |   in|    1|     ap_fifo|         b_strm|       pointer|
+|b_strm_read              |  out|    1|     ap_fifo|         b_strm|       pointer|
+|e_b_strm_dout            |   in|    1|     ap_fifo|       e_b_strm|       pointer|
+|e_b_strm_num_data_valid  |   in|    4|     ap_fifo|       e_b_strm|       pointer|
+|e_b_strm_fifo_cap        |   in|    4|     ap_fifo|       e_b_strm|       pointer|
+|e_b_strm_empty_n         |   in|    1|     ap_fifo|       e_b_strm|       pointer|
+|e_b_strm_read            |  out|    1|     ap_fifo|       e_b_strm|       pointer|
+|f_strm_din               |  out|   32|     ap_fifo|         f_strm|       pointer|
+|f_strm_full_n            |   in|    1|     ap_fifo|         f_strm|       pointer|
+|f_strm_write             |  out|    1|     ap_fifo|         f_strm|       pointer|
+|e_f_strm_din             |  out|    1|     ap_fifo|       e_f_strm|       pointer|
+|e_f_strm_full_n          |   in|    1|     ap_fifo|       e_f_strm|       pointer|
+|e_f_strm_write           |  out|    1|     ap_fifo|       e_f_strm|       pointer|
++-------------------------+-----+-----+------------+---------------+--------------+
+

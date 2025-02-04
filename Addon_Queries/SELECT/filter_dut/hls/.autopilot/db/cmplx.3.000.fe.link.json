@@ -1,0 +1,107 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "filter_dut.cpp",
+    "fileloc": 20,
+    "instructions": 12,
+    "name": "filter_dut",
+    "total_instructions": 9095
+  },
+  "1": {
+    "basicblocks": 45,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 110,
+    "instructions": 198,
+    "name": "var_const_cmp<32>",
+    "total_instructions": 880
+  },
+  "2": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 309,
+    "instructions": 79,
+    "loads": {
+      "L": 1
+    },
+    "name": "true_table<4>",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 149
+  },
+  "3": {
+    "basicblocks": 5,
+    "calls": "1 1 1 1 5 5 5 5 5 5",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 213,
+    "instructions": 241,
+    "loads": {
+      "L": 26
+    },
+    "name": "compare_ops<32>",
+    "stores": {
+      "L": 28
+    },
+    "total_instructions": 8133
+  },
+  "4": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 86,
+    "instructions": 37,
+    "name": "broadcast",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 77
+  },
+  "5": {
+    "basicblocks": 34,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 174,
+    "instructions": 140,
+    "name": "var_var_cmp<32>",
+    "total_instructions": 667
+  },
+  "6": {
+    "basicblocks": 39,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 405,
+    "instructions": 198,
+    "loads": {
+      "L": 5
+    },
+    "name": "parse_filter_config<4, 32>",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 473
+  },
+  "7": {
+    "basicblocks": 7,
+    "calls": "4 6 3 2 8",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 510,
+    "instructions": 124,
+    "name": "dynamicFilter<32, 32>",
+    "total_instructions": 9083
+  },
+  "8": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 356,
+    "instructions": 40,
+    "name": "pred_pass<32>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 118
+  }
+}

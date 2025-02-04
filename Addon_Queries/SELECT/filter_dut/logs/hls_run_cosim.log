@@ -1,0 +1,253 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /home/chips/Storage/zoho/hls_component/filter_dut/filter_dut.hlsrun_cosim_summary, at Mon Feb  3 14:22:07 2025
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run cosim -work_dir /home/chips/Storage/zoho/hls_component/filter_dut -config /home/chips/Storage/zoho/hls_component/hls_config.cfg -cmdlineconfig /home/chips/Storage/zoho/hls_component/filter_dut/hls/config.cmdline
+INFO: [HLS 200-10] For user 'chips' on host 'chips-server' (Linux_x86_64 version 5.11.0-49-generic) on Mon Feb 03 14:22:09 IST 2025
+INFO: [HLS 200-10] On os Ubuntu 21.04
+INFO: [HLS 200-10] In directory '/home/chips/Storage/zoho/hls_component'
+INFO: [HLS 200-2005] Using work_dir /home/chips/Storage/zoho/hls_component/filter_dut 
+INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flga2104-2-i'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.hpp' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_test.cpp' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file '/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_test.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=filter_dut' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xcvu9p-flga2104-2-i' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(5)
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/home/chips/Storage/Vitis_HLS/2024.1/vcxx/libexec//clang++"
+   Compiling apatb_filter_dut.cpp
+   Compiling apatb_filter_dut_util.cpp
+   Compiling filter_dut.cpp_pre.cpp.tb.cpp
+   Compiling filter_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_filter_dut_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+DEBUG: total config dwords: 45
+INFO: DUT generated 47 rows, sum = 2288
+INFO: CPU ref matched 47 rows, sum = 2288
+
+PASS: no error found.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1025
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/chips/Storage/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_filter_dut_top glbl -Oenable_linking_all_libraries -prj filter_dut.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_23 -L floating_point_v7_1_18 --lib ieee_proposed=./ieee_proposed -s filter_dut 
+Multi-threading is on. Using 14 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_true_table_4_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_true_table_4_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_true_table_4_Pipeline_TRUE_TABLE_READ.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_true_table_4_Pipeline_TRUE_TABLE_READ
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_sparsemux_17_7_1_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_sparsemux_17_7_1_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_filter_dut_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_autofifo_k_strms_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_k_strms_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_autofifo_p_strm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_p_strm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_dynamicFilter_32_32_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_dynamicFilter_32_32_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_var_const_cmp_32_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_var_const_cmp_32_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_broadcast_Pipeline_VITIS_LOOP_88_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_broadcast_Pipeline_VITIS_LOOP_88_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_autofifo_k_strms_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_k_strms_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_true_table_4_s_truetable_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_true_table_4_s_truetable_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_autofifo_e_f_strm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_e_f_strm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_fifo_w72_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w72_d2_S
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w72_d2_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_fifo_w1_d32_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w1_d32_S
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w1_d32_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_autofifo_k_strms_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_k_strms_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_parse_filter_config_4_32_Pipeline_VITIS_LOOP_467_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_parse_filter_config_4_32_Pipeline_VITIS_LOOP_467_5
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_parse_filter_config_4_32_Pipeline_VITIS_LOOP_445_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_parse_filter_config_4_32_Pipeline_VITIS_LOOP_445_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_compare_ops_32_Pipeline_FILTER_MAIN_LOOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_compare_ops_32_Pipeline_FILTER_MAIN_LOOP
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_start_for_compare_ops_32_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_start_for_compare_ops_32_U0
+INFO: [VRFC 10-311] analyzing module filter_dut_start_for_compare_ops_32_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_fifo_w4_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w4_d2_S
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w4_d2_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_pred_pass_32_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_pred_pass_32_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_start_for_true_table_4_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_start_for_true_table_4_U0
+INFO: [VRFC 10-311] analyzing module filter_dut_start_for_true_table_4_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_true_table_4_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_true_table_4_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_autofifo_k_strms_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_k_strms_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_compare_ops_32_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_compare_ops_32_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_autofifo_f_strm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_f_strm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_fifo_w10_d8_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w10_d8_S
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w10_d8_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_var_var_cmp_32_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_var_var_cmp_32_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_start_for_pred_pass_32_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_start_for_pred_pass_32_U0
+INFO: [VRFC 10-311] analyzing module filter_dut_start_for_pred_pass_32_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_fifo_w1_d8_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w1_d8_S
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w1_d8_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_pred_pass_32_Pipeline_FILTER_PRED_PASS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_pred_pass_32_Pipeline_FILTER_PRED_PASS
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_broadcast.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_broadcast
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_parse_filter_config_4_32_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_parse_filter_config_4_32_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_autofifo_filter_cfg_strm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_filter_cfg_strm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/AESL_autofifo_e_strm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_e_strm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut_fifo_w32_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w32_d2_S
+INFO: [VRFC 10-311] analyzing module filter_dut_fifo_w32_d2_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.filter_dut_flow_control_loop_pip...
+Compiling module xil_defaultlib.filter_dut_broadcast_Pipeline_VI...
+Compiling module xil_defaultlib.filter_dut_broadcast
+Compiling module xil_defaultlib.filter_dut_parse_filter_config_4...
+Compiling module xil_defaultlib.filter_dut_parse_filter_config_4...
+Compiling module xil_defaultlib.filter_dut_parse_filter_config_4...
+Compiling module xil_defaultlib.filter_dut_parse_filter_config_4...
+Compiling module xil_defaultlib.filter_dut_sparsemux_17_7_1_1_1(...
+Compiling module xil_defaultlib.filter_dut_var_const_cmp_32_s
+Compiling module xil_defaultlib.filter_dut_var_var_cmp_32_s
+Compiling module xil_defaultlib.filter_dut_compare_ops_32_Pipeli...
+Compiling module xil_defaultlib.filter_dut_compare_ops_32_s
+Compiling module xil_defaultlib.filter_dut_true_table_4_s_trueta...
+Compiling module xil_defaultlib.filter_dut_true_table_4_Pipeline...
+Compiling module xil_defaultlib.filter_dut_true_table_4_Pipeline...
+Compiling module xil_defaultlib.filter_dut_true_table_4_s
+Compiling module xil_defaultlib.filter_dut_pred_pass_32_Pipeline...
+Compiling module xil_defaultlib.filter_dut_pred_pass_32_s
+Compiling module xil_defaultlib.filter_dut_fifo_w1_d8_S_ShiftReg
+Compiling module xil_defaultlib.filter_dut_fifo_w1_d8_S_default
+Compiling module xil_defaultlib.filter_dut_fifo_w1_d32_S_ShiftRe...
+Compiling module xil_defaultlib.filter_dut_fifo_w1_d32_S_default
+Compiling module xil_defaultlib.filter_dut_fifo_w72_d2_S_ShiftRe...
+Compiling module xil_defaultlib.filter_dut_fifo_w72_d2_S_default
+Compiling module xil_defaultlib.filter_dut_fifo_w4_d2_S_ShiftReg
+Compiling module xil_defaultlib.filter_dut_fifo_w4_d2_S_default
+Compiling module xil_defaultlib.filter_dut_fifo_w32_d2_S_ShiftRe...
+Compiling module xil_defaultlib.filter_dut_fifo_w32_d2_S_default
+Compiling module xil_defaultlib.filter_dut_fifo_w10_d8_S_ShiftRe...
+Compiling module xil_defaultlib.filter_dut_fifo_w10_d8_S_default
+Compiling module xil_defaultlib.filter_dut_start_for_compare_ops...
+Compiling module xil_defaultlib.filter_dut_start_for_compare_ops...
+Compiling module xil_defaultlib.filter_dut_start_for_pred_pass_3...
+Compiling module xil_defaultlib.filter_dut_start_for_pred_pass_3...
+Compiling module xil_defaultlib.filter_dut_start_for_true_table_...
+Compiling module xil_defaultlib.filter_dut_start_for_true_table_...
+Compiling module xil_defaultlib.filter_dut_dynamicFilter_32_32_s
+Compiling module xil_defaultlib.filter_dut
+Compiling module xil_defaultlib.AESL_autofifo_filter_cfg_strm
+Compiling module xil_defaultlib.AESL_autofifo_k_strms_0
+Compiling module xil_defaultlib.AESL_autofifo_k_strms_1
+Compiling module xil_defaultlib.AESL_autofifo_k_strms_2
+Compiling module xil_defaultlib.AESL_autofifo_k_strms_3
+Compiling module xil_defaultlib.AESL_autofifo_p_strm
+Compiling module xil_defaultlib.AESL_autofifo_e_strm
+Compiling module xil_defaultlib.AESL_autofifo_f_strm
+Compiling module xil_defaultlib.AESL_autofifo_e_f_strm
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_2
+Compiling module xil_defaultlib.df_fifo_intf_default
+Compiling module xil_defaultlib.df_process_intf_default
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=3)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_filter_dut_top
+Compiling module work.glbl
+Built simulation snapshot filter_dut
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Feb  3 14:22:30 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/filter_dut/xsim_script.tcl
+# xsim {filter_dut} -autoloadwcfg -tclbatch {filter_dut.tcl}
+Time resolution is 1 ps
+source filter_dut.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "21015000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 21075 ns : File "/home/chips/Storage/zoho/hls_component/filter_dut/hls/sim/verilog/filter_dut.autotb.v" Line 655
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Feb  3 14:22:33 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+DEBUG: total config dwords: 45
+INFO: DUT generated 47 rows, sum = 2288
+INFO: CPU ref matched 47 rows, sum = 2288
+
+PASS: no error found.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1025
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-112] Total CPU user time: 24.29 seconds. Total CPU system time: 1.47 seconds. Total elapsed time: 25.63 seconds; peak allocated memory: 405.754 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 29s

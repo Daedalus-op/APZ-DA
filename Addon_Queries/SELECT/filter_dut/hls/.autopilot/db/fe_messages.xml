@@ -1,0 +1,135 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:251:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compare_ops" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:322:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="true_table" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:335:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="true_table" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:521:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:531:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = cmpvc_cfg_strms" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:532:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = cmpvv_cfg_strms" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:544:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = e_v_strm depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:545:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = e_p_strm depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:546:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = addr_strm depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:547:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = e_addr_strm depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:548:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = b_strm depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:549:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = e_b_strm depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:601:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="filter_3_to_4" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:654:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:663:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = va_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:664:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = vb_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:665:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = vc_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:666:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = vd_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:667:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = pay_strm1 depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:668:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = e_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:700:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="filter_2_to_4" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:750:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:759:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = va_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:760:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = vb_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:761:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = vc_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:762:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = vd_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:763:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = pay_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:764:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = e_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:794:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="filter_1_to_4" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:841:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:850:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = va_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:851:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = vb_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:852:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = vc_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:853:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = vd_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:854:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = pay_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:855:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dynamicFilter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = e_strm1 depth = 8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="filter_dut" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=filter_dut" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:524:65" msg_body="Applying array_partition to 'cmpvc_cfg_strms': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="cmpvc_cfg_strms"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527:9" msg_body="Applying array_partition to 'cmpvv_cfg_strms': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="cmpvv_cfg_strms"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp:26:0" msg_body="Applying array_partition to 'k_strms': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="k_strms"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:524:65" msg_body="Aggregating fifo (hls::stream) variable 'cmpvc_cfg_strms_0' with compact=bit mode in 72-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="72" HwTyName="fifo (hls::stream)" Name="cmpvc_cfg_strms_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:524:65" msg_body="Aggregating fifo (hls::stream) variable 'cmpvc_cfg_strms_1' with compact=bit mode in 72-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="72" HwTyName="fifo (hls::stream)" Name="cmpvc_cfg_strms_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:524:65" msg_body="Aggregating fifo (hls::stream) variable 'cmpvc_cfg_strms_2' with compact=bit mode in 72-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="72" HwTyName="fifo (hls::stream)" Name="cmpvc_cfg_strms_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:524:65" msg_body="Aggregating fifo (hls::stream) variable 'cmpvc_cfg_strms_3' with compact=bit mode in 72-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="72" HwTyName="fifo (hls::stream)" Name="cmpvc_cfg_strms_3"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,180 @@
+
+
+================================================================
+== Vitis HLS Report for 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1'
+================================================================
+* Date:           Mon Feb  3 14:21:55 2025
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        filter_dut
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.833 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |       14|       14|  0.140 us|  0.140 us|   13|   13|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_419_1  |       12|       12|         4|          3|          1|     4|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       34|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        0|      119|    -|
+|Register             |        -|     -|       76|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       76|      153|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln419_fu_108_p2               |         +|   0|  0|  10|           3|           1|
+    |ap_block_pp0_stage0_01001         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage1_11001         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage2_11001         |       and|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage1_iter0  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln419_fu_102_p2              |      icmp|   0|  0|  12|           3|           4|
+    |ap_block_state4_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  34|          12|          12|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  20|          4|    1|          4|
+    |ap_done_int                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0_reg  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_3         |   9|          2|    3|          6|
+    |cmpvc_cfg_strms_0_blk_n      |   9|          2|    1|          2|
+    |cmpvc_cfg_strms_1_blk_n      |   9|          2|    1|          2|
+    |cmpvc_cfg_strms_2_blk_n      |   9|          2|    1|          2|
+    |cmpvc_cfg_strms_3_blk_n      |   9|          2|    1|          2|
+    |filter_cfg_strm_blk_n        |   9|          2|    1|          2|
+    |i_fu_56                      |   9|          2|    3|          6|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 119|         26|   16|         34|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   3|   0|    3|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |cfg_l_reg_166                |  32|   0|   32|          0|
+    |cfg_r_reg_171                |  32|   0|   32|          0|
+    |i_fu_56                      |   3|   0|    3|          0|
+    |icmp_ln419_reg_158           |   1|   0|    1|          0|
+    |trunc_ln419_reg_162          |   2|   0|    2|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        |  76|   0|   76|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+------------------------------------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |                     Source Object                    |    C Type    |
++----------------------------------+-----+-----+------------+------------------------------------------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|  parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_419_1|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|  parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_419_1|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|  parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_419_1|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|  parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_419_1|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|  parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_419_1|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|  parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_419_1|  return value|
+|filter_cfg_strm_dout              |   in|   32|     ap_fifo|                                       filter_cfg_strm|       pointer|
+|filter_cfg_strm_empty_n           |   in|    1|     ap_fifo|                                       filter_cfg_strm|       pointer|
+|filter_cfg_strm_read              |  out|    1|     ap_fifo|                                       filter_cfg_strm|       pointer|
+|cmpvc_cfg_strms_2_din             |  out|   72|     ap_fifo|                                     cmpvc_cfg_strms_2|       pointer|
+|cmpvc_cfg_strms_2_num_data_valid  |   in|    3|     ap_fifo|                                     cmpvc_cfg_strms_2|       pointer|
+|cmpvc_cfg_strms_2_fifo_cap        |   in|    3|     ap_fifo|                                     cmpvc_cfg_strms_2|       pointer|
+|cmpvc_cfg_strms_2_full_n          |   in|    1|     ap_fifo|                                     cmpvc_cfg_strms_2|       pointer|
+|cmpvc_cfg_strms_2_write           |  out|    1|     ap_fifo|                                     cmpvc_cfg_strms_2|       pointer|
+|cmpvc_cfg_strms_1_din             |  out|   72|     ap_fifo|                                     cmpvc_cfg_strms_1|       pointer|
+|cmpvc_cfg_strms_1_num_data_valid  |   in|    3|     ap_fifo|                                     cmpvc_cfg_strms_1|       pointer|
+|cmpvc_cfg_strms_1_fifo_cap        |   in|    3|     ap_fifo|                                     cmpvc_cfg_strms_1|       pointer|
+|cmpvc_cfg_strms_1_full_n          |   in|    1|     ap_fifo|                                     cmpvc_cfg_strms_1|       pointer|
+|cmpvc_cfg_strms_1_write           |  out|    1|     ap_fifo|                                     cmpvc_cfg_strms_1|       pointer|
+|cmpvc_cfg_strms_0_din             |  out|   72|     ap_fifo|                                     cmpvc_cfg_strms_0|       pointer|
+|cmpvc_cfg_strms_0_num_data_valid  |   in|    3|     ap_fifo|                                     cmpvc_cfg_strms_0|       pointer|
+|cmpvc_cfg_strms_0_fifo_cap        |   in|    3|     ap_fifo|                                     cmpvc_cfg_strms_0|       pointer|
+|cmpvc_cfg_strms_0_full_n          |   in|    1|     ap_fifo|                                     cmpvc_cfg_strms_0|       pointer|
+|cmpvc_cfg_strms_0_write           |  out|    1|     ap_fifo|                                     cmpvc_cfg_strms_0|       pointer|
+|cmpvc_cfg_strms_3_din             |  out|   72|     ap_fifo|                                     cmpvc_cfg_strms_3|       pointer|
+|cmpvc_cfg_strms_3_num_data_valid  |   in|    3|     ap_fifo|                                     cmpvc_cfg_strms_3|       pointer|
+|cmpvc_cfg_strms_3_fifo_cap        |   in|    3|     ap_fifo|                                     cmpvc_cfg_strms_3|       pointer|
+|cmpvc_cfg_strms_3_full_n          |   in|    1|     ap_fifo|                                     cmpvc_cfg_strms_3|       pointer|
+|cmpvc_cfg_strms_3_write           |  out|    1|     ap_fifo|                                     cmpvc_cfg_strms_3|       pointer|
++----------------------------------+-----+-----+------------+------------------------------------------------------+--------------+
+

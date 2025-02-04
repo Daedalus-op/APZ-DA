@@ -1,0 +1,465 @@
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/chips/Storage/zoho/hls_component/filter_dut/filter_dut.hlscompile_summary, at Mon Feb  3 14:21:40 2025
+INFO: [v++ 82-31] Launching vitis_hls: vitis_hls -nolog -run csynth -work_dir /home/chips/Storage/zoho/hls_component/filter_dut -config /home/chips/Storage/zoho/hls_component/hls_config.cfg -cmdlineconfig /home/chips/Storage/zoho/hls_component/filter_dut/hls/config.cmdline
+INFO: [HLS 200-10] For user 'chips' on host 'chips-server' (Linux_x86_64 version 5.11.0-49-generic) on Mon Feb 03 14:21:42 IST 2025
+INFO: [HLS 200-10] On os Ubuntu 21.04
+INFO: [HLS 200-10] In directory '/home/chips/Storage/zoho/hls_component'
+INFO: [HLS 200-2005] Using work_dir /home/chips/Storage/zoho/hls_component/filter_dut 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.hpp' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_test.cpp' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file '/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_test.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=filter_dut' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xcvu9p-flga2104-2-i' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flga2104-2-i'
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /home/chips/Storage/zoho/hls_component/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 2.18 seconds. CPU system time: 0.17 seconds. Elapsed time: 2.26 seconds; current allocated memory: 340.996 MB.
+INFO: [HLS 200-10] Analyzing design file '../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.99 seconds. CPU system time: 0.29 seconds. Elapsed time: 2.32 seconds; current allocated memory: 343.398 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 9,095 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,093 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 568 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 564 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 564 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 578 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 578 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 586 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 782 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 798 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 714 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 714 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 714 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 714 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 740 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 811 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/chips/Storage/zoho/hls_component/filter_dut/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-248] Applying array_partition to 'cmpvc_cfg_strms': Complete partitioning on dimension 1. (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:524:65)
+INFO: [HLS 214-248] Applying array_partition to 'cmpvv_cfg_strms': Complete partitioning on dimension 1. (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527:9)
+INFO: [HLS 214-248] Applying array_partition to 'k_strms': Complete partitioning on dimension 1. (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp:26:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cmpvc_cfg_strms_0' with compact=bit mode in 72-bits (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:524:65)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cmpvc_cfg_strms_1' with compact=bit mode in 72-bits (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:524:65)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cmpvc_cfg_strms_2' with compact=bit mode in 72-bits (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:524:65)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cmpvc_cfg_strms_3' with compact=bit mode in 72-bits (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:524:65)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< FILTER_PRED_PASS> at ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:372:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_419_1> at ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:419:27 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_445_4> at ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:445:27 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_467_5> at ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:467:27 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_88_1> at ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:88:22 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.75 seconds. CPU system time: 0.27 seconds. Elapsed time: 6.77 seconds; current allocated memory: 345.227 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 345.227 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 345.887 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:324: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 347.586 MB.
+WARNING: [HLS 200-805] An internal stream 'cmpvc_cfg_strms_0' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'cmpvc_cfg_strms_1' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'cmpvc_cfg_strms_2' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'cmpvc_cfg_strms_3' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'cmpvv_cfg_strms' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'cmpvv_cfg_strms.1' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'cmpvv_cfg_strms.2' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'cmpvv_cfg_strms.3' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'cmpvv_cfg_strms.4' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'cmpvv_cfg_strms.5' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'tt_cfg_strm' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:529) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::database::dynamicFilter<32, 32>' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:521:1), detected/extracted 5 process function(s): 
+	 'xf::database::details::broadcast'
+	 'xf::database::details::parse_filter_config<4, 32>'
+	 'xf::database::details::compare_ops<32>'
+	 'xf::database::details::true_table<4>'
+	 'xf::database::details::pred_pass<32>'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:111:15) to (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:163:5) in function 'xf::database::details::var_const_cmp<32>'... converting 17 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 371.359 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_318_1'(../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:318:23) and 'TRUE_TABLE_INIT32'(../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:321:9) in function 'xf::database::details::true_table<4>' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_318_1' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:318:23) in function 'xf::database::details::true_table<4>'.
+WARNING: [HLS 200-1614] Cosimulation may deadlock if process compare_ops<32> has a streamed top-level array input and has predecessor processes. If a deadlock occurs, please consider converting the streamed array into an hls::stream
+WARNING: [HLS 200-1614] Cosimulation may deadlock if process pred_pass<32> has a streamed top-level array input and has predecessor processes. If a deadlock occurs, please consider converting the streamed array into an hls::stream
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 516.496 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'filter_dut' ...
+WARNING: [SYN 201-103] Legalizing function name 'parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_419_1' to 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1'.
+WARNING: [SYN 201-103] Legalizing function name 'parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_445_4' to 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_445_4'.
+WARNING: [SYN 201-103] Legalizing function name 'parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_467_5' to 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_467_5'.
+WARNING: [SYN 201-103] Legalizing function name 'parse_filter_config<4, 32>' to 'parse_filter_config_4_32_s'.
+WARNING: [SYN 201-103] Legalizing function name 'var_const_cmp<32>' to 'var_const_cmp_32_s'.
+WARNING: [SYN 201-103] Legalizing function name 'var_var_cmp<32>' to 'var_var_cmp_32_s'.
+WARNING: [SYN 201-103] Legalizing function name 'compare_ops<32>_Pipeline_FILTER_MAIN_LOOP' to 'compare_ops_32_Pipeline_FILTER_MAIN_LOOP'.
+WARNING: [SYN 201-103] Legalizing function name 'compare_ops<32>' to 'compare_ops_32_s'.
+WARNING: [SYN 201-103] Legalizing function name 'true_table<4>_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32' to 'true_table_4_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32'.
+WARNING: [SYN 201-103] Legalizing function name 'true_table<4>_Pipeline_TRUE_TABLE_READ' to 'true_table_4_Pipeline_TRUE_TABLE_READ'.
+WARNING: [SYN 201-103] Legalizing function name 'true_table<4>' to 'true_table_4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'pred_pass<32>_Pipeline_FILTER_PRED_PASS' to 'pred_pass_32_Pipeline_FILTER_PRED_PASS'.
+WARNING: [SYN 201-103] Legalizing function name 'pred_pass<32>' to 'pred_pass_32_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dynamicFilter<32, 32>' to 'dynamicFilter_32_32_s'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'broadcast_Pipeline_VITIS_LOOP_88_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_88_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_88_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 517.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 517.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'broadcast' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 517.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 517.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_419_1'.
+WARNING: [HLS 200-880] The II Violation in module 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1' (loop 'VITIS_LOOP_419_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo read operation ('cfg.r', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:427) on port 'filter_cfg_strm' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:427) and fifo read operation ('cfg.l', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:423) on port 'filter_cfg_strm' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:423).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1' (loop 'VITIS_LOOP_419_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between fifo read operation ('dw', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:429) on port 'filter_cfg_strm' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:429) and fifo read operation ('cfg.l', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:423) on port 'filter_cfg_strm' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:423).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 4, loop 'VITIS_LOOP_419_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 517.770 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 517.770 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_445_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_445_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_445_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 518.266 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 518.266 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_467_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_467_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_467_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 518.547 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 518.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'parse_filter_config_4_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 518.750 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 518.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'var_const_cmp_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'var_const_cmp<32>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 0, Final II = 1, Depth = 1, function 'var_const_cmp<32>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 518.750 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 518.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'var_var_cmp_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'var_var_cmp<32>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 0, Final II = 1, Depth = 1, function 'var_var_cmp<32>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 519.156 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 519.219 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compare_ops_32_Pipeline_FILTER_MAIN_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'FILTER_MAIN_LOOP'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'FILTER_MAIN_LOOP'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 520.367 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 520.367 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compare_ops_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 520.801 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 520.801 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'true_table_4_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_318_1_TRUE_TABLE_INIT32'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_318_1_TRUE_TABLE_INIT32'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 521.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 521.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'true_table_4_Pipeline_TRUE_TABLE_READ' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'TRUE_TABLE_READ'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'TRUE_TABLE_READ'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 521.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 521.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'true_table_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 522.062 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 522.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pred_pass_32_Pipeline_FILTER_PRED_PASS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'FILTER_PRED_PASS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'FILTER_PRED_PASS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 522.336 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 522.336 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pred_pass_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 522.688 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 522.688 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dynamicFilter_32_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1020] Increasing the depth of FIFO start_for_true_table_4_U0 (from parse_filter_config_4_32_U0 to true_table_4_U0) to 3 to improve performance and/or avoid deadlocks.
+WARNING: [HLS 200-1020] Increasing the depth of FIFO start_for_pred_pass_32_U0 (from broadcast_U0 to pred_pass_32_U0) to 4 to improve performance and/or avoid deadlocks.
+WARNING: [HLS 200-1018] Consider increasing the depth of FIFO tt_cfg_strm (from parse_filter_config_4_32_U0 to true_table_4_U0) to 3 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 522.688 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 522.688 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'filter_dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 522.832 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 522.895 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'broadcast_Pipeline_VITIS_LOOP_88_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'broadcast_Pipeline_VITIS_LOOP_88_1' pipeline 'VITIS_LOOP_88_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'broadcast_Pipeline_VITIS_LOOP_88_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 523.301 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'broadcast' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'broadcast'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 523.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1' pipeline 'VITIS_LOOP_419_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 524.691 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_445_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_445_4' pipeline 'VITIS_LOOP_445_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_445_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 525.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_467_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_467_5' pipeline 'VITIS_LOOP_467_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'parse_filter_config_4_32_Pipeline_VITIS_LOOP_467_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 527.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'parse_filter_config_4_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'parse_filter_config_4_32_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 528.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'var_const_cmp_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_7_1_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'var_const_cmp_32_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 529.020 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'var_var_cmp_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'var_var_cmp_32_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 530.188 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compare_ops_32_Pipeline_FILTER_MAIN_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compare_ops_32_Pipeline_FILTER_MAIN_LOOP' pipeline 'FILTER_MAIN_LOOP' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compare_ops_32_Pipeline_FILTER_MAIN_LOOP'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 531.621 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compare_ops_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compare_ops_32_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 533.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'true_table_4_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'true_table_4_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32' pipeline 'VITIS_LOOP_318_1_TRUE_TABLE_INIT32' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'true_table_4_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 534.781 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'true_table_4_Pipeline_TRUE_TABLE_READ' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'true_table_4_Pipeline_TRUE_TABLE_READ' pipeline 'TRUE_TABLE_READ' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'true_table_4_Pipeline_TRUE_TABLE_READ'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 535.984 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'true_table_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'true_table_4_s'.
+INFO: [RTMG 210-278] Implementing memory 'filter_dut_true_table_4_s_truetable_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 536.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pred_pass_32_Pipeline_FILTER_PRED_PASS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'pred_pass_32_Pipeline_FILTER_PRED_PASS' pipeline 'FILTER_PRED_PASS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pred_pass_32_Pipeline_FILTER_PRED_PASS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 537.605 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pred_pass_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pred_pass_32_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 538.418 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dynamicFilter_32_32_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dynamicFilter_32_32_s'.
+INFO: [RTMG 210-285] Implementing FIFO 'e_v_strm_U(filter_dut_fifo_w1_d8_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'e_p_strm_U(filter_dut_fifo_w1_d32_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cmpvc_cfg_strms_0_U(filter_dut_fifo_w72_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cmpvc_cfg_strms_1_U(filter_dut_fifo_w72_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cmpvc_cfg_strms_2_U(filter_dut_fifo_w72_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cmpvc_cfg_strms_3_U(filter_dut_fifo_w72_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cmpvv_cfg_strms_U(filter_dut_fifo_w4_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cmpvv_cfg_strms_1_U(filter_dut_fifo_w4_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cmpvv_cfg_strms_2_U(filter_dut_fifo_w4_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cmpvv_cfg_strms_3_U(filter_dut_fifo_w4_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cmpvv_cfg_strms_4_U(filter_dut_fifo_w4_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cmpvv_cfg_strms_5_U(filter_dut_fifo_w4_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'tt_cfg_strm_U(filter_dut_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'addr_strm_U(filter_dut_fifo_w10_d8_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'e_addr_strm_U(filter_dut_fifo_w1_d8_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'b_strm_U(filter_dut_fifo_w1_d8_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'e_b_strm_U(filter_dut_fifo_w1_d8_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_compare_ops_32_U0_U(filter_dut_start_for_compare_ops_32_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_pred_pass_32_U0_U(filter_dut_start_for_pred_pass_32_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_true_table_4_U0_U(filter_dut_start_for_true_table_4_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.52 seconds; current allocated memory: 540.398 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'filter_dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_dut/filter_cfg_strm' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_dut/k_strms_0' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_dut/k_strms_1' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_dut/k_strms_2' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_dut/k_strms_3' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_dut/p_strm' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_dut/e_strm' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_dut/f_strm' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_dut/e_f_strm' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'filter_dut' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'filter_dut'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 541.582 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 543.855 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.38 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.4 seconds; current allocated memory: 550.309 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for filter_dut.
+INFO: [VLOG 209-307] Generating Verilog RTL for filter_dut.
+INFO: [HLS 200-789] **** Estimated Fmax: 222.75 MHz
+INFO: [HLS 200-112] Total CPU user time: 8.63 seconds. Total CPU system time: 0.95 seconds. Total elapsed time: 16.93 seconds; peak allocated memory: 551.023 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 20s

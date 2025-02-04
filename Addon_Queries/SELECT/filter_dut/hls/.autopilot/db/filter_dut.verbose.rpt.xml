@@ -1,0 +1,152 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'filter_dut'" level="0">
+<item name = "Date">Mon Feb  3 14:21:57 2025
+</item>
+<item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
+<item name = "Project">filter_dut</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu9p-flga2104-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 4.489 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_dynamicFilter_32_32_s_fu_36">dynamicFilter_32_32_s, ?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, -, 1846, 7857, 0</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 95, -</column>
+<column name="Register">-, -, 5, -, -</column>
+<specialColumn name="Available SLR">1440, 2280, 788160, 394080, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, 2, 0</specialColumn>
+<specialColumn name="Available">4320, 6840, 2364480, 1182240, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_dynamicFilter_32_32_s_fu_36">dynamicFilter_32_32_s, 0, 0, 1846, 7857, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_sync_grp_dynamicFilter_32_32_s_fu_36_ap_ready">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">14, 3, 1, 3</column>
+<column name="e_f_strm_write">9, 2, 1, 2</column>
+<column name="e_strm_read">9, 2, 1, 2</column>
+<column name="f_strm_write">9, 2, 1, 2</column>
+<column name="filter_cfg_strm_read">9, 2, 1, 2</column>
+<column name="k_strms_0_read">9, 2, 1, 2</column>
+<column name="k_strms_1_read">9, 2, 1, 2</column>
+<column name="k_strms_2_read">9, 2, 1, 2</column>
+<column name="k_strms_3_read">9, 2, 1, 2</column>
+<column name="p_strm_read">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="ap_sync_reg_grp_dynamicFilter_32_32_s_fu_36_ap_done">1, 0, 1, 0</column>
+<column name="ap_sync_reg_grp_dynamicFilter_32_32_s_fu_36_ap_ready">1, 0, 1, 0</column>
+<column name="grp_dynamicFilter_32_32_s_fu_36_ap_start_reg">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, filter_dut, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, filter_dut, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, filter_dut, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, filter_dut, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, filter_dut, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, filter_dut, return value</column>
+<column name="filter_cfg_strm_dout">in, 32, ap_fifo, filter_cfg_strm, pointer</column>
+<column name="filter_cfg_strm_empty_n">in, 1, ap_fifo, filter_cfg_strm, pointer</column>
+<column name="filter_cfg_strm_read">out, 1, ap_fifo, filter_cfg_strm, pointer</column>
+<column name="k_strms_0_dout">in, 32, ap_fifo, k_strms_0, pointer</column>
+<column name="k_strms_0_empty_n">in, 1, ap_fifo, k_strms_0, pointer</column>
+<column name="k_strms_0_read">out, 1, ap_fifo, k_strms_0, pointer</column>
+<column name="k_strms_1_dout">in, 32, ap_fifo, k_strms_1, pointer</column>
+<column name="k_strms_1_empty_n">in, 1, ap_fifo, k_strms_1, pointer</column>
+<column name="k_strms_1_read">out, 1, ap_fifo, k_strms_1, pointer</column>
+<column name="k_strms_2_dout">in, 32, ap_fifo, k_strms_2, pointer</column>
+<column name="k_strms_2_empty_n">in, 1, ap_fifo, k_strms_2, pointer</column>
+<column name="k_strms_2_read">out, 1, ap_fifo, k_strms_2, pointer</column>
+<column name="k_strms_3_dout">in, 32, ap_fifo, k_strms_3, pointer</column>
+<column name="k_strms_3_empty_n">in, 1, ap_fifo, k_strms_3, pointer</column>
+<column name="k_strms_3_read">out, 1, ap_fifo, k_strms_3, pointer</column>
+<column name="p_strm_dout">in, 32, ap_fifo, p_strm, pointer</column>
+<column name="p_strm_empty_n">in, 1, ap_fifo, p_strm, pointer</column>
+<column name="p_strm_read">out, 1, ap_fifo, p_strm, pointer</column>
+<column name="e_strm_dout">in, 1, ap_fifo, e_strm, pointer</column>
+<column name="e_strm_empty_n">in, 1, ap_fifo, e_strm, pointer</column>
+<column name="e_strm_read">out, 1, ap_fifo, e_strm, pointer</column>
+<column name="f_strm_din">out, 32, ap_fifo, f_strm, pointer</column>
+<column name="f_strm_full_n">in, 1, ap_fifo, f_strm, pointer</column>
+<column name="f_strm_write">out, 1, ap_fifo, f_strm, pointer</column>
+<column name="e_f_strm_din">out, 1, ap_fifo, e_f_strm, pointer</column>
+<column name="e_f_strm_full_n">in, 1, ap_fifo, e_f_strm, pointer</column>
+<column name="e_f_strm_write">out, 1, ap_fifo, e_f_strm, pointer</column>
+</table>
+</item>
+</section>
+</profile>
