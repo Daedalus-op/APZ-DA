@@ -1,0 +1,154 @@
+
+
+================================================================
+== Vitis HLS Report for 'true_table_4_Pipeline_TRUE_TABLE_READ'
+================================================================
+* Date:           Mon Feb  3 14:21:55 2025
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        filter_dut
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.314 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- TRUE_TABLE_READ  |        ?|        ?|         3|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.70>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i10 %addr_strm, void @empty_8, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %e_addr_strm, void @empty_8, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %b_strm, void @empty_8, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %e_b_strm, void @empty_8, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%e_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %e"   --->   Operation 10 'read' 'e_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.38ns)   --->   "%br_ln334 = br void %while.cond" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:334]   --->   Operation 11 'br' 'br_ln334' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%e_1 = phi i1 %e_read, void %newFuncRoot, i1 %e_2, void %while.body"   --->   Operation 12 'phi' 'e_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln334 = br i1 %e_1, void %while.body, void %while.end.exitStub" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:334]   --->   Operation 13 'br' 'br_ln334' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (1.31ns)   --->   "%e_2 = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %e_addr_strm" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:336]   --->   Operation 14 'read' 'e_2' <Predicate = (!e_1)> <Delay = 1.31> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.31> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 8> <FIFO>
+
+State 2 <SV = 1> <Delay = 2.31>
+ST_2 : Operation 15 [1/1] (1.38ns)   --->   "%addr = read i10 @_ssdm_op_Read.ap_fifo.volatile.i10P0A, i10 %addr_strm" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:337]   --->   Operation 15 'read' 'addr' <Predicate = (!e_1)> <Delay = 1.38> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 10> <Depth = 8> <FIFO>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln340 = zext i10 %addr" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:340]   --->   Operation 16 'zext' 'zext_ln340' <Predicate = (!e_1)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%truetable_addr = getelementptr i1 %truetable, i64 0, i64 %zext_ln340" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:340]   --->   Operation 17 'getelementptr' 'truetable_addr' <Predicate = (!e_1)> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (0.92ns)   --->   "%b = load i10 %truetable_addr" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:340]   --->   Operation 18 'load' 'b' <Predicate = (!e_1)> <Delay = 0.92> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.92> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 1024> <RAM>
+ST_2 : Operation 25 [1/1] (0.38ns)   --->   "%ret_ln0 = ret"   --->   Operation 25 'ret' 'ret_ln0' <Predicate = (e_1)> <Delay = 0.38>
+
+State 3 <SV = 2> <Delay = 2.24>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln335 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:335]   --->   Operation 19 'specpipeline' 'specpipeline_ln335' <Predicate = (!e_1)> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln334 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:334]   --->   Operation 20 'specloopname' 'specloopname_ln334' <Predicate = (!e_1)> <Delay = 0.00>
+ST_3 : Operation 21 [1/2] (0.92ns)   --->   "%b = load i10 %truetable_addr" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:340]   --->   Operation 21 'load' 'b' <Predicate = (!e_1)> <Delay = 0.92> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.92> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 1024> <RAM>
+ST_3 : Operation 22 [1/1] (1.31ns)   --->   "%write_ln341 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %b_strm, i1 %b" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:341]   --->   Operation 22 'write' 'write_ln341' <Predicate = (!e_1)> <Delay = 1.31> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.31> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 8> <FIFO>
+ST_3 : Operation 23 [1/1] (1.31ns)   --->   "%write_ln342 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %e_b_strm, i1 0" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:342]   --->   Operation 23 'write' 'write_ln342' <Predicate = (!e_1)> <Delay = 1.31> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.31> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 8> <FIFO>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln334 = br void %while.cond" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:334]   --->   Operation 24 'br' 'br_ln334' <Predicate = (!e_1)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.701ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation 1 bit ('e') with incoming values : ('e_read') ('e', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:336) [14]  (0.387 ns)
+	'phi' operation 1 bit ('e') with incoming values : ('e_read') ('e', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:336) [14]  (0.000 ns)
+	fifo read operation ('e', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:336) on port 'e_addr_strm' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:336) [19]  (1.314 ns)
+
+ <State 2>: 2.314ns
+The critical path consists of the following:
+	fifo read operation ('addr', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:337) on port 'addr_strm' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:337) [20]  (1.386 ns)
+	'getelementptr' operation 10 bit ('truetable_addr', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:340) [22]  (0.000 ns)
+	'load' operation 1 bit ('b', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:340) on array 'truetable' [23]  (0.928 ns)
+
+ <State 3>: 2.242ns
+The critical path consists of the following:
+	'load' operation 1 bit ('b', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:340) on array 'truetable' [23]  (0.928 ns)
+	fifo write operation ('write_ln341', ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:341) on port 'b_strm' (../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:341) [24]  (1.314 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

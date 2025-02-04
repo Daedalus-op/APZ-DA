@@ -1,0 +1,237 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'compare_ops_32_s'" level="0">
+<item name = "Date">Mon Feb  3 14:21:56 2025
+</item>
+<item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
+<item name = "Project">filter_dut</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu9p-flga2104-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 4.489 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_compare_ops_32_Pipeline_FILTER_MAIN_LOOP_fu_148">compare_ops_32_Pipeline_FILTER_MAIN_LOOP, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 5, 5306, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 215, -</column>
+<column name="Register">-, -, 319, -, -</column>
+<specialColumn name="Available SLR">1440, 2280, 788160, 394080, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, 1, 0</specialColumn>
+<specialColumn name="Available">4320, 6840, 2364480, 1182240, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_compare_ops_32_Pipeline_FILTER_MAIN_LOOP_fu_148">compare_ops_32_Pipeline_FILTER_MAIN_LOOP, 0, 0, 5, 5306, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="addr_strm_write">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">26, 5, 1, 5</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="cmpvc_cfg_strms_0_blk_n">9, 2, 1, 2</column>
+<column name="cmpvc_cfg_strms_1_blk_n">9, 2, 1, 2</column>
+<column name="cmpvc_cfg_strms_2_blk_n">9, 2, 1, 2</column>
+<column name="cmpvc_cfg_strms_3_blk_n">9, 2, 1, 2</column>
+<column name="cmpvv_cfg_strms_0_blk_n">9, 2, 1, 2</column>
+<column name="cmpvv_cfg_strms_1_blk_n">9, 2, 1, 2</column>
+<column name="cmpvv_cfg_strms_2_blk_n">9, 2, 1, 2</column>
+<column name="cmpvv_cfg_strms_3_blk_n">9, 2, 1, 2</column>
+<column name="cmpvv_cfg_strms_4_blk_n">9, 2, 1, 2</column>
+<column name="cmpvv_cfg_strms_5_blk_n">9, 2, 1, 2</column>
+<column name="e_addr_strm_blk_n">9, 2, 1, 2</column>
+<column name="e_addr_strm_din">9, 2, 1, 2</column>
+<column name="e_addr_strm_write">9, 2, 1, 2</column>
+<column name="e_v_strm_blk_n">9, 2, 1, 2</column>
+<column name="e_v_strm_read">9, 2, 1, 2</column>
+<column name="k_strms_0_read">9, 2, 1, 2</column>
+<column name="k_strms_1_read">9, 2, 1, 2</column>
+<column name="k_strms_2_read">9, 2, 1, 2</column>
+<column name="k_strms_3_read">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="cmpvv_cfg_strms_0_read_reg_405">4, 0, 4, 0</column>
+<column name="cmpvv_cfg_strms_1_read_reg_410">4, 0, 4, 0</column>
+<column name="cmpvv_cfg_strms_2_read_reg_415">4, 0, 4, 0</column>
+<column name="cmpvv_cfg_strms_3_read_reg_420">4, 0, 4, 0</column>
+<column name="cmpvv_cfg_strms_4_read_reg_425">4, 0, 4, 0</column>
+<column name="cmpvv_cfg_strms_5_read_reg_430">4, 0, 4, 0</column>
+<column name="e_reg_435">1, 0, 1, 0</column>
+<column name="grp_compare_ops_32_Pipeline_FILTER_MAIN_LOOP_fu_148_ap_start_reg">1, 0, 1, 0</column>
+<column name="trunc_ln232_1_reg_330">4, 0, 4, 0</column>
+<column name="trunc_ln232_2_reg_335">32, 0, 32, 0</column>
+<column name="trunc_ln232_3_reg_340">32, 0, 32, 0</column>
+<column name="trunc_ln232_reg_325">4, 0, 4, 0</column>
+<column name="trunc_ln233_1_reg_350">4, 0, 4, 0</column>
+<column name="trunc_ln233_2_reg_355">32, 0, 32, 0</column>
+<column name="trunc_ln233_3_reg_360">32, 0, 32, 0</column>
+<column name="trunc_ln233_reg_345">4, 0, 4, 0</column>
+<column name="trunc_ln234_1_reg_370">4, 0, 4, 0</column>
+<column name="trunc_ln234_2_reg_375">32, 0, 32, 0</column>
+<column name="trunc_ln234_3_reg_380">32, 0, 32, 0</column>
+<column name="trunc_ln234_reg_365">4, 0, 4, 0</column>
+<column name="trunc_ln235_1_reg_390">4, 0, 4, 0</column>
+<column name="trunc_ln235_2_reg_395">32, 0, 32, 0</column>
+<column name="trunc_ln235_3_reg_400">32, 0, 32, 0</column>
+<column name="trunc_ln235_reg_385">4, 0, 4, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, compare_ops&lt;32&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, compare_ops&lt;32&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, compare_ops&lt;32&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, compare_ops&lt;32&gt;, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, compare_ops&lt;32&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, compare_ops&lt;32&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, compare_ops&lt;32&gt;, return value</column>
+<column name="cmpvc_cfg_strms_0_dout">in, 72, ap_fifo, cmpvc_cfg_strms_0, pointer</column>
+<column name="cmpvc_cfg_strms_0_num_data_valid">in, 3, ap_fifo, cmpvc_cfg_strms_0, pointer</column>
+<column name="cmpvc_cfg_strms_0_fifo_cap">in, 3, ap_fifo, cmpvc_cfg_strms_0, pointer</column>
+<column name="cmpvc_cfg_strms_0_empty_n">in, 1, ap_fifo, cmpvc_cfg_strms_0, pointer</column>
+<column name="cmpvc_cfg_strms_0_read">out, 1, ap_fifo, cmpvc_cfg_strms_0, pointer</column>
+<column name="cmpvc_cfg_strms_1_dout">in, 72, ap_fifo, cmpvc_cfg_strms_1, pointer</column>
+<column name="cmpvc_cfg_strms_1_num_data_valid">in, 3, ap_fifo, cmpvc_cfg_strms_1, pointer</column>
+<column name="cmpvc_cfg_strms_1_fifo_cap">in, 3, ap_fifo, cmpvc_cfg_strms_1, pointer</column>
+<column name="cmpvc_cfg_strms_1_empty_n">in, 1, ap_fifo, cmpvc_cfg_strms_1, pointer</column>
+<column name="cmpvc_cfg_strms_1_read">out, 1, ap_fifo, cmpvc_cfg_strms_1, pointer</column>
+<column name="cmpvc_cfg_strms_2_dout">in, 72, ap_fifo, cmpvc_cfg_strms_2, pointer</column>
+<column name="cmpvc_cfg_strms_2_num_data_valid">in, 3, ap_fifo, cmpvc_cfg_strms_2, pointer</column>
+<column name="cmpvc_cfg_strms_2_fifo_cap">in, 3, ap_fifo, cmpvc_cfg_strms_2, pointer</column>
+<column name="cmpvc_cfg_strms_2_empty_n">in, 1, ap_fifo, cmpvc_cfg_strms_2, pointer</column>
+<column name="cmpvc_cfg_strms_2_read">out, 1, ap_fifo, cmpvc_cfg_strms_2, pointer</column>
+<column name="cmpvc_cfg_strms_3_dout">in, 72, ap_fifo, cmpvc_cfg_strms_3, pointer</column>
+<column name="cmpvc_cfg_strms_3_num_data_valid">in, 3, ap_fifo, cmpvc_cfg_strms_3, pointer</column>
+<column name="cmpvc_cfg_strms_3_fifo_cap">in, 3, ap_fifo, cmpvc_cfg_strms_3, pointer</column>
+<column name="cmpvc_cfg_strms_3_empty_n">in, 1, ap_fifo, cmpvc_cfg_strms_3, pointer</column>
+<column name="cmpvc_cfg_strms_3_read">out, 1, ap_fifo, cmpvc_cfg_strms_3, pointer</column>
+<column name="cmpvv_cfg_strms_0_dout">in, 4, ap_fifo, cmpvv_cfg_strms_0, pointer</column>
+<column name="cmpvv_cfg_strms_0_num_data_valid">in, 3, ap_fifo, cmpvv_cfg_strms_0, pointer</column>
+<column name="cmpvv_cfg_strms_0_fifo_cap">in, 3, ap_fifo, cmpvv_cfg_strms_0, pointer</column>
+<column name="cmpvv_cfg_strms_0_empty_n">in, 1, ap_fifo, cmpvv_cfg_strms_0, pointer</column>
+<column name="cmpvv_cfg_strms_0_read">out, 1, ap_fifo, cmpvv_cfg_strms_0, pointer</column>
+<column name="cmpvv_cfg_strms_1_dout">in, 4, ap_fifo, cmpvv_cfg_strms_1, pointer</column>
+<column name="cmpvv_cfg_strms_1_num_data_valid">in, 3, ap_fifo, cmpvv_cfg_strms_1, pointer</column>
+<column name="cmpvv_cfg_strms_1_fifo_cap">in, 3, ap_fifo, cmpvv_cfg_strms_1, pointer</column>
+<column name="cmpvv_cfg_strms_1_empty_n">in, 1, ap_fifo, cmpvv_cfg_strms_1, pointer</column>
+<column name="cmpvv_cfg_strms_1_read">out, 1, ap_fifo, cmpvv_cfg_strms_1, pointer</column>
+<column name="cmpvv_cfg_strms_2_dout">in, 4, ap_fifo, cmpvv_cfg_strms_2, pointer</column>
+<column name="cmpvv_cfg_strms_2_num_data_valid">in, 3, ap_fifo, cmpvv_cfg_strms_2, pointer</column>
+<column name="cmpvv_cfg_strms_2_fifo_cap">in, 3, ap_fifo, cmpvv_cfg_strms_2, pointer</column>
+<column name="cmpvv_cfg_strms_2_empty_n">in, 1, ap_fifo, cmpvv_cfg_strms_2, pointer</column>
+<column name="cmpvv_cfg_strms_2_read">out, 1, ap_fifo, cmpvv_cfg_strms_2, pointer</column>
+<column name="cmpvv_cfg_strms_3_dout">in, 4, ap_fifo, cmpvv_cfg_strms_3, pointer</column>
+<column name="cmpvv_cfg_strms_3_num_data_valid">in, 3, ap_fifo, cmpvv_cfg_strms_3, pointer</column>
+<column name="cmpvv_cfg_strms_3_fifo_cap">in, 3, ap_fifo, cmpvv_cfg_strms_3, pointer</column>
+<column name="cmpvv_cfg_strms_3_empty_n">in, 1, ap_fifo, cmpvv_cfg_strms_3, pointer</column>
+<column name="cmpvv_cfg_strms_3_read">out, 1, ap_fifo, cmpvv_cfg_strms_3, pointer</column>
+<column name="cmpvv_cfg_strms_4_dout">in, 4, ap_fifo, cmpvv_cfg_strms_4, pointer</column>
+<column name="cmpvv_cfg_strms_4_num_data_valid">in, 3, ap_fifo, cmpvv_cfg_strms_4, pointer</column>
+<column name="cmpvv_cfg_strms_4_fifo_cap">in, 3, ap_fifo, cmpvv_cfg_strms_4, pointer</column>
+<column name="cmpvv_cfg_strms_4_empty_n">in, 1, ap_fifo, cmpvv_cfg_strms_4, pointer</column>
+<column name="cmpvv_cfg_strms_4_read">out, 1, ap_fifo, cmpvv_cfg_strms_4, pointer</column>
+<column name="cmpvv_cfg_strms_5_dout">in, 4, ap_fifo, cmpvv_cfg_strms_5, pointer</column>
+<column name="cmpvv_cfg_strms_5_num_data_valid">in, 3, ap_fifo, cmpvv_cfg_strms_5, pointer</column>
+<column name="cmpvv_cfg_strms_5_fifo_cap">in, 3, ap_fifo, cmpvv_cfg_strms_5, pointer</column>
+<column name="cmpvv_cfg_strms_5_empty_n">in, 1, ap_fifo, cmpvv_cfg_strms_5, pointer</column>
+<column name="cmpvv_cfg_strms_5_read">out, 1, ap_fifo, cmpvv_cfg_strms_5, pointer</column>
+<column name="k_strms_0_dout">in, 32, ap_fifo, k_strms_0, pointer</column>
+<column name="k_strms_0_empty_n">in, 1, ap_fifo, k_strms_0, pointer</column>
+<column name="k_strms_0_read">out, 1, ap_fifo, k_strms_0, pointer</column>
+<column name="k_strms_1_dout">in, 32, ap_fifo, k_strms_1, pointer</column>
+<column name="k_strms_1_empty_n">in, 1, ap_fifo, k_strms_1, pointer</column>
+<column name="k_strms_1_read">out, 1, ap_fifo, k_strms_1, pointer</column>
+<column name="k_strms_2_dout">in, 32, ap_fifo, k_strms_2, pointer</column>
+<column name="k_strms_2_empty_n">in, 1, ap_fifo, k_strms_2, pointer</column>
+<column name="k_strms_2_read">out, 1, ap_fifo, k_strms_2, pointer</column>
+<column name="k_strms_3_dout">in, 32, ap_fifo, k_strms_3, pointer</column>
+<column name="k_strms_3_empty_n">in, 1, ap_fifo, k_strms_3, pointer</column>
+<column name="k_strms_3_read">out, 1, ap_fifo, k_strms_3, pointer</column>
+<column name="e_v_strm_dout">in, 1, ap_fifo, e_v_strm, pointer</column>
+<column name="e_v_strm_num_data_valid">in, 4, ap_fifo, e_v_strm, pointer</column>
+<column name="e_v_strm_fifo_cap">in, 4, ap_fifo, e_v_strm, pointer</column>
+<column name="e_v_strm_empty_n">in, 1, ap_fifo, e_v_strm, pointer</column>
+<column name="e_v_strm_read">out, 1, ap_fifo, e_v_strm, pointer</column>
+<column name="addr_strm_din">out, 10, ap_fifo, addr_strm, pointer</column>
+<column name="addr_strm_num_data_valid">in, 4, ap_fifo, addr_strm, pointer</column>
+<column name="addr_strm_fifo_cap">in, 4, ap_fifo, addr_strm, pointer</column>
+<column name="addr_strm_full_n">in, 1, ap_fifo, addr_strm, pointer</column>
+<column name="addr_strm_write">out, 1, ap_fifo, addr_strm, pointer</column>
+<column name="e_addr_strm_din">out, 1, ap_fifo, e_addr_strm, pointer</column>
+<column name="e_addr_strm_num_data_valid">in, 4, ap_fifo, e_addr_strm, pointer</column>
+<column name="e_addr_strm_fifo_cap">in, 4, ap_fifo, e_addr_strm, pointer</column>
+<column name="e_addr_strm_full_n">in, 1, ap_fifo, e_addr_strm, pointer</column>
+<column name="e_addr_strm_write">out, 1, ap_fifo, e_addr_strm, pointer</column>
+</table>
+</item>
+</section>
+</profile>

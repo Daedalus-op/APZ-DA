@@ -1,0 +1,2249 @@
+<profile>
+    <ReportVersion>
+        <Version>2024.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcvu9p-flga2104-2-i</Part>
+        <TopModelName>filter_dut</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>4.489</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp:20</SourceLocation>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>0</BRAM_18K>
+            <FF>1851</FF>
+            <LUT>7954</LUT>
+            <URAM>0</URAM>
+            <DSP>0</DSP>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4320</BRAM_18K>
+            <DSP>6840</DSP>
+            <FF>2364480</FF>
+            <LUT>1182240</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>filter_dut</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>filter_dut</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>filter_dut</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>filter_dut</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>filter_dut</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>filter_dut</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>filter_cfg_strm_dout</name>
+            <Object>filter_cfg_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>filter_cfg_strm_empty_n</name>
+            <Object>filter_cfg_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>filter_cfg_strm_read</name>
+            <Object>filter_cfg_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_0_dout</name>
+            <Object>k_strms_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_0_empty_n</name>
+            <Object>k_strms_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_0_read</name>
+            <Object>k_strms_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_1_dout</name>
+            <Object>k_strms_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_1_empty_n</name>
+            <Object>k_strms_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_1_read</name>
+            <Object>k_strms_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_2_dout</name>
+            <Object>k_strms_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_2_empty_n</name>
+            <Object>k_strms_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_2_read</name>
+            <Object>k_strms_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_3_dout</name>
+            <Object>k_strms_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_3_empty_n</name>
+            <Object>k_strms_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>k_strms_3_read</name>
+            <Object>k_strms_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>p_strm_dout</name>
+            <Object>p_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>p_strm_empty_n</name>
+            <Object>p_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>p_strm_read</name>
+            <Object>p_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>e_strm_dout</name>
+            <Object>e_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>e_strm_empty_n</name>
+            <Object>e_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>e_strm_read</name>
+            <Object>e_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>f_strm_din</name>
+            <Object>f_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>f_strm_full_n</name>
+            <Object>f_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>f_strm_write</name>
+            <Object>f_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>e_f_strm_din</name>
+            <Object>e_f_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>e_f_strm_full_n</name>
+            <Object>e_f_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>e_f_strm_write</name>
+            <Object>e_f_strm</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="6">
+            <ModuleName>filter_dut</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_dynamicFilter_32_32_s_fu_36</InstName>
+                    <ModuleName>dynamicFilter_32_32_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>36</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>broadcast_U0</InstName>
+                            <ModuleName>broadcast</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>156</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_broadcast_Pipeline_VITIS_LOOP_88_1_fu_48</InstName>
+                                    <ModuleName>broadcast_Pipeline_VITIS_LOOP_88_1</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>48</ID>
+                                </Instance>
+                            </InstancesList>
+                        </Instance>
+                        <Instance>
+                            <InstName>parse_filter_config_4_32_U0</InstName>
+                            <ModuleName>parse_filter_config_4_32_s</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>164</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1_fu_42</InstName>
+                                    <ModuleName>parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>42</ID>
+                                    <BindInstances>icmp_ln419_fu_102_p2 add_ln419_fu_108_p2</BindInstances>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_parse_filter_config_4_32_Pipeline_VITIS_LOOP_445_4_fu_56</InstName>
+                                    <ModuleName>parse_filter_config_4_32_Pipeline_VITIS_LOOP_445_4</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>56</ID>
+                                    <BindInstances>icmp_ln445_fu_155_p2 add_ln445_fu_161_p2 icmp_ln446_fu_180_p2 nb_1_fu_194_p2</BindInstances>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_parse_filter_config_4_32_Pipeline_VITIS_LOOP_467_5_fu_74</InstName>
+                                    <ModuleName>parse_filter_config_4_32_Pipeline_VITIS_LOOP_467_5</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>74</ID>
+                                    <BindInstances>icmp_ln467_fu_62_p2 i_2_fu_68_p2</BindInstances>
+                                </Instance>
+                            </InstancesList>
+                        </Instance>
+                        <Instance>
+                            <InstName>compare_ops_32_U0</InstName>
+                            <ModuleName>compare_ops_32_s</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>181</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_compare_ops_32_Pipeline_FILTER_MAIN_LOOP_fu_148</InstName>
+                                    <ModuleName>compare_ops_32_Pipeline_FILTER_MAIN_LOOP</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>148</ID>
+                                    <InstancesList>
+                                        <Instance>
+                                            <InstName>bv0c_var_const_cmp_32_s_fu_294</InstName>
+                                            <ModuleName>var_const_cmp_32_s</ModuleName>
+                                            <IsCompInst>true</IsCompInst>
+                                            <ID>294</ID>
+                                            <BindInstances>bl_6_fu_200_p4 bl_6_fu_200_p6 bl_6_fu_200_p8 icmp_ln135_fu_110_p2 bl_6_fu_200_p10 bl_6_fu_200_p12 icmp_ln139_fu_128_p2 bl_6_fu_200_p14 icmp_ln126_fu_140_p2 icmp_ln126_1_fu_146_p2 icmp_ln126_2_fu_152_p2 icmp_ln126_3_fu_158_p2 icmp_ln126_4_fu_164_p2 icmp_ln126_5_fu_170_p2 icmp_ln126_6_fu_176_p2 sparsemux_17_7_1_1_1_U34 br_6_fu_348_p4 br_6_fu_348_p6 br_6_fu_348_p8 icmp_ln153_fu_258_p2 br_6_fu_348_p10 br_6_fu_348_p12 icmp_ln157_fu_276_p2 br_6_fu_348_p14 icmp_ln144_fu_288_p2 icmp_ln144_1_fu_294_p2 icmp_ln144_2_fu_300_p2 icmp_ln144_3_fu_306_p2 icmp_ln144_4_fu_312_p2 icmp_ln144_5_fu_318_p2 icmp_ln144_6_fu_324_p2 sparsemux_17_7_1_1_1_U35 ap_return</BindInstances>
+                                        </Instance>
+                                        <Instance>
+                                            <InstName>bv1c_var_const_cmp_32_s_fu_304</InstName>
+                                            <ModuleName>var_const_cmp_32_s</ModuleName>
+                                            <IsCompInst>true</IsCompInst>
+                                            <ID>304</ID>
+                                            <BindInstances>bl_6_fu_200_p4 bl_6_fu_200_p6 bl_6_fu_200_p8 icmp_ln135_fu_110_p2 bl_6_fu_200_p10 bl_6_fu_200_p12 icmp_ln139_fu_128_p2 bl_6_fu_200_p14 icmp_ln126_fu_140_p2 icmp_ln126_1_fu_146_p2 icmp_ln126_2_fu_152_p2 icmp_ln126_3_fu_158_p2 icmp_ln126_4_fu_164_p2 icmp_ln126_5_fu_170_p2 icmp_ln126_6_fu_176_p2 sparsemux_17_7_1_1_1_U34 br_6_fu_348_p4 br_6_fu_348_p6 br_6_fu_348_p8 icmp_ln153_fu_258_p2 br_6_fu_348_p10 br_6_fu_348_p12 icmp_ln157_fu_276_p2 br_6_fu_348_p14 icmp_ln144_fu_288_p2 icmp_ln144_1_fu_294_p2 icmp_ln144_2_fu_300_p2 icmp_ln144_3_fu_306_p2 icmp_ln144_4_fu_312_p2 icmp_ln144_5_fu_318_p2 icmp_ln144_6_fu_324_p2 sparsemux_17_7_1_1_1_U35 ap_return</BindInstances>
+                                        </Instance>
+                                        <Instance>
+                                            <InstName>bv2c_var_const_cmp_32_s_fu_314</InstName>
+                                            <ModuleName>var_const_cmp_32_s</ModuleName>
+                                            <IsCompInst>true</IsCompInst>
+                                            <ID>314</ID>
+                                            <BindInstances>bl_6_fu_200_p4 bl_6_fu_200_p6 bl_6_fu_200_p8 icmp_ln135_fu_110_p2 bl_6_fu_200_p10 bl_6_fu_200_p12 icmp_ln139_fu_128_p2 bl_6_fu_200_p14 icmp_ln126_fu_140_p2 icmp_ln126_1_fu_146_p2 icmp_ln126_2_fu_152_p2 icmp_ln126_3_fu_158_p2 icmp_ln126_4_fu_164_p2 icmp_ln126_5_fu_170_p2 icmp_ln126_6_fu_176_p2 sparsemux_17_7_1_1_1_U34 br_6_fu_348_p4 br_6_fu_348_p6 br_6_fu_348_p8 icmp_ln153_fu_258_p2 br_6_fu_348_p10 br_6_fu_348_p12 icmp_ln157_fu_276_p2 br_6_fu_348_p14 icmp_ln144_fu_288_p2 icmp_ln144_1_fu_294_p2 icmp_ln144_2_fu_300_p2 icmp_ln144_3_fu_306_p2 icmp_ln144_4_fu_312_p2 icmp_ln144_5_fu_318_p2 icmp_ln144_6_fu_324_p2 sparsemux_17_7_1_1_1_U35 ap_return</BindInstances>
+                                        </Instance>
+                                        <Instance>
+                                            <InstName>bv3c_var_const_cmp_32_s_fu_324</InstName>
+                                            <ModuleName>var_const_cmp_32_s</ModuleName>
+                                            <IsCompInst>true</IsCompInst>
+                                            <ID>324</ID>
+                                            <BindInstances>bl_6_fu_200_p4 bl_6_fu_200_p6 bl_6_fu_200_p8 icmp_ln135_fu_110_p2 bl_6_fu_200_p10 bl_6_fu_200_p12 icmp_ln139_fu_128_p2 bl_6_fu_200_p14 icmp_ln126_fu_140_p2 icmp_ln126_1_fu_146_p2 icmp_ln126_2_fu_152_p2 icmp_ln126_3_fu_158_p2 icmp_ln126_4_fu_164_p2 icmp_ln126_5_fu_170_p2 icmp_ln126_6_fu_176_p2 sparsemux_17_7_1_1_1_U34 br_6_fu_348_p4 br_6_fu_348_p6 br_6_fu_348_p8 icmp_ln153_fu_258_p2 br_6_fu_348_p10 br_6_fu_348_p12 icmp_ln157_fu_276_p2 br_6_fu_348_p14 icmp_ln144_fu_288_p2 icmp_ln144_1_fu_294_p2 icmp_ln144_2_fu_300_p2 icmp_ln144_3_fu_306_p2 icmp_ln144_4_fu_312_p2 icmp_ln144_5_fu_318_p2 icmp_ln144_6_fu_324_p2 sparsemux_17_7_1_1_1_U35 ap_return</BindInstances>
+                                        </Instance>
+                                        <Instance>
+                                            <InstName>bv0v1_var_var_cmp_32_s_fu_334</InstName>
+                                            <ModuleName>var_var_cmp_32_s</ModuleName>
+                                            <IsCompInst>true</IsCompInst>
+                                            <ID>334</ID>
+                                            <BindInstances>icmp_ln203_fu_99_p2 ret_9_fu_105_p2 grp_fu_85_p2 ret_8_fu_112_p2 grp_fu_85_p2 ret_6_fu_119_p2 icmp_ln195_fu_126_p2 ret_5_fu_132_p2 grp_fu_92_p2 ret_4_fu_139_p2 grp_fu_92_p2 ret_2_fu_146_p2 ret_1_fu_153_p2 ret_fu_160_p2</BindInstances>
+                                        </Instance>
+                                        <Instance>
+                                            <InstName>bv0v2_var_var_cmp_32_s_fu_343</InstName>
+                                            <ModuleName>var_var_cmp_32_s</ModuleName>
+                                            <IsCompInst>true</IsCompInst>
+                                            <ID>343</ID>
+                                            <BindInstances>icmp_ln203_fu_99_p2 ret_9_fu_105_p2 grp_fu_85_p2 ret_8_fu_112_p2 grp_fu_85_p2 ret_6_fu_119_p2 icmp_ln195_fu_126_p2 ret_5_fu_132_p2 grp_fu_92_p2 ret_4_fu_139_p2 grp_fu_92_p2 ret_2_fu_146_p2 ret_1_fu_153_p2 ret_fu_160_p2</BindInstances>
+                                        </Instance>
+                                        <Instance>
+                                            <InstName>bv0v3_var_var_cmp_32_s_fu_352</InstName>
+                                            <ModuleName>var_var_cmp_32_s</ModuleName>
+                                            <IsCompInst>true</IsCompInst>
+                                            <ID>352</ID>
+                                            <BindInstances>icmp_ln203_fu_99_p2 ret_9_fu_105_p2 grp_fu_85_p2 ret_8_fu_112_p2 grp_fu_85_p2 ret_6_fu_119_p2 icmp_ln195_fu_126_p2 ret_5_fu_132_p2 grp_fu_92_p2 ret_4_fu_139_p2 grp_fu_92_p2 ret_2_fu_146_p2 ret_1_fu_153_p2 ret_fu_160_p2</BindInstances>
+                                        </Instance>
+                                        <Instance>
+                                            <InstName>bv1v2_var_var_cmp_32_s_fu_361</InstName>
+                                            <ModuleName>var_var_cmp_32_s</ModuleName>
+                                            <IsCompInst>true</IsCompInst>
+                                            <ID>361</ID>
+                                            <BindInstances>icmp_ln203_fu_99_p2 ret_9_fu_105_p2 grp_fu_85_p2 ret_8_fu_112_p2 grp_fu_85_p2 ret_6_fu_119_p2 icmp_ln195_fu_126_p2 ret_5_fu_132_p2 grp_fu_92_p2 ret_4_fu_139_p2 grp_fu_92_p2 ret_2_fu_146_p2 ret_1_fu_153_p2 ret_fu_160_p2</BindInstances>
+                                        </Instance>
+                                        <Instance>
+                                            <InstName>bv1v3_var_var_cmp_32_s_fu_370</InstName>
+                                            <ModuleName>var_var_cmp_32_s</ModuleName>
+                                            <IsCompInst>true</IsCompInst>
+                                            <ID>370</ID>
+                                            <BindInstances>icmp_ln203_fu_99_p2 ret_9_fu_105_p2 grp_fu_85_p2 ret_8_fu_112_p2 grp_fu_85_p2 ret_6_fu_119_p2 icmp_ln195_fu_126_p2 ret_5_fu_132_p2 grp_fu_92_p2 ret_4_fu_139_p2 grp_fu_92_p2 ret_2_fu_146_p2 ret_1_fu_153_p2 ret_fu_160_p2</BindInstances>
+                                        </Instance>
+                                        <Instance>
+                                            <InstName>bv2v3_var_var_cmp_32_s_fu_379</InstName>
+                                            <ModuleName>var_var_cmp_32_s</ModuleName>
+                                            <IsCompInst>true</IsCompInst>
+                                            <ID>379</ID>
+                                            <BindInstances>icmp_ln203_fu_99_p2 ret_9_fu_105_p2 grp_fu_85_p2 ret_8_fu_112_p2 grp_fu_85_p2 ret_6_fu_119_p2 icmp_ln195_fu_126_p2 ret_5_fu_132_p2 grp_fu_92_p2 ret_4_fu_139_p2 grp_fu_92_p2 ret_2_fu_146_p2 ret_1_fu_153_p2 ret_fu_160_p2</BindInstances>
+                                        </Instance>
+                                    </InstancesList>
+                                </Instance>
+                            </InstancesList>
+                        </Instance>
+                        <Instance>
+                            <InstName>true_table_4_U0</InstName>
+                            <ModuleName>true_table_4_s</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>206</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_true_table_4_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32_fu_52</InstName>
+                                    <ModuleName>true_table_4_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>52</ID>
+                                    <BindInstances>icmp_ln318_fu_101_p2 add_ln318_fu_107_p2 icmp_ln321_fu_116_p2 select_ln318_fu_122_p3 add_ln318_1_fu_160_p2 select_ln318_1_fu_166_p3 first_iter_0_fu_130_p2 add_ln324_fu_207_p2 add_ln321_fu_136_p2</BindInstances>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_true_table_4_Pipeline_TRUE_TABLE_READ_fu_60</InstName>
+                                    <ModuleName>true_table_4_Pipeline_TRUE_TABLE_READ</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>60</ID>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>truetable_U</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>pred_pass_32_U0</InstName>
+                            <ModuleName>pred_pass_32_s</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>215</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_pred_pass_32_Pipeline_FILTER_PRED_PASS_fu_52</InstName>
+                                    <ModuleName>pred_pass_32_Pipeline_FILTER_PRED_PASS</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>52</ID>
+                                    <BindInstances>or_ln372_fu_115_p2</BindInstances>
+                                </Instance>
+                            </InstancesList>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>e_v_strm_U e_p_strm_U cmpvc_cfg_strms_0_U cmpvc_cfg_strms_1_U cmpvc_cfg_strms_2_U cmpvc_cfg_strms_3_U cmpvv_cfg_strms_U cmpvv_cfg_strms_1_U cmpvv_cfg_strms_2_U cmpvv_cfg_strms_3_U cmpvv_cfg_strms_4_U cmpvv_cfg_strms_5_U tt_cfg_strm_U addr_strm_U e_addr_strm_U b_strm_U e_b_strm_U</BindInstances>
+                </Instance>
+            </InstancesList>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>broadcast_Pipeline_VITIS_LOOP_88_1</Name>
+            <Loops>
+                <VITIS_LOOP_88_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.815</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_88_1>
+                        <Name>VITIS_LOOP_88_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_88_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:86</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_88_1>
+                            <Name>VITIS_LOOP_88_1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:88</SourceLocation>
+                        </VITIS_LOOP_88_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>5</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>80</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>broadcast</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.815</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:87</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>13</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>200</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>parse_filter_config_4_32_Pipeline_VITIS_LOOP_419_1</Name>
+            <Loops>
+                <VITIS_LOOP_419_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.833</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>14</Best-caseLatency>
+                    <Average-caseLatency>14</Average-caseLatency>
+                    <Worst-caseLatency>14</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.140 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.140 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.140 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>13</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_419_1>
+                        <Name>VITIS_LOOP_419_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>4</TripCount>
+                        <Latency>12</Latency>
+                        <AbsoluteTimeLatency>0.120 us</AbsoluteTimeLatency>
+                        <PipelineII>3</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_419_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:419</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_419_1>
+                            <Name>VITIS_LOOP_419_1</Name>
+                            <IssueType>II Violation</IssueType>
+                            <ViolationType>Memory Dependency</ViolationType>
+                            <IterationDistance>1</IterationDistance>
+                            <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:419</SourceLocation>
+                        </VITIS_LOOP_419_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>76</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>153</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_419_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln419_fu_102_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:419" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln419" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_419_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln419_fu_108_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:419" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln419" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>parse_filter_config_4_32_Pipeline_VITIS_LOOP_445_4</Name>
+            <Loops>
+                <VITIS_LOOP_445_4/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>3.217</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>8</Best-caseLatency>
+                    <Average-caseLatency>8</Average-caseLatency>
+                    <Worst-caseLatency>8</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>80.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>80.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>80.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>7</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_445_4>
+                        <Name>VITIS_LOOP_445_4</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>6</TripCount>
+                        <Latency>6</Latency>
+                        <AbsoluteTimeLatency>60.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_445_4>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:444</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_445_4>
+                            <Name>VITIS_LOOP_445_4</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:445</SourceLocation>
+                        </VITIS_LOOP_445_4>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>47</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>210</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_445_4" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln445_fu_155_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:445" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln445" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_445_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln445_fu_161_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:445" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln445" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_445_4" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln446_fu_180_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:446" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln446" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_445_4" OPTYPE="add" PRAGMA="" RTLNAME="nb_1_fu_194_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:455" STORAGESUBTYPE="" URAM="0" VARIABLE="nb_1" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>parse_filter_config_4_32_Pipeline_VITIS_LOOP_467_5</Name>
+            <Loops>
+                <VITIS_LOOP_467_5/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.826</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>34</Best-caseLatency>
+                    <Average-caseLatency>34</Average-caseLatency>
+                    <Worst-caseLatency>34</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.340 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.340 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.340 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>33</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_467_5>
+                        <Name>VITIS_LOOP_467_5</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>32</TripCount>
+                        <Latency>32</Latency>
+                        <AbsoluteTimeLatency>0.320 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_467_5>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:467</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_467_5>
+                            <Name>VITIS_LOOP_467_5</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:467</SourceLocation>
+                        </VITIS_LOOP_467_5>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>9</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>87</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_467_5" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln467_fu_62_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:467" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln467" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_467_5" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_68_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:467" STORAGESUBTYPE="" URAM="0" VARIABLE="i_2" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>parse_filter_config_4_32_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>3.217</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>63</Best-caseLatency>
+                    <Average-caseLatency>63</Average-caseLatency>
+                    <Worst-caseLatency>63</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.630 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.630 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.630 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>63</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:472</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>145</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>638</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>var_const_cmp_32_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.675</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>1</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:111</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>0</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>0</UTIL_FF>
+                    <LUT>720</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="bl_6_fu_200_p4" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:129" STORAGESUBTYPE="" URAM="0" VARIABLE="bl" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setne" PRAGMA="" RTLNAME="bl_6_fu_200_p6" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:131" STORAGESUBTYPE="" URAM="0" VARIABLE="bl_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setgt" PRAGMA="" RTLNAME="bl_6_fu_200_p8" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:133" STORAGESUBTYPE="" URAM="0" VARIABLE="bl_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln135_fu_110_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:135" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln135" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="xor" PRAGMA="" RTLNAME="bl_6_fu_200_p10" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:135" STORAGESUBTYPE="" URAM="0" VARIABLE="bl_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setgt" PRAGMA="" RTLNAME="bl_6_fu_200_p12" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:137" STORAGESUBTYPE="" URAM="0" VARIABLE="bl_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln139_fu_128_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:139" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln139" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="xor" PRAGMA="" RTLNAME="bl_6_fu_200_p14" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:139" STORAGESUBTYPE="" URAM="0" VARIABLE="bl_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln126_fu_140_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:126" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln126" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln126_1_fu_146_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:126" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln126_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln126_2_fu_152_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:126" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln126_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln126_3_fu_158_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:126" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln126_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln126_4_fu_164_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:126" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln126_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln126_5_fu_170_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:126" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln126_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln126_6_fu_176_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:126" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln126_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_17_7_1_1_1_U34" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:129" STORAGESUBTYPE="" URAM="0" VARIABLE="bl_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="br_6_fu_348_p4" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:147" STORAGESUBTYPE="" URAM="0" VARIABLE="br" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setne" PRAGMA="" RTLNAME="br_6_fu_348_p6" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:149" STORAGESUBTYPE="" URAM="0" VARIABLE="br_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="br_6_fu_348_p8" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:151" STORAGESUBTYPE="" URAM="0" VARIABLE="br_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln153_fu_258_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:153" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln153" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="xor" PRAGMA="" RTLNAME="br_6_fu_348_p10" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:153" STORAGESUBTYPE="" URAM="0" VARIABLE="br_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="br_6_fu_348_p12" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:155" STORAGESUBTYPE="" URAM="0" VARIABLE="br_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln157_fu_276_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:157" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln157" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="xor" PRAGMA="" RTLNAME="br_6_fu_348_p14" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:157" STORAGESUBTYPE="" URAM="0" VARIABLE="br_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln144_fu_288_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:144" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln144" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln144_1_fu_294_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:144" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln144_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln144_2_fu_300_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:144" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln144_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln144_3_fu_306_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:144" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln144_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln144_4_fu_312_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:144" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln144_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln144_5_fu_318_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:144" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln144_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln144_6_fu_324_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:144" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln144_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_17_7_1_1_1_U35" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:147" STORAGESUBTYPE="" URAM="0" VARIABLE="br_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="and" PRAGMA="" RTLNAME="ap_return" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:162" STORAGESUBTYPE="" URAM="0" VARIABLE="ret" VISIBLE="false"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>var_var_cmp_32_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.620</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>1</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:175</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>0</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>0</UTIL_FF>
+                    <LUT>385</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln203_fu_99_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:203" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln203" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="xor" PRAGMA="" RTLNAME="ret_9_fu_105_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:203" STORAGESUBTYPE="" URAM="0" VARIABLE="ret_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_85_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:201" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln201" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="xor" PRAGMA="" RTLNAME="ret_8_fu_112_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:201" STORAGESUBTYPE="" URAM="0" VARIABLE="ret_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_85_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:199" STORAGESUBTYPE="" URAM="0" VARIABLE="ret_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setgt" PRAGMA="" RTLNAME="ret_6_fu_119_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:197" STORAGESUBTYPE="" URAM="0" VARIABLE="ret_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln195_fu_126_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:195" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln195" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="xor" PRAGMA="" RTLNAME="ret_5_fu_132_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:195" STORAGESUBTYPE="" URAM="0" VARIABLE="ret_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_92_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:193" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln193" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="xor" PRAGMA="" RTLNAME="ret_4_fu_139_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:193" STORAGESUBTYPE="" URAM="0" VARIABLE="ret_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_92_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:191" STORAGESUBTYPE="" URAM="0" VARIABLE="ret_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setgt" PRAGMA="" RTLNAME="ret_2_fu_146_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:189" STORAGESUBTYPE="" URAM="0" VARIABLE="ret_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setne" PRAGMA="" RTLNAME="ret_1_fu_153_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:187" STORAGESUBTYPE="" URAM="0" VARIABLE="ret_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="seteq" PRAGMA="" RTLNAME="ret_fu_160_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:185" STORAGESUBTYPE="" URAM="0" VARIABLE="ret" VISIBLE="false"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>compare_ops_32_Pipeline_FILTER_MAIN_LOOP</Name>
+            <Loops>
+                <FILTER_MAIN_LOOP/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>4.489</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <FILTER_MAIN_LOOP>
+                        <Name>FILTER_MAIN_LOOP</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList>
+                            <Instance>bv0c_var_const_cmp_32_s_fu_294</Instance>
+                            <Instance>bv1c_var_const_cmp_32_s_fu_304</Instance>
+                            <Instance>bv2c_var_const_cmp_32_s_fu_314</Instance>
+                            <Instance>bv3c_var_const_cmp_32_s_fu_324</Instance>
+                            <Instance>bv0v1_var_var_cmp_32_s_fu_334</Instance>
+                            <Instance>bv0v2_var_var_cmp_32_s_fu_343</Instance>
+                            <Instance>bv0v3_var_var_cmp_32_s_fu_352</Instance>
+                            <Instance>bv1v2_var_var_cmp_32_s_fu_361</Instance>
+                            <Instance>bv1v3_var_var_cmp_32_s_fu_370</Instance>
+                            <Instance>bv2v3_var_var_cmp_32_s_fu_379</Instance>
+                        </InstanceList>
+                    </FILTER_MAIN_LOOP>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:217</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <FILTER_MAIN_LOOP>
+                            <Name>FILTER_MAIN_LOOP</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:250</SourceLocation>
+                        </FILTER_MAIN_LOOP>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>5</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>5306</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>compare_ops_32_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>4.489</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:232</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>324</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>5523</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>true_table_4_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32</Name>
+            <Loops>
+                <VITIS_LOOP_318_1_TRUE_TABLE_INIT32/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.652</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1027</Best-caseLatency>
+                    <Average-caseLatency>1027</Average-caseLatency>
+                    <Worst-caseLatency>1027</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>10.270 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>10.270 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>10.270 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1025</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_318_1_TRUE_TABLE_INIT32>
+                        <Name>VITIS_LOOP_318_1_TRUE_TABLE_INIT32</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>1024</TripCount>
+                        <Latency>1025</Latency>
+                        <AbsoluteTimeLatency>10.250 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_318_1_TRUE_TABLE_INIT32>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:321</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_318_1_TRUE_TABLE_INIT32>
+                            <Name>VITIS_LOOP_318_1_TRUE_TABLE_INIT32</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:318</SourceLocation>
+                        </VITIS_LOOP_318_1_TRUE_TABLE_INIT32>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>75</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>197</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_318_1_TRUE_TABLE_INIT32" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln318_fu_101_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:318" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln318" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_318_1_TRUE_TABLE_INIT32" OPTYPE="add" PRAGMA="" RTLNAME="add_ln318_fu_107_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:318" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln318" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_318_1_TRUE_TABLE_INIT32" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln321_fu_116_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:321" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln321" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="VITIS_LOOP_318_1_TRUE_TABLE_INIT32" OPTYPE="select" PRAGMA="" RTLNAME="select_ln318_fu_122_p3" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:318" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln318" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_318_1_TRUE_TABLE_INIT32" OPTYPE="add" PRAGMA="" RTLNAME="add_ln318_1_fu_160_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:318" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln318_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="VITIS_LOOP_318_1_TRUE_TABLE_INIT32" OPTYPE="select" PRAGMA="" RTLNAME="select_ln318_1_fu_166_p3" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:318" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln318_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_318_1_TRUE_TABLE_INIT32" OPTYPE="seteq" PRAGMA="" RTLNAME="first_iter_0_fu_130_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:318" STORAGESUBTYPE="" URAM="0" VARIABLE="first_iter_0" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_318_1_TRUE_TABLE_INIT32" OPTYPE="add" PRAGMA="" RTLNAME="add_ln324_fu_207_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:324" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln324" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_318_1_TRUE_TABLE_INIT32" OPTYPE="add" PRAGMA="" RTLNAME="add_ln321_fu_136_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:321" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln321" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>true_table_4_Pipeline_TRUE_TABLE_READ</Name>
+            <Loops>
+                <TRUE_TABLE_READ/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.314</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <TRUE_TABLE_READ>
+                        <Name>TRUE_TABLE_READ</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </TRUE_TABLE_READ>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:334</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <TRUE_TABLE_READ>
+                            <Name>TRUE_TABLE_READ</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:334</SourceLocation>
+                        </TRUE_TABLE_READ>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>8</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>91</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>true_table_4_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.652</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:316</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <FF>95</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>481</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="truetable_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:316" STORAGESIZE="1 1024 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="truetable" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>pred_pass_32_Pipeline_FILTER_PRED_PASS</Name>
+            <Loops>
+                <FILTER_PRED_PASS/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.894</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <FILTER_PRED_PASS>
+                        <Name>FILTER_PRED_PASS</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </FILTER_PRED_PASS>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:356</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <FILTER_PRED_PASS>
+                            <Name>FILTER_PRED_PASS</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:372</SourceLocation>
+                        </FILTER_PRED_PASS>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>41</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>102</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="FILTER_PRED_PASS" OPTYPE="or" PRAGMA="" RTLNAME="or_ln372_fu_115_p2" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:372" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln372" VISIBLE="false"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>pred_pass_32_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.894</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:363</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>49</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>229</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>dynamicFilter_32_32_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>4.489</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>undef</DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>dataflow</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:521</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <FF>1846</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>7857</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="e_v_strm_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:535" STORAGESIZE="1 8 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="e_v_strm" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="e_p_strm_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:536" STORAGESIZE="1 32 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="e_p_strm" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cmpvc_cfg_strms_0_U" SOURCE=":0" STORAGESIZE="72 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cmpvc_cfg_strms_0" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cmpvc_cfg_strms_1_U" SOURCE=":0" STORAGESIZE="72 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cmpvc_cfg_strms_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cmpvc_cfg_strms_2_U" SOURCE=":0" STORAGESIZE="72 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cmpvc_cfg_strms_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cmpvc_cfg_strms_3_U" SOURCE=":0" STORAGESIZE="72 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cmpvc_cfg_strms_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cmpvv_cfg_strms_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527" STORAGESIZE="4 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cmpvv_cfg_strms" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cmpvv_cfg_strms_1_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527" STORAGESIZE="4 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cmpvv_cfg_strms_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cmpvv_cfg_strms_2_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527" STORAGESIZE="4 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cmpvv_cfg_strms_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cmpvv_cfg_strms_3_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527" STORAGESIZE="4 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cmpvv_cfg_strms_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cmpvv_cfg_strms_4_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527" STORAGESIZE="4 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cmpvv_cfg_strms_4" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cmpvv_cfg_strms_5_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:527" STORAGESIZE="4 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cmpvv_cfg_strms_5" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="tt_cfg_strm_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:529" STORAGESIZE="32 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="tt_cfg_strm" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="addr_strm_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:538" STORAGESIZE="10 8 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="addr_strm" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="e_addr_strm_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:539" STORAGESIZE="1 8 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="e_addr_strm" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="b_strm_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:541" STORAGESIZE="1 8 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="b_strm" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="e_b_strm_U" SOURCE="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:542" STORAGESIZE="1 8 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="e_b_strm" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>filter_dut</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>4.489</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp:20</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <FF>1851</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>7954</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation>
+        <FIFOInst>
+            <Name>e_v_strm_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>8</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>e_p_strm_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>32</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>cmpvc_cfg_strms_0_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>cmpvc_cfg_strms_1_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>cmpvc_cfg_strms_2_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>cmpvc_cfg_strms_3_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>cmpvv_cfg_strms_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>cmpvv_cfg_strms_1_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>cmpvv_cfg_strms_2_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>cmpvv_cfg_strms_3_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>cmpvv_cfg_strms_4_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>cmpvv_cfg_strms_5_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>tt_cfg_strm_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>2</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>addr_strm_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>8</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>e_addr_strm_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>8</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>b_strm_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>8</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+        <FIFOInst>
+            <Name>e_b_strm_U</Name>
+            <ParentInst>grp_dynamicFilter_32_32_s_fu_36</ParentInst>
+            <StaticDepth>8</StaticDepth>
+            <RuntimeDepth>mOutPtr</RuntimeDepth>
+            <InterfaceList>
+                <Interface>clk</Interface>
+                <Interface>reset</Interface>
+                <Interface>if_write</Interface>
+                <Interface>if_din</Interface>
+                <Interface>if_full_n</Interface>
+                <Interface>if_read</Interface>
+                <Interface>if_empty_n</Interface>
+            </InterfaceList>
+        </FIFOInst>
+    </FIFOInformation>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="filter_cfg_strm" index="0" direction="in" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="filter_cfg_strm" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="k_strms" index="1" direction="in" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;*" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="k_strms_0" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="k_strms_1" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="k_strms_2" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="k_strms_3" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="p_strm" index="2" direction="in" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="p_strm" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="e_strm" index="3" direction="in" srcType="stream&lt;bool, 0&gt;&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="interface" interface="e_strm" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="f_strm" index="4" direction="out" srcType="stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="f_strm" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="e_f_strm" index="5" direction="out" srcType="stream&lt;bool, 0&gt;&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="interface" interface="e_f_strm" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="filter_cfg_strm" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" direction="in" dataWidth="32" portPrefix="filter_cfg_strm_">
+            <portMaps>
+                <portMap portMapName="filter_cfg_strm_dout">RD_DATA</portMap>
+                <portMap portMapName="filter_cfg_strm_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="filter_cfg_strm_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>filter_cfg_strm_dout</port>
+                <port>filter_cfg_strm_empty_n</port>
+                <port>filter_cfg_strm_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="filter_cfg_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="k_strms_0" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" direction="in" dataWidth="32" portPrefix="k_strms_0_">
+            <portMaps>
+                <portMap portMapName="k_strms_0_dout">RD_DATA</portMap>
+                <portMap portMapName="k_strms_0_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="k_strms_0_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>k_strms_0_dout</port>
+                <port>k_strms_0_empty_n</port>
+                <port>k_strms_0_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="k_strms"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="k_strms_1" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" direction="in" dataWidth="32" portPrefix="k_strms_1_">
+            <portMaps>
+                <portMap portMapName="k_strms_1_dout">RD_DATA</portMap>
+                <portMap portMapName="k_strms_1_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="k_strms_1_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>k_strms_1_dout</port>
+                <port>k_strms_1_empty_n</port>
+                <port>k_strms_1_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="k_strms"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="k_strms_2" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" direction="in" dataWidth="32" portPrefix="k_strms_2_">
+            <portMaps>
+                <portMap portMapName="k_strms_2_dout">RD_DATA</portMap>
+                <portMap portMapName="k_strms_2_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="k_strms_2_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>k_strms_2_dout</port>
+                <port>k_strms_2_empty_n</port>
+                <port>k_strms_2_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="k_strms"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="k_strms_3" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" direction="in" dataWidth="32" portPrefix="k_strms_3_">
+            <portMaps>
+                <portMap portMapName="k_strms_3_dout">RD_DATA</portMap>
+                <portMap portMapName="k_strms_3_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="k_strms_3_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>k_strms_3_dout</port>
+                <port>k_strms_3_empty_n</port>
+                <port>k_strms_3_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="k_strms"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="p_strm" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" direction="in" dataWidth="32" portPrefix="p_strm_">
+            <portMaps>
+                <portMap portMapName="p_strm_dout">RD_DATA</portMap>
+                <portMap portMapName="p_strm_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="p_strm_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>p_strm_dout</port>
+                <port>p_strm_empty_n</port>
+                <port>p_strm_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="p_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="e_strm" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" direction="in" dataWidth="1" portPrefix="e_strm_">
+            <portMaps>
+                <portMap portMapName="e_strm_dout">RD_DATA</portMap>
+                <portMap portMapName="e_strm_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="e_strm_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>e_strm_dout</port>
+                <port>e_strm_empty_n</port>
+                <port>e_strm_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="e_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="f_strm" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" direction="out" dataWidth="32" portPrefix="f_strm_">
+            <portMaps>
+                <portMap portMapName="f_strm_din">WR_DATA</portMap>
+                <portMap portMapName="f_strm_full_n">FULL_N</portMap>
+                <portMap portMapName="f_strm_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>f_strm_din</port>
+                <port>f_strm_full_n</port>
+                <port>f_strm_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="f_strm"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="e_f_strm" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" direction="out" dataWidth="1" portPrefix="e_f_strm_">
+            <portMaps>
+                <portMap portMapName="e_f_strm_din">WR_DATA</portMap>
+                <portMap portMapName="e_f_strm_full_n">FULL_N</portMap>
+                <portMap portMapName="e_f_strm_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>e_f_strm_din</port>
+                <port>e_f_strm_full_n</port>
+                <port>e_f_strm_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="e_f_strm"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_FIFO">
+                <table>
+                    <keys size="3">Interface, Direction, Data Width</keys>
+                    <column name="e_f_strm">out, 1</column>
+                    <column name="e_strm">in, 1</column>
+                    <column name="f_strm">out, 32</column>
+                    <column name="filter_cfg_strm">in, 32</column>
+                    <column name="k_strms_0">in, 32</column>
+                    <column name="k_strms_1">in, 32</column>
+                    <column name="k_strms_2">in, 32</column>
+                    <column name="k_strms_3">in, 32</column>
+                    <column name="p_strm">in, 32</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="filter_cfg_strm">in, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="k_strms">in, stream&lt;ap_uint&lt;32&gt; 0&gt;*</column>
+                    <column name="p_strm">in, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="e_strm">in, stream&lt;bool 0&gt;&amp;</column>
+                    <column name="f_strm">out, stream&lt;ap_uint&lt;32&gt; 0&gt;&amp;</column>
+                    <column name="e_f_strm">out, stream&lt;bool 0&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="filter_cfg_strm">filter_cfg_strm, interface</column>
+                    <column name="k_strms">k_strms_0, interface</column>
+                    <column name="k_strms">k_strms_1, interface</column>
+                    <column name="k_strms">k_strms_2, interface</column>
+                    <column name="k_strms">k_strms_3, interface</column>
+                    <column name="p_strm">p_strm, interface</column>
+                    <column name="e_strm">e_strm, interface</column>
+                    <column name="f_strm">f_strm, interface</column>
+                    <column name="e_f_strm">e_f_strm, interface</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="pipeline" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:251" status="valid" parentFunction="compare_ops" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="pipeline" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:322" status="valid" parentFunction="true_table" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="pipeline" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:335" status="valid" parentFunction="true_table" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="dataflow" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:521" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:531" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = cmpvc_cfg_strms"/>
+        <Pragma type="array_partition" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:532" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = cmpvv_cfg_strms"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:544" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = e_v_strm depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:545" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = e_p_strm depth = 32"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:546" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = addr_strm depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:547" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = e_addr_strm depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:548" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = b_strm depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:549" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = e_b_strm depth = 8"/>
+        <Pragma type="pipeline" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:601" status="valid" parentFunction="filter_3_to_4" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="dataflow" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:654" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options=""/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:663" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = va_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:664" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = vb_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:665" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = vc_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:666" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = vd_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:667" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = pay_strm1 depth = 32"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:668" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = e_strm1 depth = 8"/>
+        <Pragma type="pipeline" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:700" status="valid" parentFunction="filter_2_to_4" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="dataflow" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:750" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options=""/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:759" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = va_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:760" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = vb_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:761" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = vc_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:762" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = vd_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:763" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = pay_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:764" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = e_strm1 depth = 8"/>
+        <Pragma type="pipeline" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:794" status="valid" parentFunction="filter_1_to_4" variable="" isDirective="0" options="II = 1"/>
+        <Pragma type="dataflow" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:841" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options=""/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:850" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = va_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:851" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = vb_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:852" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = vc_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:853" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = vd_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:854" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = pay_strm1 depth = 8"/>
+        <Pragma type="stream" location="../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:855" status="valid" parentFunction="dynamicfilter" variable="" isDirective="0" options="variable = e_strm1 depth = 8"/>
+    </PragmaReport>
+</profile>
+

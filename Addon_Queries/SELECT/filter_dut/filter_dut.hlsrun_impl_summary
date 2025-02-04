@@ -1,0 +1,244 @@
+<ENTRY>
+{
+ "thisFile": "/home/chips/Storage/zoho/hls_component/filter_dut/filter_dut.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Feb  3 14:23:18 2025",
+ "timestampMillis": "1738572798351",
+ "buildStep": {
+  "cmdId": "4d154439-0d97-4788-bbf5-9f7b9ef56de8",
+  "name": "vitis-run",
+  "logFile": "/home/chips/Storage/zoho/hls_component/filter_dut/logs/filter_dut.steps.log",
+  "commandLine": "/home/chips/Storage/Vitis/2024.1/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /home/chips/Storage/zoho/hls_component/hls_config.cfg --work_dir filter_dut ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "/home/chips/Storage/zoho/hls_component/hls_config.cfg",
+   "--work_dir",
+   "filter_dut"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/chips/Storage/zoho/hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Feb  3 14:23:18 2025",
+ "timestampMillis": "1738572798351",
+ "status": {
+  "cmdId": "4d154439-0d97-4788-bbf5-9f7b9ef56de8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Feb  3 14:23:21 2025",
+ "timestampMillis": "1738572801663",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "filter_dut",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp",
+     "/home/chips/Storage/APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Feb  3 14:23:21 2025",
+ "timestampMillis": "1738572801664",
+ "buildStep": {
+  "cmdId": "dab194ea-0d24-467c-93ce-0451e0f431fb",
+  "name": "export_design",
+  "logFile": "/home/chips/Storage/zoho/hls_component/filter_dut/hls/hls.log",
+  "commandLine": "export_design -flow impl",
+  "args": [
+   "-flow",
+   "impl"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/chips/Storage/zoho/hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Feb  3 14:23:21 2025",
+ "timestampMillis": "1738572801664",
+ "status": {
+  "cmdId": "dab194ea-0d24-467c-93ce-0451e0f431fb",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:23:21 2025",
+ "timestampMillis": "1738572801665",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:23:21 2025",
+ "timestampMillis": "1738572801665",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls/impl/report/verilog/export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:23:21 2025",
+ "timestampMillis": "1738572801665",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls/impl/report/verilog/export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:23:21 2025",
+ "timestampMillis": "1738572801665",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:23:21 2025",
+ "timestampMillis": "1738572801665",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls/impl/report/verilog/export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:23:21 2025",
+ "timestampMillis": "1738572801665",
+ "report": {
+  "path": "/home/chips/Storage/zoho/hls_component/filter_dut/hls/impl/report/verilog/export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Feb  3 14:24:41 2025",
+ "timestampMillis": "1738572881549",
+ "status": {
+  "cmdId": "dab194ea-0d24-467c-93ce-0451e0f431fb",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Feb  3 14:24:41 2025",
+ "timestampMillis": "1738572881648",
+ "status": {
+  "cmdId": "4d154439-0d97-4788-bbf5-9f7b9ef56de8",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:24:41 2025",
+ "timestampMillis": "1738572881649",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Feb  3 14:24:41 2025",
+ "timestampMillis": "1738572881649",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

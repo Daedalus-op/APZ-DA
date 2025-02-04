@@ -1,0 +1,214 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "bd_0_hls_inst_0",
+    "cell_name": "hls_inst",
+    "component_reference": "xilinx.com:hls:filter_dut:1.0",
+    "ip_revision": "2113938983",
+    "gen_directory": "../../../../../../project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "bd_0_hls_inst_0", "resolve_type": "user", "usage": "all" } ],
+        "clk_period": [ { "value": "10", "enabled": false, "usage": "all" } ],
+        "machine": [ { "value": "64", "enabled": false, "usage": "all" } ],
+        "combinational": [ { "value": "0", "enabled": false, "usage": "all" } ],
+        "latency": [ { "value": "undef", "enabled": false, "usage": "all" } ],
+        "II": [ { "value": "undef", "enabled": false, "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "virtexuplus" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xcvu9p" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
+        "PACKAGE": [ { "value": "flga2104" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "I" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "2113938983" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "ap_clk": [ { "direction": "in" } ],
+        "ap_rst": [ { "direction": "in" } ],
+        "ap_done": [ { "direction": "out" } ],
+        "ap_idle": [ { "direction": "out" } ],
+        "ap_ready": [ { "direction": "out" } ],
+        "ap_start": [ { "direction": "in" } ],
+        "filter_cfg_strm_dout": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "filter_cfg_strm_empty_n": [ { "direction": "in" } ],
+        "filter_cfg_strm_read": [ { "direction": "out" } ],
+        "k_strms_0_dout": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "k_strms_0_empty_n": [ { "direction": "in" } ],
+        "k_strms_0_read": [ { "direction": "out" } ],
+        "k_strms_1_dout": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "k_strms_1_empty_n": [ { "direction": "in" } ],
+        "k_strms_1_read": [ { "direction": "out" } ],
+        "k_strms_2_dout": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "k_strms_2_empty_n": [ { "direction": "in" } ],
+        "k_strms_2_read": [ { "direction": "out" } ],
+        "k_strms_3_dout": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "k_strms_3_empty_n": [ { "direction": "in" } ],
+        "k_strms_3_read": [ { "direction": "out" } ],
+        "p_strm_dout": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "p_strm_empty_n": [ { "direction": "in" } ],
+        "p_strm_read": [ { "direction": "out" } ],
+        "e_strm_dout": [ { "direction": "in" } ],
+        "e_strm_empty_n": [ { "direction": "in" } ],
+        "e_strm_read": [ { "direction": "out" } ],
+        "f_strm_din": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "f_strm_full_n": [ { "direction": "in" } ],
+        "f_strm_write": [ { "direction": "out" } ],
+        "e_f_strm_din": [ { "direction": "out" } ],
+        "e_f_strm_full_n": [ { "direction": "in" } ],
+        "e_f_strm_write": [ { "direction": "out" } ]
+      },
+      "interfaces": {
+        "ap_clk": {
+          "vlnv": "xilinx.com:signal:clock:1.0",
+          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "ASSOCIATED_RESET": [ { "value": "ap_rst", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "100000000.0", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "bd_0_ap_clk_0", "value_src": "default_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_BUSIF": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "CLK": [ { "physical_name": "ap_clk" } ]
+          }
+        },
+        "ap_rst": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_HIGH", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "ap_rst" } ]
+          }
+        },
+        "ap_ctrl": {
+          "vlnv": "xilinx.com:interface:acc_handshake:1.0",
+          "abstraction_type": "xilinx.com:interface:acc_handshake_rtl:1.0",
+          "mode": "slave",
+          "port_maps": {
+            "done": [ { "physical_name": "ap_done" } ],
+            "idle": [ { "physical_name": "ap_idle" } ],
+            "ready": [ { "physical_name": "ap_ready" } ],
+            "start": [ { "physical_name": "ap_start" } ]
+          }
+        },
+        "filter_cfg_strm": {
+          "vlnv": "xilinx.com:interface:acc_fifo_read:1.0",
+          "abstraction_type": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "RD_DATA": [ { "physical_name": "filter_cfg_strm_dout" } ],
+            "EMPTY_N": [ { "physical_name": "filter_cfg_strm_empty_n" } ],
+            "RD_EN": [ { "physical_name": "filter_cfg_strm_read" } ]
+          }
+        },
+        "k_strms_0": {
+          "vlnv": "xilinx.com:interface:acc_fifo_read:1.0",
+          "abstraction_type": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "RD_DATA": [ { "physical_name": "k_strms_0_dout" } ],
+            "EMPTY_N": [ { "physical_name": "k_strms_0_empty_n" } ],
+            "RD_EN": [ { "physical_name": "k_strms_0_read" } ]
+          }
+        },
+        "k_strms_1": {
+          "vlnv": "xilinx.com:interface:acc_fifo_read:1.0",
+          "abstraction_type": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "RD_DATA": [ { "physical_name": "k_strms_1_dout" } ],
+            "EMPTY_N": [ { "physical_name": "k_strms_1_empty_n" } ],
+            "RD_EN": [ { "physical_name": "k_strms_1_read" } ]
+          }
+        },
+        "k_strms_2": {
+          "vlnv": "xilinx.com:interface:acc_fifo_read:1.0",
+          "abstraction_type": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "RD_DATA": [ { "physical_name": "k_strms_2_dout" } ],
+            "EMPTY_N": [ { "physical_name": "k_strms_2_empty_n" } ],
+            "RD_EN": [ { "physical_name": "k_strms_2_read" } ]
+          }
+        },
+        "k_strms_3": {
+          "vlnv": "xilinx.com:interface:acc_fifo_read:1.0",
+          "abstraction_type": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "RD_DATA": [ { "physical_name": "k_strms_3_dout" } ],
+            "EMPTY_N": [ { "physical_name": "k_strms_3_empty_n" } ],
+            "RD_EN": [ { "physical_name": "k_strms_3_read" } ]
+          }
+        },
+        "p_strm": {
+          "vlnv": "xilinx.com:interface:acc_fifo_read:1.0",
+          "abstraction_type": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "RD_DATA": [ { "physical_name": "p_strm_dout" } ],
+            "EMPTY_N": [ { "physical_name": "p_strm_empty_n" } ],
+            "RD_EN": [ { "physical_name": "p_strm_read" } ]
+          }
+        },
+        "e_strm": {
+          "vlnv": "xilinx.com:interface:acc_fifo_read:1.0",
+          "abstraction_type": "xilinx.com:interface:acc_fifo_read_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "RD_DATA": [ { "physical_name": "e_strm_dout" } ],
+            "EMPTY_N": [ { "physical_name": "e_strm_empty_n" } ],
+            "RD_EN": [ { "physical_name": "e_strm_read" } ]
+          }
+        },
+        "f_strm": {
+          "vlnv": "xilinx.com:interface:acc_fifo_write:1.0",
+          "abstraction_type": "xilinx.com:interface:acc_fifo_write_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "WR_DATA": [ { "physical_name": "f_strm_din" } ],
+            "FULL_N": [ { "physical_name": "f_strm_full_n" } ],
+            "WR_EN": [ { "physical_name": "f_strm_write" } ]
+          }
+        },
+        "e_f_strm": {
+          "vlnv": "xilinx.com:interface:acc_fifo_write:1.0",
+          "abstraction_type": "xilinx.com:interface:acc_fifo_write_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "WR_DATA": [ { "physical_name": "e_f_strm_din" } ],
+            "FULL_N": [ { "physical_name": "e_f_strm_full_n" } ],
+            "WR_EN": [ { "physical_name": "e_f_strm_write" } ]
+          }
+        }
+      }
+    }
+  }
+}

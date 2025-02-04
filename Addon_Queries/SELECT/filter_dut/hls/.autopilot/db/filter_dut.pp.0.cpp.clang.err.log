@@ -1,0 +1,114 @@
+In file included from ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.cpp:18:
+In file included from ../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/filter_dut.hpp:28:
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:251:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compare_ops_XLX_SEP_ PragmaOptions=II = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II = 1
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:322:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=true_table_XLX_SEP_ PragmaOptions=II = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II = 1
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:335:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=true_table_XLX_SEP_ PragmaOptions=II = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II = 1
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:521:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS dataflow
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:531:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = cmpvc_cfg_strms_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable = cmpvc_cfg_strms
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:532:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = cmpvv_cfg_strms_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable = cmpvv_cfg_strms
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:544:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = e_v_strm depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = e_v_strm depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:545:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = e_p_strm depth = 32_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = e_p_strm depth = 32
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:546:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = addr_strm depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = addr_strm depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:547:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = e_addr_strm depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = e_addr_strm depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:548:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = b_strm depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = b_strm depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:549:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = e_b_strm depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = e_b_strm depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:601:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filter_3_to_4_XLX_SEP_ PragmaOptions=II = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II = 1
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:654:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS dataflow
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:663:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = va_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = va_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:664:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = vb_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = vb_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:665:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = vc_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = vc_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:666:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = vd_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = vd_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:667:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = pay_strm1 depth = 32_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = pay_strm1 depth = 32
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:668:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = e_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = e_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:700:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filter_2_to_4_XLX_SEP_ PragmaOptions=II = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II = 1
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:750:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS dataflow
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:759:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = va_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = va_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:760:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = vb_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = vb_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:761:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = vc_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = vc_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:762:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = vd_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = vd_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:763:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = pay_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = pay_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:764:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = e_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = e_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:794:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filter_1_to_4_XLX_SEP_ PragmaOptions=II = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II = 1
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:841:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS dataflow
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:850:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = va_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = va_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:851:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = vb_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = vb_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:852:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = vc_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = vc_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:853:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = vd_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = vd_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:854:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = pay_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = pay_strm1 depth = 8
+        ^
+../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:855:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dynamicFilter_XLX_SEP_ PragmaOptions=variable = e_strm1 depth = 8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable = e_strm1 depth = 8
+        ^
+directive:1:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=filter_dut_XLX_SEP_ PragmaOptions=name=filter_dut_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=filter_dut
+        ^
+37 warnings generated.

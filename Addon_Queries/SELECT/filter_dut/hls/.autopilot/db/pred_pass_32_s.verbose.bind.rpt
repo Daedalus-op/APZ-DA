@@ -1,0 +1,479 @@
+
+
+================================================================
+== Vitis HLS Report for 'pred_pass_32_s'
+================================================================
+* Date:           Mon Feb  3 14:21:55 2025
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        filter_dut
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.894 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |                                                  |                                        |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+        |                     Instance                     |                 Module                 |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |grp_pred_pass_32_Pipeline_FILTER_PRED_PASS_fu_52  |pred_pass_32_Pipeline_FILTER_PRED_PASS  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.38>
+ST_1 : Operation 5 [1/1] (1.38ns)   --->   "%ep = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %e_p_strm" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:363]   --->   Operation 5 'read' 'ep' <Predicate = true> <Delay = 1.38> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.38> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 32> <FIFO>
+ST_1 : Operation 6 [1/1] (1.31ns)   --->   "%eb = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %e_b_strm" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:364]   --->   Operation 6 'read' 'eb' <Predicate = true> <Delay = 1.31> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.31> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 8> <FIFO>
+
+State 2 <SV = 1> <Delay = 1.50>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 7 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [2/2] (1.50ns)   --->   "%call_ln363 = call void @pred_pass<32>_Pipeline_FILTER_PRED_PASS, i1 %ep, i1 %eb, i1 %e_p_strm, i1 %e_b_strm, i32 %p_strm, i1 %b_strm, i32 %f_strm, i1 %e_f_strm" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:363]   --->   Operation 8 'call' 'call_ln363' <Predicate = true> <Delay = 1.50> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 9 [1/2] (0.00ns)   --->   "%call_ln363 = call void @pred_pass<32>_Pipeline_FILTER_PRED_PASS, i1 %ep, i1 %eb, i1 %e_p_strm, i1 %e_b_strm, i32 %p_strm, i1 %b_strm, i32 %f_strm, i1 %e_f_strm" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:363]   --->   Operation 9 'call' 'call_ln363' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.42>
+ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %e_b_strm, void @empty_8, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %b_strm, void @empty_8, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %e_p_strm, void @empty_8, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %p_strm, void @empty_8, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %f_strm, void @empty_8, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %e_f_strm, void @empty_8, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%empty_35 = wait i32 @_ssdm_op_Wait"   --->   Operation 16 'wait' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (1.42ns)   --->   "%write_ln391 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %e_f_strm, i1 1" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:391]   --->   Operation 17 'write' 'write_ln391' <Predicate = true> <Delay = 1.42> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln395 = ret" [../../APZ-DA/Addon_Queries/SELECT/dynamic_filter/xf_database/dynamic_filter.hpp:395]   --->   Operation 18 'ret' 'ret_ln395' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ p_strm]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ e_p_strm]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ b_strm]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ e_b_strm]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ f_strm]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ e_f_strm]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+ep                (read         ) [ 00110]
+eb                (read         ) [ 00110]
+empty             (wait         ) [ 00000]
+call_ln363        (call         ) [ 00000]
+specinterface_ln0 (specinterface) [ 00000]
+specinterface_ln0 (specinterface) [ 00000]
+specinterface_ln0 (specinterface) [ 00000]
+specinterface_ln0 (specinterface) [ 00000]
+specinterface_ln0 (specinterface) [ 00000]
+specinterface_ln0 (specinterface) [ 00000]
+empty_35          (wait         ) [ 00000]
+write_ln391       (write        ) [ 00000]
+ret_ln395         (ret          ) [ 00000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="p_strm">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_strm"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="e_p_strm">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="e_p_strm"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="b_strm">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="b_strm"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="e_b_strm">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="e_b_strm"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="f_strm">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="f_strm"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="e_f_strm">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="e_f_strm"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i1P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Wait"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="pred_pass<32>_Pipeline_FILTER_PRED_PASS"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i1P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1004" name="ep_read_fu_32">
+<pin_list>
+<pin id="33" dir="0" index="0" bw="1" slack="0"/>
+<pin id="34" dir="0" index="1" bw="1" slack="0"/>
+<pin id="35" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="ep/1 "/>
+</bind>
+</comp>
+
+<comp id="38" class="1004" name="eb_read_fu_38">
+<pin_list>
+<pin id="39" dir="0" index="0" bw="1" slack="0"/>
+<pin id="40" dir="0" index="1" bw="1" slack="0"/>
+<pin id="41" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="eb/1 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="write_ln391_write_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="0" slack="0"/>
+<pin id="46" dir="0" index="1" bw="1" slack="0"/>
+<pin id="47" dir="0" index="2" bw="1" slack="0"/>
+<pin id="48" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln391/4 "/>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="grp_pred_pass_32_Pipeline_FILTER_PRED_PASS_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="0" slack="0"/>
+<pin id="54" dir="0" index="1" bw="1" slack="1"/>
+<pin id="55" dir="0" index="2" bw="1" slack="1"/>
+<pin id="56" dir="0" index="3" bw="1" slack="0"/>
+<pin id="57" dir="0" index="4" bw="1" slack="0"/>
+<pin id="58" dir="0" index="5" bw="32" slack="0"/>
+<pin id="59" dir="0" index="6" bw="1" slack="0"/>
+<pin id="60" dir="0" index="7" bw="32" slack="0"/>
+<pin id="61" dir="0" index="8" bw="1" slack="0"/>
+<pin id="62" dir="1" index="9" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln363/2 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1005" name="ep_reg_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="1" slack="1"/>
+<pin id="72" dir="1" index="1" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opset="ep "/>
+</bind>
+</comp>
+
+<comp id="75" class="1005" name="eb_reg_75">
+<pin_list>
+<pin id="76" dir="0" index="0" bw="1" slack="1"/>
+<pin id="77" dir="1" index="1" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opset="eb "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="36"><net_src comp="12" pin="0"/><net_sink comp="32" pin=0"/></net>
+
+<net id="37"><net_src comp="2" pin="0"/><net_sink comp="32" pin=1"/></net>
+
+<net id="42"><net_src comp="12" pin="0"/><net_sink comp="38" pin=0"/></net>
+
+<net id="43"><net_src comp="6" pin="0"/><net_sink comp="38" pin=1"/></net>
+
+<net id="49"><net_src comp="28" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="50"><net_src comp="10" pin="0"/><net_sink comp="44" pin=1"/></net>
+
+<net id="51"><net_src comp="30" pin="0"/><net_sink comp="44" pin=2"/></net>
+
+<net id="63"><net_src comp="16" pin="0"/><net_sink comp="52" pin=0"/></net>
+
+<net id="64"><net_src comp="2" pin="0"/><net_sink comp="52" pin=3"/></net>
+
+<net id="65"><net_src comp="6" pin="0"/><net_sink comp="52" pin=4"/></net>
+
+<net id="66"><net_src comp="0" pin="0"/><net_sink comp="52" pin=5"/></net>
+
+<net id="67"><net_src comp="4" pin="0"/><net_sink comp="52" pin=6"/></net>
+
+<net id="68"><net_src comp="8" pin="0"/><net_sink comp="52" pin=7"/></net>
+
+<net id="69"><net_src comp="10" pin="0"/><net_sink comp="52" pin=8"/></net>
+
+<net id="73"><net_src comp="32" pin="2"/><net_sink comp="70" pin=0"/></net>
+
+<net id="74"><net_src comp="70" pin="1"/><net_sink comp="52" pin=1"/></net>
+
+<net id="78"><net_src comp="38" pin="2"/><net_sink comp="75" pin=0"/></net>
+
+<net id="79"><net_src comp="75" pin="1"/><net_sink comp="52" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: f_strm | {2 3 }
+	Port: e_f_strm | {2 3 4 }
+ - Input state : 
+	Port: pred_pass<32> : p_strm | {2 3 }
+	Port: pred_pass<32> : e_p_strm | {1 2 3 }
+	Port: pred_pass<32> : b_strm | {2 3 }
+	Port: pred_pass<32> : e_b_strm | {1 2 3 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------------------------------|---------|---------|
+| Operation|                  Functional Unit                 |    FF   |   LUT   |
+|----------|--------------------------------------------------|---------|---------|
+|   call   | grp_pred_pass_32_Pipeline_FILTER_PRED_PASS_fu_52 |    38   |    2    |
+|----------|--------------------------------------------------|---------|---------|
+|   read   |                   ep_read_fu_32                  |    0    |    0    |
+|          |                   eb_read_fu_38                  |    0    |    0    |
+|----------|--------------------------------------------------|---------|---------|
+|   write  |              write_ln391_write_fu_44             |    0    |    0    |
+|----------|--------------------------------------------------|---------|---------|
+|   Total  |                                                  |    38   |    2    |
+|----------|--------------------------------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++---------+--------+
+|         |   FF   |
++---------+--------+
+|eb_reg_75|    1   |
+|ep_reg_70|    1   |
++---------+--------+
+|  Total  |    2   |
++---------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+
+|           |   FF   |   LUT  |
++-----------+--------+--------+
+|  Function |   38   |    2   |
+|   Memory  |    -   |    -   |
+|Multiplexer|    -   |    -   |
+|  Register |    2   |    -   |
++-----------+--------+--------+
+|   Total   |   40   |    2   |
++-----------+--------+--------+

@@ -1,0 +1,206 @@
+{
+    "1": {
+        "name": "true_table<4>",
+        "file": "dynamic_filter.hpp",
+        "fileloc": "309",
+        "instructions": "15",
+        "total_instructions": "78",
+        "calls": "11 12",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "compare_ops<32>_Pipeline_FILTER_MAIN_LOOP",
+        "file": "..\/..\/APZ-DA\/Addon_Queries\/SELECT\/dynamic_filter\/xf_database\/dynamic_filter.hpp",
+        "fileloc": "217",
+        "instructions": "55",
+        "total_instructions": "405",
+        "calls": "13 13 13 13 4 4 4 4 4 4",
+        "basicblocks": "4",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_445_4",
+        "file": "..\/..\/APZ-DA\/Addon_Queries\/SELECT\/dynamic_filter\/xf_database\/dynamic_filter.hpp",
+        "fileloc": "443",
+        "instructions": "52",
+        "total_instructions": "52",
+        "calls": "",
+        "basicblocks": "13",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "var_var_cmp<32>",
+        "file": "dynamic_filter.hpp",
+        "fileloc": "174",
+        "instructions": "31",
+        "total_instructions": "31",
+        "calls": "",
+        "basicblocks": "13"
+    },
+    "5": {
+        "name": "pred_pass<32>",
+        "file": "dynamic_filter.hpp",
+        "fileloc": "356",
+        "instructions": "13",
+        "total_instructions": "38",
+        "calls": "16",
+        "basicblocks": "1"
+    },
+    "6": {
+        "name": "broadcast_Pipeline_VITIS_LOOP_88_1",
+        "file": "..\/..\/APZ-DA\/Addon_Queries\/SELECT\/dynamic_filter\/xf_database\/dynamic_filter.hpp",
+        "fileloc": "86",
+        "instructions": "14",
+        "total_instructions": "14",
+        "calls": "",
+        "basicblocks": "4",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "dynamicFilter<32, 32>",
+        "file": "dynamic_filter.hpp",
+        "fileloc": "510",
+        "instructions": "67",
+        "total_instructions": "785",
+        "calls": "9 10 8 1 5",
+        "basicblocks": "1"
+    },
+    "8": {
+        "name": "compare_ops<32>",
+        "file": "dynamic_filter.hpp",
+        "fileloc": "213",
+        "instructions": "49",
+        "total_instructions": "454",
+        "calls": "2",
+        "basicblocks": "1"
+    },
+    "9": {
+        "name": "broadcast",
+        "file": "dynamic_filter.hpp",
+        "fileloc": "86",
+        "instructions": "10",
+        "total_instructions": "24",
+        "calls": "6",
+        "basicblocks": "1"
+    },
+    "10": {
+        "name": "parse_filter_config<4, 32>",
+        "file": "dynamic_filter.hpp",
+        "fileloc": "405",
+        "instructions": "21",
+        "total_instructions": "124",
+        "calls": "14 3 15",
+        "basicblocks": "1"
+    },
+    "11": {
+        "name": "true_table<4>_Pipeline_VITIS_LOOP_318_1_TRUE_TABLE_INIT32",
+        "file": "..\/..\/APZ-DA\/Addon_Queries\/SELECT\/dynamic_filter\/xf_database\/dynamic_filter.hpp",
+        "fileloc": "318",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
+        "name": "true_table<4>_Pipeline_TRUE_TABLE_READ",
+        "file": "..\/..\/APZ-DA\/Addon_Queries\/SELECT\/dynamic_filter\/xf_database\/dynamic_filter.hpp",
+        "fileloc": "332",
+        "instructions": "19",
+        "total_instructions": "19",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "filter_dut",
+        "file": "filter_dut.cpp",
+        "fileloc": "20",
+        "instructions": "21",
+        "total_instructions": "806",
+        "calls": "7",
+        "basicblocks": "1"
+    },
+    "13": {
+        "name": "var_const_cmp<32>",
+        "file": "dynamic_filter.hpp",
+        "fileloc": "110",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "14": {
+        "name": "parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_419_1",
+        "file": "..\/..\/APZ-DA\/Addon_Queries\/SELECT\/dynamic_filter\/xf_database\/dynamic_filter.hpp",
+        "fileloc": "419",
+        "instructions": "34",
+        "total_instructions": "34",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "15": {
+        "name": "parse_filter_config<4, 32>_Pipeline_VITIS_LOOP_467_5",
+        "file": "..\/..\/APZ-DA\/Addon_Queries\/SELECT\/dynamic_filter\/xf_database\/dynamic_filter.hpp",
+        "fileloc": "467",
+        "instructions": "17",
+        "total_instructions": "17",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "16": {
+        "name": "pred_pass<32>_Pipeline_FILTER_PRED_PASS",
+        "file": "..\/..\/APZ-DA\/Addon_Queries\/SELECT\/dynamic_filter\/xf_database\/dynamic_filter.hpp",
+        "fileloc": "356",
+        "instructions": "25",
+        "total_instructions": "25",
+        "calls": "",
+        "basicblocks": "6",
+        "loops": {
+            "L": "1"
+        }
+    }
+}

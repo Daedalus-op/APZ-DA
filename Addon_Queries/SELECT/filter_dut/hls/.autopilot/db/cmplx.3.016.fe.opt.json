@@ -1,0 +1,113 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "5",
+    "file": "filter_dut.cpp",
+    "fileloc": 20,
+    "instructions": 30,
+    "name": "filter_dut",
+    "total_instructions": 811
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 86,
+    "instructions": 26,
+    "loads": {
+      "L": 2
+    },
+    "name": "broadcast",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 26
+  },
+  "2": {
+    "basicblocks": 4,
+    "calls": "6 6 6 6 7 7 7 7 7 7",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 213,
+    "instructions": 168,
+    "loads": {
+      "L": 16
+    },
+    "name": "compare_ops<32>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 470
+  },
+  "3": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 309,
+    "instructions": 56,
+    "loads": {
+      "L": 5
+    },
+    "name": "true_table<4>",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 56
+  },
+  "4": {
+    "basicblocks": 24,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 405,
+    "instructions": 131,
+    "loads": {
+      "L": 5
+    },
+    "name": "parse_filter_config<4, 32>",
+    "stores": {
+      "L": 11
+    },
+    "total_instructions": 131
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "1 4 2 3 8",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 510,
+    "instructions": 59,
+    "name": "dynamicFilter<32, 32>",
+    "total_instructions": 781
+  },
+  "6": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 110,
+    "instructions": 35,
+    "name": "var_const_cmp<32>",
+    "total_instructions": 35
+  },
+  "7": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 174,
+    "instructions": 27,
+    "name": "var_var_cmp<32>",
+    "total_instructions": 27
+  },
+  "8": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "dynamic_filter.hpp",
+    "fileloc": 356,
+    "instructions": 39,
+    "loads": {
+      "L": 6
+    },
+    "name": "pred_pass<32>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 39
+  }
+}

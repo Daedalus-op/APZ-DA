@@ -1,0 +1,203 @@
+
+
+================================================================
+== Vitis HLS Report for 'dynamicFilter_32_32_s'
+================================================================
+* Date:           Mon Feb  3 14:21:57 2025
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        filter_dut
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.489 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------+----------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                             |                            |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |           Instance          |           Module           |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------------+----------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |broadcast_U0                 |broadcast                   |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |parse_filter_config_4_32_U0  |parse_filter_config_4_32_s  |       63|       63|  0.630 us|  0.630 us|   63|   63|       no|
+        |compare_ops_32_U0            |compare_ops_32_s            |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |true_table_4_U0              |true_table_4_s              |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |pred_pass_32_U0              |pred_pass_32_s              |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-----------------------------+----------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       14|    -|
+|FIFO                 |        -|     -|     1218|      754|    -|
+|Instance             |        0|     -|      626|     7071|    0|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        0|       18|    -|
+|Register             |        -|     -|        2|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     1846|     7857|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+----------------------------+---------+----+-----+------+-----+
+    |           Instance          |           Module           | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +-----------------------------+----------------------------+---------+----+-----+------+-----+
+    |broadcast_U0                 |broadcast                   |        0|   0|   13|   200|    0|
+    |compare_ops_32_U0            |compare_ops_32_s            |        0|   0|  324|  5523|    0|
+    |parse_filter_config_4_32_U0  |parse_filter_config_4_32_s  |        0|   0|  145|   638|    0|
+    |pred_pass_32_U0              |pred_pass_32_s              |        0|   0|   49|   229|    0|
+    |true_table_4_U0              |true_table_4_s              |        0|   0|   95|   481|    0|
+    +-----------------------------+----------------------------+---------+----+-----+------+-----+
+    |Total                        |                            |        0|   0|  626|  7071|    0|
+    +-----------------------------+----------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +---------------------+---------+-----+----+-----+------+-----+---------+
+    |         Name        | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +---------------------+---------+-----+----+-----+------+-----+---------+
+    |addr_strm_U          |        0|    6|   0|    -|     8|   10|       80|
+    |b_strm_U             |        0|    6|   0|    -|     8|    1|        8|
+    |cmpvc_cfg_strms_0_U  |        0|  260|   0|    -|     2|   72|      144|
+    |cmpvc_cfg_strms_1_U  |        0|  260|   0|    -|     2|   72|      144|
+    |cmpvc_cfg_strms_2_U  |        0|  260|   0|    -|     2|   72|      144|
+    |cmpvc_cfg_strms_3_U  |        0|  260|   0|    -|     2|   72|      144|
+    |cmpvv_cfg_strms_1_U  |        0|   12|   0|    -|     2|    4|        8|
+    |cmpvv_cfg_strms_2_U  |        0|   12|   0|    -|     2|    4|        8|
+    |cmpvv_cfg_strms_3_U  |        0|   12|   0|    -|     2|    4|        8|
+    |cmpvv_cfg_strms_4_U  |        0|   12|   0|    -|     2|    4|        8|
+    |cmpvv_cfg_strms_5_U  |        0|   12|   0|    -|     2|    4|        8|
+    |cmpvv_cfg_strms_U    |        0|   12|   0|    -|     2|    4|        8|
+    |e_addr_strm_U        |        0|    6|   0|    -|     8|    1|        8|
+    |e_b_strm_U           |        0|    6|   0|    -|     8|    1|        8|
+    |e_p_strm_U           |        0|    8|   0|    -|    32|    1|       32|
+    |e_v_strm_U           |        0|    6|   0|    -|     8|    1|        8|
+    |tt_cfg_strm_U        |        0|   68|   0|    -|     2|   32|       64|
+    +---------------------+---------+-----+----+-----+------+-----+---------+
+    |Total                |        0| 1218|   0|    0|    94|  359|      832|
+    +---------------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +----------------------------------------------+----------+----+---+----+------------+------------+
+    |                 Variable Name                | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_idle                                       |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                                 |       and|   0|  0|   2|           1|           1|
+    |broadcast_U0_ap_start                         |       and|   0|  0|   2|           1|           1|
+    |broadcast_U0_start_full_n                     |       and|   0|  0|   2|           1|           1|
+    |parse_filter_config_4_32_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_broadcast_U0_ap_ready                 |        or|   0|  0|   2|           1|           1|
+    |ap_sync_parse_filter_config_4_32_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +----------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                         |          |   0|  0|  14|           7|           7|
+    +----------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                       | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_broadcast_U0_ap_ready                 |   9|          2|    1|          2|
+    |ap_sync_reg_parse_filter_config_4_32_U0_ap_ready  |   9|          2|    1|          2|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                             |  18|          4|    2|          4|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------+---+----+-----+-----------+
+    |                       Name                       | FF| LUT| Bits| Const Bits|
+    +--------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_broadcast_U0_ap_ready                 |  1|   0|    1|          0|
+    |ap_sync_reg_parse_filter_config_4_32_U0_ap_ready  |  1|   0|    1|          0|
+    +--------------------------------------------------+---+----+-----+-----------+
+    |Total                                             |  2|   0|    2|          0|
+    +--------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-----------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-------------------------+-----+-----+------------+-----------------------+--------------+
+|filter_cfg_strm_dout     |   in|   32|     ap_fifo|        filter_cfg_strm|       pointer|
+|filter_cfg_strm_empty_n  |   in|    1|     ap_fifo|        filter_cfg_strm|       pointer|
+|filter_cfg_strm_read     |  out|    1|     ap_fifo|        filter_cfg_strm|       pointer|
+|k_strms_0_dout           |   in|   32|     ap_fifo|              k_strms_0|       pointer|
+|k_strms_0_empty_n        |   in|    1|     ap_fifo|              k_strms_0|       pointer|
+|k_strms_0_read           |  out|    1|     ap_fifo|              k_strms_0|       pointer|
+|k_strms_1_dout           |   in|   32|     ap_fifo|              k_strms_1|       pointer|
+|k_strms_1_empty_n        |   in|    1|     ap_fifo|              k_strms_1|       pointer|
+|k_strms_1_read           |  out|    1|     ap_fifo|              k_strms_1|       pointer|
+|k_strms_2_dout           |   in|   32|     ap_fifo|              k_strms_2|       pointer|
+|k_strms_2_empty_n        |   in|    1|     ap_fifo|              k_strms_2|       pointer|
+|k_strms_2_read           |  out|    1|     ap_fifo|              k_strms_2|       pointer|
+|k_strms_3_dout           |   in|   32|     ap_fifo|              k_strms_3|       pointer|
+|k_strms_3_empty_n        |   in|    1|     ap_fifo|              k_strms_3|       pointer|
+|k_strms_3_read           |  out|    1|     ap_fifo|              k_strms_3|       pointer|
+|p_strm_dout              |   in|   32|     ap_fifo|                 p_strm|       pointer|
+|p_strm_empty_n           |   in|    1|     ap_fifo|                 p_strm|       pointer|
+|p_strm_read              |  out|    1|     ap_fifo|                 p_strm|       pointer|
+|e_strm_dout              |   in|    1|     ap_fifo|                 e_strm|       pointer|
+|e_strm_empty_n           |   in|    1|     ap_fifo|                 e_strm|       pointer|
+|e_strm_read              |  out|    1|     ap_fifo|                 e_strm|       pointer|
+|f_strm_din               |  out|   32|     ap_fifo|                 f_strm|       pointer|
+|f_strm_full_n            |   in|    1|     ap_fifo|                 f_strm|       pointer|
+|f_strm_write             |  out|    1|     ap_fifo|                 f_strm|       pointer|
+|e_f_strm_din             |  out|    1|     ap_fifo|               e_f_strm|       pointer|
+|e_f_strm_full_n          |   in|    1|     ap_fifo|               e_f_strm|       pointer|
+|e_f_strm_write           |  out|    1|     ap_fifo|               e_f_strm|       pointer|
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  dynamicFilter<32, 32>|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  dynamicFilter<32, 32>|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  dynamicFilter<32, 32>|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  dynamicFilter<32, 32>|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  dynamicFilter<32, 32>|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  dynamicFilter<32, 32>|  return value|
+|ap_continue              |   in|    1|  ap_ctrl_hs|  dynamicFilter<32, 32>|  return value|
++-------------------------+-----+-----+------------+-----------------------+--------------+
+

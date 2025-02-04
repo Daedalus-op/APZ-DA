@@ -1,0 +1,75 @@
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:1314:7: warning: Added loop label VITIS_LOOP_1223_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1223_1: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:1314:7: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:2288:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:2288:5: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:2302:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:2302:5: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:2316:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:2316:5: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:3945:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:3945:7: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6338:5: warning: Added loop label VITIS_LOOP_88_1:   [xilinx-label-all-loops]
+    while (!e) {
+    ^~~~~
+    VITIS_LOOP_88_1: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6338:5: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6568:5: warning: Added loop label VITIS_LOOP_318_1:   [xilinx-label-all-loops]
+    for (unsigned i = 0; i < true_table_info<NCOL>::dwords_num; ++i) {
+    ^~~
+    VITIS_LOOP_318_1: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6568:5: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6662:9: warning: Added loop label VITIS_LOOP_419_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < NCOL; ++i) {
+        ^~~
+        VITIS_LOOP_419_1: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6662:9: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6664:13: warning: Added loop label VITIS_LOOP_421_2:   [xilinx-label-all-loops]
+            for (int il = 0; il < W; il += 32) {
+            ^~~
+            VITIS_LOOP_421_2: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6664:13: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6668:13: warning: Added loop label VITIS_LOOP_425_3:   [xilinx-label-all-loops]
+            for (int il = 0; il < W; il += 32) {
+            ^~~
+            VITIS_LOOP_425_3: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6668:13: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6688:9: warning: Added loop label VITIS_LOOP_445_4:   [xilinx-label-all-loops]
+        for (int i = 0; i < NVV; ++i) {
+        ^~~
+        VITIS_LOOP_445_4: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6688:9: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6710:9: warning: Added loop label VITIS_LOOP_467_5:   [xilinx-label-all-loops]
+        for (int i = 0; i < NTTW; ++i) {
+        ^~~
+        VITIS_LOOP_467_5: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6710:9: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6818:5: warning: Added loop label VITIS_LOOP_600_1:   [xilinx-label-all-loops]
+    while (!e) {
+    ^~~~~
+    VITIS_LOOP_600_1: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6818:5: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6898:5: warning: Added loop label VITIS_LOOP_699_1:   [xilinx-label-all-loops]
+    while (!e) {
+    ^~~~~
+    VITIS_LOOP_699_1: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6898:5: note: FIX-IT applied suggested code changes
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6974:5: warning: Added loop label VITIS_LOOP_793_1:   [xilinx-label-all-loops]
+    while (!e) {
+    ^~~~~
+    VITIS_LOOP_793_1: 
+/home/chips/Storage/zoho/hls_component/filter_dut/hls/.autopilot/db/filter_dut.pp.0.cpp:6974:5: note: FIX-IT applied suggested code changes
