@@ -18,16 +18,16 @@
 
 help::
 	$(ECHO) "Makefile Usage:"
-	$(ECHO) "  make all TARGET=<hw/hw_emu/sw_emu/> PLATFORM=<FPGA platform>"
+	$(ECHO) "  make all TARGET=<hw/sw_emu/> PLATFORM=<FPGA platform>"
 	$(ECHO) "      Command to generate the design for specified Target and Shell."
 	$(ECHO) ""
-	$(ECHO) "  make run TARGET=<hw/hw_emu/sw_emu/> PLATFORM=<FPGA platform>"
+	$(ECHO) "  make run TARGET=<hw/sw_emu/> PLATFORM=<FPGA platform>"
 	$(ECHO) "      Command to run application in emulation."
 	$(ECHO) ""
-	$(ECHO) "  make xclbin TARGET=<hw/hw_emu/sw_emu/> PLATFORM=<FPGA platform>"
+	$(ECHO) "  make xclbin TARGET=<hw/sw_emu/> PLATFORM=<FPGA platform>"
 	$(ECHO) "      Command to build xclbin application."
 	$(ECHO) ""
-	$(ECHO) "  make host TARGET=<hw/hw_emu/sw_emu/>"
+	$(ECHO) "  make host TARGET=<hw/sw_emu/>"
 	$(ECHO) "      Command to build host application."
 	$(ECHO) ""
 	$(ECHO) "  NOTE: For embedded devices, e.g. zcu102/zcu104/vck190, HOST_ARCH is either aarch32 or aarch64."
@@ -50,9 +50,9 @@ help::
 ############################## Setting up Project Variables ##############################
 
 MK_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
-XF_PROJ_ROOT ?= $(shell bash -c 'export MK_PATH=$(MK_PATH); echo $${MK_PATH%/L1/*}')
+XF_PROJ_ROOT ?= $(shell bash -c 'export MK_PATH=$(MK_PATH); echo $${MK_PATH%/*}')
 CUR_DIR := $(patsubst %/,%,$(dir $(MK_PATH)))
-XFLIB_DIR = $(XF_PROJ_ROOT)
+XFLIB_DIR = $(dir $(MK_PATH))/../../lib/database
 
 # setting devault value
 TARGET ?= sw_emu
@@ -67,7 +67,7 @@ PLATFORM := xilinx_u280_gen3x16_xdma_1_202120_1
 endif
 
 # #################### Checking if PLATFORM in whitelist ############################
-PLATFORM_ALLOWLIST +=  u280 u250 u200 u50
+PLATFORM_ALLOWLIST +=  u280 u250 u200
 PLATFORM_BLOCKLIST +=  zc
 
 include ./utils.mk
@@ -109,108 +109,90 @@ ifeq ($(TARGET),hw_emu)
 CXXFLAGS += -D HW_EMU_TEST
 endif
 
-#Include Required Host Source Files
+#Inclue Required Host Source Files
+ifneq (,$(shell echo $(XPLATFORM) | awk '/u280/'))
+HOST_SRCS += $(CUR_DIR)/host/filter_test.cpp $(CUR_DIR)/host/xclhost.cpp 
+CXXFLAGS +=  -D USE_HBM
+CXXFLAGS +=  -I $(CUR_DIR)/kernel -I $(CUR_DIR)/host -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include
+CXXFLAGS += -O3
+else ifneq (,$(shell echo $(XPLATFORM) | awk '/u250/'))
+HOST_SRCS += $(CUR_DIR)/host/filter_test.cpp $(CUR_DIR)/host/xclhost.cpp 
+CXXFLAGS +=  -D USE_DDR
+CXXFLAGS +=  -I $(CUR_DIR)/kernel -I $(CUR_DIR)/host -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include
+CXXFLAGS += -O3
+else ifneq (,$(shell echo $(XPLATFORM) | awk '/u200/'))
+HOST_SRCS += $(CUR_DIR)/host/filter_test.cpp $(CUR_DIR)/host/xclhost.cpp 
+CXXFLAGS +=  -D USE_DDR
+CXXFLAGS +=  -I $(CUR_DIR)/kernel -I $(CUR_DIR)/host -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include
+CXXFLAGS += -O3
+else 
 ifeq ($(ps_on_x86), on)
-HOST_SRCS += $(CUR_DIR)/host/main.cpp $(XFLIB_DIR)/ext/xcl2/xcl2.cpp 
-CXXFLAGS +=  -D PRAGMA
-CXXFLAGS +=  -I $(XFLIB_DIR)/L1/include/hw -I $(CUR_DIR)/host -I $(CUR_DIR)/kernel -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include
-CXXFLAGS += -O3 
+HOST_SRCS += $(CUR_DIR)/host/filter_test.cpp $(CUR_DIR)/host/xclhost.cpp 
+CXXFLAGS +=  -I $(CUR_DIR)/kernel -I $(CUR_DIR)/host -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include
+CXXFLAGS += -O3
 else
-HOST_SRCS += $(CUR_DIR)/host/main.cpp $(XFLIB_DIR)/ext/xcl2/xcl2.cpp 
-CXXFLAGS +=  -D PRAGMA
-CXXFLAGS +=  -I $(XFLIB_DIR)/L1/include/hw -I $(CUR_DIR)/host -I $(CUR_DIR)/kernel -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include
-CXXFLAGS += -O3 
+HOST_SRCS += $(CUR_DIR)/host/filter_test.cpp $(CUR_DIR)/host/xclhost.cpp 
+CXXFLAGS +=  -I $(CUR_DIR)/kernel -I $(CUR_DIR)/host -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L3/include/sw -I $(XFLIB_DIR)/ext/xcl2 -I $(XFLIB_DIR)/../utils/L1/include
+CXXFLAGS += -O3
 endif
-
+endif
 # workaround for opencv
 ifeq (,$(findstring opencv,$(CXXFLAGS)))
 CXXFLAGS += $(XRT_CXXFLAGS)
 endif
 
-EXE_NAME := host.exe
+EXE_NAME := filter_test.exe
 EXE_FILE := $(BUILD_DIR)/$(EXE_NAME)
 EXE_FILE_DEPS := $(HOST_SRCS) $(EXE_FILE_DEPS)
 
-HOST_ARGS :=  -xclbin $(BUILD_DIR)/FilterKernel.xclbin
+HOST_ARGS :=  -xclbin $(BUILD_DIR)/filter_kernel.xclbin -data $(CUR_DIR)/db_data
 ifneq ($(HOST_ARCH), x86)
 PKG_HOST_ARGS = $(foreach args,$(HOST_ARGS),$(subst $(dir $(patsubst %/,%,$(args))),,$(args)))
 endif
 
 ########################## Kernel compiler global settings ##########################
-VPP_FLAGS +=  -I $(XFLIB_DIR)/L1/include/hw -I $(CUR_DIR)/kernel -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L2/include
-
-######################### binary container global settings ##########################
 ifneq (,$(shell echo $(XPLATFORM) | awk '/u280/'))
-VPP_FLAGS_FilterKernel +=  -D KERNEL_NAME=FilterKernel
-VPP_FLAGS_FilterKernel += --hls.clock 300000000:FilterKernel
-ifneq ($(HOST_ARCH_temp), x86)
-VPP_LDFLAGS_FilterKernel += --clock.defaultFreqHz 300000000
-else
-VPP_LDFLAGS_FilterKernel += --kernel_frequency 300
-endif
-VPP_LDFLAGS_FilterKernel_temp := --config $(CUR_DIR)/conn_u280.cfg
-VPP_LDFLAGS_FilterKernel += $(VPP_LDFLAGS_FilterKernel_temp)
+VPP_FLAGS +=   --config $(CUR_DIR)/conn_u280.cfg
+VPP_FLAGS +=  -I $(CUR_DIR)/kernel -I $(CUR_DIR)/host -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L2/include
 
 else ifneq (,$(shell echo $(XPLATFORM) | awk '/u250/'))
-VPP_FLAGS_FilterKernel +=  -D KERNEL_NAME=FilterKernel
-VPP_FLAGS_FilterKernel += --hls.clock 300000000:FilterKernel
-ifneq ($(HOST_ARCH_temp), x86)
-VPP_LDFLAGS_FilterKernel += --clock.defaultFreqHz 300000000
-else
-VPP_LDFLAGS_FilterKernel += --kernel_frequency 300
-endif
-VPP_LDFLAGS_FilterKernel_temp := --config $(CUR_DIR)/conn_u250.cfg
-VPP_LDFLAGS_FilterKernel += $(VPP_LDFLAGS_FilterKernel_temp)
+VPP_FLAGS +=   --config $(CUR_DIR)/conn_u250.cfg
+VPP_FLAGS +=  -I $(CUR_DIR)/kernel -I $(CUR_DIR)/host -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L2/include
 
 else ifneq (,$(shell echo $(XPLATFORM) | awk '/u200/'))
-VPP_FLAGS_FilterKernel +=  -D KERNEL_NAME=FilterKernel
-VPP_FLAGS_FilterKernel += --hls.clock 300000000:FilterKernel
-ifneq ($(HOST_ARCH_temp), x86)
-VPP_LDFLAGS_FilterKernel += --clock.defaultFreqHz 300000000
-else
-VPP_LDFLAGS_FilterKernel += --kernel_frequency 300
-endif
-VPP_LDFLAGS_FilterKernel_temp := --config $(CUR_DIR)/conn_u200.cfg
-VPP_LDFLAGS_FilterKernel += $(VPP_LDFLAGS_FilterKernel_temp)
-
-else ifneq (,$(shell echo $(XPLATFORM) | awk '/u50/'))
-VPP_FLAGS_FilterKernel +=  -D KERNEL_NAME=FilterKernel
-VPP_FLAGS_FilterKernel += --hls.clock 300000000:FilterKernel
-ifneq ($(HOST_ARCH_temp), x86)
-VPP_LDFLAGS_FilterKernel += --clock.defaultFreqHz 300000000
-else
-VPP_LDFLAGS_FilterKernel += --kernel_frequency 300
-endif
-VPP_LDFLAGS_FilterKernel_temp := --config $(CUR_DIR)/conn_u50.cfg
-VPP_LDFLAGS_FilterKernel += $(VPP_LDFLAGS_FilterKernel_temp)
+VPP_FLAGS +=   --config $(CUR_DIR)/conn_u200.cfg
+VPP_FLAGS +=  -I $(CUR_DIR)/kernel -I $(CUR_DIR)/host -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L2/include
 
 else 
-VPP_FLAGS_FilterKernel +=  -D KERNEL_NAME=FilterKernel
-VPP_FLAGS_FilterKernel += --hls.clock 300000000:FilterKernel
-ifneq ($(HOST_ARCH_temp), x86)
-VPP_LDFLAGS_FilterKernel += --clock.defaultFreqHz 300000000
-else
-VPP_LDFLAGS_FilterKernel += --kernel_frequency 300
-endif
+VPP_FLAGS +=  -I $(CUR_DIR)/kernel -I $(CUR_DIR)/host -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L1/include/hw -I $(XFLIB_DIR)/L2/include
 
 endif
-ifneq ($(SD_CARD_NEEDED), on)
-BINARY_CONTAINERS += $(BUILD_DIR)/FilterKernel.xclbin
+
+######################### binary container global settings ##########################
+VPP_FLAGS_filter_kernel += --hls.clock 300000000:filter_kernel
+ifneq ($(HOST_ARCH_temp), x86)
+VPP_LDFLAGS_filter_kernel += --clock.defaultFreqHz 300000000
 else
-BINARY_CONTAINERS += $(BUILD_DIR)/FilterKernel_pkg.$(LINK_TARGET_FMT)
-BINARY_CONTAINERS_PKG += $(BUILD_DIR)/FilterKernel.xclbin
+VPP_LDFLAGS_filter_kernel += --kernel_frequency 300
+endif
+
+ifneq ($(SD_CARD_NEEDED), on)
+BINARY_CONTAINERS += $(BUILD_DIR)/filter_kernel.xclbin
+else
+BINARY_CONTAINERS += $(BUILD_DIR)/filter_kernel_pkg.$(LINK_TARGET_FMT)
+BINARY_CONTAINERS_PKG += $(BUILD_DIR)/filter_kernel.xclbin
 endif
 
 # ################ Setting Rules for Binary Containers (Building Kernels) ################
-$(TEMP_DIR)/FilterKernel.xo: $(CUR_DIR)/kernel/kernel_filter_top.cpp 
-	$(ECHO) "Compiling Kernel: FilterKernel"
+$(TEMP_DIR)/filter_kernel.xo: $(CUR_DIR)/kernel/filter_kernel.cpp 
+	$(ECHO) "Compiling Kernel: filter_kernel"
 	mkdir -p $(TEMP_DIR)
-	$(VPP) -c $(VPP_FLAGS_FilterKernel) $(VPP_FLAGS) -k FilterKernel -I'$(<D)' --temp_dir $(TEMP_DIR) --report_dir $(TEMP_REPORT_DIR) -o $@ $^
-BINARY_CONTAINER_FilterKernel_OBJS += $(TEMP_DIR)/FilterKernel.xo
-BINARY_CONTAINERS_DEPS += $(BINARY_CONTAINER_FilterKernel_OBJS)
+	$(VPP) -c $(VPP_FLAGS_filter_kernel) $(VPP_FLAGS) -k filter_kernel -I'$(<D)' --temp_dir $(TEMP_DIR) --report_dir $(TEMP_REPORT_DIR) -o $@ $^
+BINARY_CONTAINER_filter_kernel_OBJS += $(TEMP_DIR)/filter_kernel.xo
+BINARY_CONTAINERS_DEPS += $(BINARY_CONTAINER_filter_kernel_OBJS)
 $(BINARY_CONTAINERS): $(BINARY_CONTAINERS_DEPS)
 	mkdir -p $(BUILD_DIR)
-	$(VPP) -l $(VPP_FLAGS) --temp_dir $(TEMP_DIR) --report_dir $(BUILD_REPORT_DIR)/FilterKernel $(VPP_LDFLAGS)  $(VPP_LDFLAGS_FilterKernel) $(AIE_LDFLAGS)   -o $@ $^
+	$(VPP) -l $(VPP_FLAGS) --temp_dir $(TEMP_DIR) --report_dir $(BUILD_REPORT_DIR)/filter_kernel $(VPP_LDFLAGS)  $(VPP_LDFLAGS_filter_kernel) $(AIE_LDFLAGS)   -o $@ $^
 
 ############################## Setting Rules for Host (Building Host Executable) ##############################
 $(EXE_FILE): $(EXE_FILE_DEPS)
@@ -321,7 +303,7 @@ endif
 #hw
 ifeq ($(TARGET), hw)
 ifneq (,$(findstring aws-vu9p-f1, $(PLATFORM_NAME)))
-ifeq (,$(wildcard $(BUILD_DIR)/FilterKernel.awsxclbin))
+ifeq (,$(wildcard $(BUILD_DIR)/filter_kernel.awsxclbin))
 	$(ECHO) "This makefile does not directly support converting .xclbin to .awsxclbin, please refer https://github.com/aws/aws-fpga/blob/master/Vitis/README.md for next operations"
 else
 	$(ECHO) "Running HW using generated .awsxclbin"

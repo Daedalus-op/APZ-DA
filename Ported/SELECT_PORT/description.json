@@ -1,83 +1,93 @@
 {
-    "name": "Xilinx Dynamic Filter Benchmark",
-    "description": "Xilinx Dynamic Filter Benchmark",
+    "name": "Xilinx Q6 Mod Demo",
+    "description": "Xilinx Q6 Mod Demo",
     "flow": "vitis",
-    "gui": true,
     "platform_type": "pcie",
     "platform_allowlist": [
         "u280",
         "u250",
-        "u200",
-        "u50"
+        "u200"
     ],
     "platform_blocklist": [
         "zc"
     ],
     "platform_properties": {
         "u280": {
-            "containers": [
-                {
-                    "name": "FilterKernel",
-                    "ldclflags": "--config PROJECT/conn_u280.cfg"
+            "host": {
+                "compiler": {
+                    "symbols": [
+                        "USE_HBM"
+                    ]
                 }
-            ]
+            },
+            "v++": {
+                "compiler": {
+                    "clflags": [
+                        "--config PROJECT/conn_u280.cfg"
+                    ]
+                }
+            }
         },
         "u250": {
-            "containers": [
-                {
-                    "name": "FilterKernel",
-                    "ldclflags": "--config PROJECT/conn_u250.cfg"
+            "host": {
+                "compiler": {
+                    "symbols": [
+                        "USE_DDR"
+                    ]
                 }
-            ]
+            },
+            "v++": {
+                "compiler": {
+                    "clflags": [
+                        "--config PROJECT/conn_u250.cfg"
+                    ]
+                }
+            }
         },
         "u200": {
-            "containers": [
-                {
-                    "name": "FilterKernel",
-                    "ldclflags": "--config PROJECT/conn_u200.cfg"
+            "host": {
+                "compiler": {
+                    "symbols": [
+                        "USE_DDR"
+                    ]
                 }
-            ]
-        },
-        "u50": {
-            "containers": [
-                {
-                    "name": "FilterKernel",
-                    "ldclflags": "--config PROJECT/conn_u50.cfg"
+            },
+            "v++": {
+                "compiler": {
+                    "clflags": [
+                        "--config PROJECT/conn_u200.cfg"
+                    ]
                 }
-            ]
+            }
         }
     },
     "launch": [
         {
-            "cmd_args": " -xclbin BUILD/FilterKernel.xclbin",
-            "name": "generic launch for all flows"
+            "name": "generic launch for all flows",
+            "cmd_args": " -xclbin BUILD/filter_kernel.xclbin -data PROJECT/db_data"
         }
     ],
     "host": {
-        "host_exe": "host.exe",
+        "host_exe": "filter_test.exe",
         "compiler": {
             "sources": [
-                "host/main.cpp",
-                "LIB_DIR/ext/xcl2/xcl2.cpp"
+                "host/filter_test.cpp",
+                "host/xclhost.cpp"
             ],
             "includepaths": [
-                "LIB_DIR/L1/include/hw",
-                "host",
                 "kernel",
-                "LIB_DIR/ext/xcl2",
-                "LIB_DIR/../utils/L1/include"
+                "host",
+                "LIB_DIR/L1/include/hw"
             ],
-            "options": "-O3 ",
-            "symbols": [
-                "PRAGMA"
-            ]
+            "options": "-O3"
         }
     },
     "v++": {
         "compiler": {
             "includepaths": [
-                "LIB_DIR/L1/include/hw",
-                "kernel"
+                "kernel",
+                "host",
+                "LIB_DIR/L1/include/hw"
             ]
         }
     },
@@ -85,18 +95,17 @@
         {
             "accelerators": [
                 {
-                    "location": "kernel/kernel_filter_top.cpp",
+                    "location": "kernel/filter_kernel.cpp",
                     "frequency": 300,
-                    "clflags": " -D KERNEL_NAME=FilterKernel",
-                    "name": "FilterKernel"
+                    "name": "filter_kernel"
                 }
             ],
             "frequency": 300,
-            "name": "FilterKernel"
+            "name": "filter_kernel"
         }
     ],
     "testinfo": {
-        "disable": false,
+        "disable": true,
         "jobs": [
             {
                 "index": 0,
@@ -119,7 +128,6 @@
         ],
         "targets": [
             "vitis_sw_emu",
-            "vitis_hw_emu",
             "vitis_hw_build",
             "vitis_hw_run"
         ],

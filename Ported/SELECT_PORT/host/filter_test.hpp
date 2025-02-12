@@ -13,21 +13,3 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-#ifndef _KERNEL_FILTER_HPP_
-#define _KERNEL_FILTER_HPP_
-
-#include <ap_int.h>
-#include <hls_stream.h>
-#include "xf_database/dynamic_filter.hpp"
-
-/*
-* @tparam W width of all condition column streams, in bits.
-* @tparam WP width of payload column, in bits.
-*/
-#define WKEY 32
-#define WPAY 32
-
-extern "C" void FilterKernel(int order, int keyLength, KEY_TYPE inKey[LEN], KEY_TYPE outKey[LEN]);
-
-#endif //_KERNEL_FILTER_HPP_
