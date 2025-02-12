@@ -23,21 +23,14 @@ typedef int32_t TPCH_INT;
 
 #define TPCH_INT_SZ sizeof(TPCH_INT)
 
-typedef TPCH_INT COND0_SZ;
-typedef TPCH_INT COND1_SZ;
-typedef TPCH_INT COND2_SZ;
-typedef TPCH_INT COND3_SZ;
+typedef TPCH_INT MONEY_T;
+typedef TPCH_INT DATE_T;
+typedef TPCH_INT KEY_T;
 
-typedef TPCH_INT OUT_SZ;
+#define MONEY_SZ sizeof(TPCH_INT)
+#define DATE_SZ sizeof(TPCH_INT)
+#define KEY_SZ sizeof(TPCH_INT)
 
-#define COND0_SZ sizeof(TPCH_INT)
-#define COND1_SZ sizeof(TPCH_INT)
-#define COND2_SZ sizeof(TPCH_INT)
-#define COND3_SZ sizeof(TPCH_INT)
-
-#define OUT_SZ sizeof(TPCH_INT)
-
-#define L_DEPTH 2000
 // every cycle, 4 input rows.
 #define VEC_LEN 16
 

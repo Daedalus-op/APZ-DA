@@ -13,23 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 #ifndef UTILS_H
 #define UTILS_H
-
-// ------------------------------------------------------------
-
-#include <new>
-#include <cstdlib>
-
-template <typename T>
-T* aligned_alloc(std::size_t num) {
-    void* ptr = NULL;
-    if (posix_memalign(&ptr, 4096, num * sizeof(T)))
-        //  ptr= malloc(num*sizeof(T));
-        //  if (ptr==NULL)
-        throw std::bad_alloc();
-    return reinterpret_cast<T*>(ptr);
-}
 
 // ------------------------------------------------------------
 
@@ -95,7 +81,7 @@ inline bool is_dir(const std::string& path) {
 inline bool is_file(const char* path) {
     struct stat info;
     if (stat(path, &info) != 0) return false;
-    if (info.st_mode & (S_IFREG))
+    if (info.st_mode & (S_IFREG | S_IFLNK))
         return true;
     else
         return false;
