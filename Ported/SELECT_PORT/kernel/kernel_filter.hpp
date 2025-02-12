@@ -14,21 +14,20 @@
  * limitations under the License.
  */
 
-#ifndef _KERNEL_SORT_HPP_
-#define _KERNEL_SORT_HPP_
+#ifndef _KERNEL_FILTER_HPP_
+#define _KERNEL_FILTER_HPP_
 
 #include <ap_int.h>
 #include <hls_stream.h>
-#include "xf_database/compound_sort.hpp"
+#include "xf_database/dynamic_filter.hpp"
 
-#define INSERT_LEN 1024
-#define KEY_BW 32
-#define DATA_BW 32
-#define BW (KEY_BW + DATA_BW)
-#define LEN (INSERT_LEN * 4 * 32) // max length support: 1024*4*512
-typedef ap_uint<32> KEY_TYPE;
-typedef ap_uint<32> DATA_TYPE;
+/*
+* @tparam W width of all condition column streams, in bits.
+* @tparam WP width of payload column, in bits.
+*/
+#define WKEY 32
+#define WPAY 32
 
-extern "C" void SortKernel(int order, int keyLength, KEY_TYPE inKey[LEN], KEY_TYPE outKey[LEN]);
+extern "C" void FilterKernel(int order, int keyLength, KEY_TYPE inKey[LEN], KEY_TYPE outKey[LEN]);
 
-#endif //_KERNEL_SORT_HPP_
+#endif //_KERNEL_FILTER_HPP_

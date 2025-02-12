@@ -83,13 +83,13 @@ int main(int argc, const char* argv[]) {
     devices.resize(1);
     cl::Program program(context, devices, xclBins, NULL, &err);
     logger.logCreateProgram(err);
-    cl::Kernel kernel_SortKernel(program, "SortKernel", &err);
+    cl::Kernel kernel_FilterKernel(program, "FilterKernel", &err);
     logger.logCreateKernel(err);
     std::cout << "kernel has been created" << std::endl;
 
     cl_mem_ext_ptr_t mext_o[3];
-    mext_o[0] = {2, inKey_alloc, kernel_SortKernel()};  // arg 2 of kernel
-    mext_o[1] = {3, outKey_alloc, kernel_SortKernel()}; // arg 3 of kernel
+    mext_o[0] = {2, inKey_alloc, kernel_FilterKernel()};  // arg 2 of kernel
+    mext_o[1] = {3, outKey_alloc, kernel_FilterKernel()}; // arg 3 of kernel
     cl::Buffer inKey_buf, outKey_buf, outIndex_buf;
     inKey_buf = cl::Buffer(context, CL_MEM_EXT_PTR_XILINX | CL_MEM_USE_HOST_PTR | CL_MEM_READ_WRITE,
                            sizeof(KEY_TYPE) * LEN, &mext_o[0]);
@@ -107,11 +107,11 @@ int main(int argc, const char* argv[]) {
     // q.finish();
     std::cout << "kernel start------" << std::endl;
     int j = 0;
-    kernel_SortKernel.setArg(j++, 1);
-    kernel_SortKernel.setArg(j++, keyLength);
-    kernel_SortKernel.setArg(j++, inKey_buf);
-    kernel_SortKernel.setArg(j++, outKey_buf);
-    q.enqueueTask(kernel_SortKernel, &events_write, &events_kernel[0]);
+    kernel_FilterKernel.setArg(j++, 1);
+    kernel_FilterKernel.setArg(j++, keyLength);
+    kernel_FilterKernel.setArg(j++, inKey_buf);
+    kernel_FilterKernel.setArg(j++, outKey_buf);
+    q.enqueueTask(kernel_FilterKernel, &events_write, &events_kernel[0]);
     // q.finish();
     q.enqueueMigrateMemObjects(ob_out, 1, &events_kernel, &events_read[0]);
     q.finish();

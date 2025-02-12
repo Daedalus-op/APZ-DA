@@ -1,6 +1,6 @@
 {
-    "name": "Xilinx Compound Sort Benchmark",
-    "description": "Xilinx Compound Sort Benchmark",
+    "name": "Xilinx Dynamic Filter Benchmark",
+    "description": "Xilinx Dynamic Filter Benchmark",
     "flow": "vitis",
     "gui": true,
     "platform_type": "pcie",
@@ -17,7 +17,7 @@
         "u280": {
             "containers": [
                 {
-                    "name": "SortKernel",
+                    "name": "FilterKernel",
                     "ldclflags": "--config PROJECT/conn_u280.cfg"
                 }
             ]
@@ -25,7 +25,7 @@
         "u250": {
             "containers": [
                 {
-                    "name": "SortKernel",
+                    "name": "FilterKernel",
                     "ldclflags": "--config PROJECT/conn_u250.cfg"
                 }
             ]
@@ -33,7 +33,7 @@
         "u200": {
             "containers": [
                 {
-                    "name": "SortKernel",
+                    "name": "FilterKernel",
                     "ldclflags": "--config PROJECT/conn_u200.cfg"
                 }
             ]
@@ -41,7 +41,7 @@
         "u50": {
             "containers": [
                 {
-                    "name": "SortKernel",
+                    "name": "FilterKernel",
                     "ldclflags": "--config PROJECT/conn_u50.cfg"
                 }
             ]
@@ -49,7 +49,7 @@
     },
     "launch": [
         {
-            "cmd_args": " -xclbin BUILD/SortKernel.xclbin",
+            "cmd_args": " -xclbin BUILD/FilterKernel.xclbin",
             "name": "generic launch for all flows"
         }
     ],
@@ -85,14 +85,14 @@
         {
             "accelerators": [
                 {
-                    "location": "kernel/kernel_sort_top.cpp",
+                    "location": "kernel/kernel_filter_top.cpp",
                     "frequency": 300,
-                    "clflags": " -D KERNEL_NAME=SortKernel",
-                    "name": "SortKernel"
+                    "clflags": " -D KERNEL_NAME=FilterKernel",
+                    "name": "FilterKernel"
                 }
             ],
             "frequency": 300,
-            "name": "SortKernel"
+            "name": "FilterKernel"
         }
     ],
     "testinfo": {
